@@ -1,5 +1,11 @@
 public class Start {
-    public static void main(String[] args) {
-        System.out.println("Hello World");
+    public String hello_World = "Hello World";
+    public Rechtsformfinder finder = new Rechtsformfinder();
+
+    public String getHello_World() {
+        return hello_World;
+    }
+    public Rechtsformfinder getFinder() {
+        return finder;
     }
 }
