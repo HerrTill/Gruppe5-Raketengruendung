@@ -1,4 +1,4 @@
-package de.RaketenStart.V.Screens;
+package main.V.Screens;
 
 import javax.swing.*;
 

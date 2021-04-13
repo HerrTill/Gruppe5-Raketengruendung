@@ -1,4 +1,4 @@
-package de.RaketenStart;
+package main;
 
 public class Controller {
     private static Model model;

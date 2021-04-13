@@ -1,7 +1,7 @@
-package de.RaketenStart;
+package main;
 
-import de.RaketenStart.M.Finder.ModelFinder;
-import de.RaketenStart.M.ModelHome;
+import main.M.Finder.ModelFinder;
+import main.M.ModelHome;
 
 public class Model {
     private static Model[] models = new Model[1];

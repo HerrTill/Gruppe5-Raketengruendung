@@ -1,7 +1,7 @@
-package de.RaketenStart.V.Screens.Finder;
+package main.V.Screens.Finder;
 
-import de.RaketenStart.M.Finder.ModelFrage;
-import de.RaketenStart.V.Listener.onHomeClick;
+import main.M.Finder.ModelFrage;
+import main.V.Listener.onHomeClick;
 
 import javax.swing.*;
 

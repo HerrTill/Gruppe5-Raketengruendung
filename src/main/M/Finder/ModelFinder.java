@@ -1,4 +1,4 @@
-package de.RaketenStart.M.Finder;
+package main.M.Finder;
 
 public class ModelFinder {
     private ModelFrage frage1;

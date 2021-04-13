@@ -1,10 +1,10 @@
-package de.RaketenStart.V.Screens.Finder;
+package main.V.Screens.Finder;
 
-import de.RaketenStart.Controller;
-import de.RaketenStart.M.Finder.ModelFrage;
-import de.RaketenStart.Model;
-import de.RaketenStart.V.Listener.onHomeClick;
-import de.RaketenStart.V.Listener.onStartClick;
+import main.Controller;
+import main.M.Finder.ModelFrage;
+import main.Model;
+import main.V.Listener.onHomeClick;
+import main.V.Listener.onStartClick;
 
 import javax.swing.*;
 

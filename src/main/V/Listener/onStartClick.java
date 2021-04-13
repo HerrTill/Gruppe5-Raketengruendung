@@ -1,8 +1,6 @@
-package de.RaketenStart.V.Listener;
+package main.V.Listener;
 
-import de.RaketenStart.Controller;
-import de.RaketenStart.V.Screens.Finder.ViewFinder;
-import de.RaketenStart.View;
+import main.V.Screens.Finder.ViewFinder;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

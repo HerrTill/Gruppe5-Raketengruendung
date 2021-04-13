@@ -1,8 +1,8 @@
-package de.RaketenStart;
+package main;
 
-import de.RaketenStart.V.Screens.Finder.ViewFinder;
-import de.RaketenStart.V.Screens.ViewHome;
-import de.RaketenStart.V.Screens.Screen;
+import main.V.Screens.Finder.ViewFinder;
+import main.V.Screens.ViewHome;
+import main.V.Screens.Screen;
 
 import javax.swing.*;
 
