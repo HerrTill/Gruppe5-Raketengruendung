@@ -1,6 +1,8 @@
 package de.RaketenStart.V.Screens.Finder;
 
 import de.RaketenStart.Controller;
+import de.RaketenStart.M.Finder.ModelFrage;
+import de.RaketenStart.Model;
 import de.RaketenStart.V.Listener.onHomeClick;
 import de.RaketenStart.V.Listener.onStartClick;
 
@@ -25,8 +27,10 @@ public class ViewFinder extends JPanel {
     }
 
     public static void start() {
-        ViewFrage frage1 = new ViewFrage1();
-        Controller.getView().setPanel(frage1);
+        Model model = Controller.getModel();
+        ModelFrage Mfrage1 = model.getFinder().getFrage1();
+        ViewFrage Vfrage1 = new ViewFrage(Mfrage1);
+        Controller.getView().setPanel(Vfrage1);
     }
 
     public static ViewFinder factory() {
