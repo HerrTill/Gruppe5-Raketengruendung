@@ -31,7 +31,7 @@ public class RaketengruendungView {
         home = homescreenController.getView();
         window.add(home);
 
-        window.setVisible(true);
+        Window.update();
     }
 
     public static void loadRechtsformenfinder() {
@@ -44,6 +44,6 @@ public class RaketengruendungView {
         finder = FinderView.factory();
         window.add(finder);
 
-        window.setVisible(true);
+        Window.update();
     }
 }

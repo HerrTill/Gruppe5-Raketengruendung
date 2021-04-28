@@ -1,10 +1,13 @@
 package Raketengruendung.Rechtsformenfinder;
 
+import Raketengruendung.Rechtsformenfinder.Fragen.FragenController;
+
 public class FinderController {
     private static FinderController[] controllers = new FinderController[1];
     private static FinderModel model;
     private static FinderView view;
     public FinderController() {
+        FragenController controller = new FragenController();
         model = new FinderModel();
         view = FinderView.factory();
     }

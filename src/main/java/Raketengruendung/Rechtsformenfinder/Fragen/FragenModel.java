@@ -1,21 +1,70 @@
 package Raketengruendung.Rechtsformenfinder.Fragen;
 
+import Raketengruendung.Exceptions.TooManyChildrenException;
+
 public class FragenModel {
-    public String Frage;
+    Frage frage1;
+    Frage frage2_1, frage2_2;
+    Frage frage3_1_1, frage3_1_2, frage3_2_1, frage3_2_2,frage3_3_1, frage3_3_2,frage3_4_1, frage3_4_2;
+    Frage frage4;
+    Frage frage5;
+    Frage frage6;
+    Frage frage7;
+    public FragenModel() {
 
-    public String Antwort_1;
+        frage1 = new Frage("Wie viele Gründer gibt es?", null);
 
-    public String Antwort_2;
+        frage2_1 = new Frage("Soll es eine persönliche Haftung geben?", "1");
+        frage2_2 = new Frage("Soll es eine persönliche Haftung geben?", "2");
+        try {
+            frage1.addChild(frage2_1);
+        } catch (TooManyChildrenException e) {
+            System.out.println(e.getMessage());
+        }
+        try {
+            frage1.addChild(frage2_2);
+        } catch (TooManyChildrenException e) {
+            System.out.println(e.getMessage());
+        }
 
-    public String Antwort_3;
+        frage3_1_1 = new Frage("EinzelU", "ja");
+        frage3_1_2 = new Frage("Gibt es eine Stammeinlage?", "nein");
+        try {
+            frage2_1.addChild(frage3_1_1);
+        } catch (TooManyChildrenException e) {
+            e.printStackTrace();
+        }
+        try {
+            frage2_1.addChild(frage3_1_2);
+        } catch (TooManyChildrenException e) {
+            e.printStackTrace();
+        }
 
-    public String Antwort_4;
+        frage3_2_1 = new Frage("Gibt es eine Stammeinlage?", "ja");
+        frage3_2_2 = new Frage("Gibt es eine Stammeinlage?", "nein");
+        try {
+            frage2_2.addChild(frage3_2_1);
+        } catch (TooManyChildrenException e) {
+            e.printStackTrace();
+        }
+        try {
+            frage2_2.addChild(frage3_2_2);
+        } catch (TooManyChildrenException e) {
+            e.printStackTrace();
+        }
 
-    public FragenModel (String frage, String antwort_1, String antwort_2, String antwort_3, String antwort_4) {
-        this.Antwort_1 = antwort_1;
-        this.Antwort_2 = antwort_2;
-        this.Antwort_3 = antwort_3;
-        this.Antwort_4 = antwort_4;
-        this.Frage = frage;
+
+        /**frage5 = new FragenModel("Einlagenhöhe?", ">25.000", "<25.000");
+        frage5 = new FragenModel("Einlagenhöhe?", "=25.000", "=50.000", "<25.000");
+        frage6 = new FragenModel("Buchführung?", "Buchführung nach EÜR, Bilanzierungspflicht, Offenlegung Jahresabschluss", "Bilanzierungspflicht", "Nein");
+        frage7 = new FragenModel("Buchführung?", "Bilanzierungspflicht", "Nein");*/
+    }
+
+    public Frage getFrage(Frage frage) {
+        return frage;
+    }
+
+    public Frage getFrage() {
+        return frage1;
     }
 }
