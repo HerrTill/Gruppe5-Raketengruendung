@@ -1,6 +1,5 @@
 package Raketengruendung.Homescreen;
 
-import Raketengruendung.Initial.Window;
 import Raketengruendung.RaketengruendungView;
 
 import javax.swing.*;

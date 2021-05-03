@@ -1,8 +1,5 @@
 package Raketengruendung.Homescreen;
 
-import Raketengruendung.Rechtsformenfinder.FinderController;
-import Raketengruendung.Rechtsformenfinder.FinderView;
-
 public class HomescreenModel {
     private static HomescreenModel[] models = new HomescreenModel[1];
     public HomescreenModel() {

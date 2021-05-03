@@ -4,7 +4,6 @@ package Raketengruendung;
 import Raketengruendung.Homescreen.HomescreenController;
 import Raketengruendung.Homescreen.HomescreenView;
 import Raketengruendung.Initial.Window;
-import Raketengruendung.Rechtsformenfinder.FinderController;
 import Raketengruendung.Rechtsformenfinder.FinderView;
 
 import javax.swing.*;
@@ -31,7 +30,7 @@ public class RaketengruendungView {
         home = homescreenController.getView();
         window.add(home);
 
-        window.setVisible(true);
+        Window.update();
     }
 
     public static void loadRechtsformenfinder() {
@@ -44,6 +43,6 @@ public class RaketengruendungView {
         finder = FinderView.factory();
         window.add(finder);
 
-        window.setVisible(true);
+        Window.update();
     }
 }

@@ -15,7 +15,12 @@ public class Window extends JFrame {
         return screens[0];
     }
     public static void update(){
+        if (screens[0] == null) {
+            Window.factory();
+        }
+
         screens[0].setVisible(true);
+        SwingUtilities.updateComponentTreeUI(screens[0]);
         System.out.println("done");
     }
 }

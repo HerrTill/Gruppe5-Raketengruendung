@@ -1,9 +1,5 @@
 package Raketengruendung.Homescreen;
 
-import Raketengruendung.Initial.Window;
-import Raketengruendung.Rechtsformenfinder.FinderController;
-import Raketengruendung.Rechtsformenfinder.FinderView;
-
 public class HomescreenController {
     private static HomescreenController[] controllers = new HomescreenController[1];
     private static HomescreenView view;

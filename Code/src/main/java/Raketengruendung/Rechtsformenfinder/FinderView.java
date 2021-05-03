@@ -1,8 +1,7 @@
 package Raketengruendung.Rechtsformenfinder;
 
 import Raketengruendung.Initial.Window;
-import Raketengruendung.Rechtsformenfinder.Fragen.FragenModel;
-import Raketengruendung.Rechtsformenfinder.Fragen.FragenView;
+import Raketengruendung.Rechtsformenfinder.Fragen.FragenController;
 import Raketengruendung.Rechtsformenfinder.initial.FinderLayout;
 import Raketengruendung.Rechtsformenfinder.initial.Startscreen;
 
@@ -23,9 +22,8 @@ public class FinderView extends JPanel {
         views[0].removeAll();
         views[0].setLayout(new GridLayout(2,1));
         views[0].add(layout);
-        FragenModel frage1 = views[0].model.getFrage1();
-        FragenView frage = new FragenView(frage1);
-        views[0].add(frage);
+
+        views[0].add(FragenController.getView());
         Window.update();
     }
 
