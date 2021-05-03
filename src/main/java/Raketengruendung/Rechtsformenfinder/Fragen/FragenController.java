@@ -1,6 +1,5 @@
 package Raketengruendung.Rechtsformenfinder.Fragen;
 
-import Raketengruendung.Rechtsformenfinder.FinderView;
 
 public class FragenController {
     private static FragenController[] controllers = new FragenController[1];
@@ -24,6 +23,11 @@ public class FragenController {
 
     public static void nextQuestion(Frage frage){
         System.out.println("Nächste Frage:"+ frage.getQuestion());
-        FragenController.view.loadQuestion(frage);
+        view.loadQuestion(frage);
+    }
+
+    public static void loadRechtsform(String rechtsform) {
+        view.loadRechtsform();
+        System.out.println("Rechtsform = " +rechtsform);
     }
 }

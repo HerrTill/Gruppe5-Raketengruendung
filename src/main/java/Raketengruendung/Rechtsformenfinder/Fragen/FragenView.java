@@ -1,6 +1,7 @@
 package Raketengruendung.Rechtsformenfinder.Fragen;
 
 import Raketengruendung.Initial.Window;
+import Raketengruendung.Rechtsformenfinder.Rechtsform;
 import Raketengruendung.Rechtsformenfinder.initial.FinderLayout;
 
 import javax.swing.*;
@@ -23,47 +24,45 @@ public class FragenView extends JPanel {
 
     public void loadQuestion(Frage frage) {
         this.removeAll();
-        this.setText(frage);
-
-        this.add(LabelFrage);
-        this.setLayout(new GridLayout(2,1));
-        JPanel antworten = new JPanel();
-
-        antwort1.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                FragenController.nextQuestion(answers[0]);
-            }
-        });
-        antworten.add(antwort1);
-
-        antwort2.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                FragenController.nextQuestion(answers[1]);
-            }
-        });
-        antworten.add(antwort2);
-
-        if (antwort3.getText() != ""){
-            antwort3.addActionListener(new ActionListener() {
-                @Override
-                public void actionPerformed(ActionEvent e) {
-                    FragenController.nextQuestion(answers[2]);
-                }
-            });
-            antworten.add(antwort3);
-            antworten.setLayout(new GridLayout(1,3));
+        this.revalidate();
+        if (frage.children[0] == null){
+            FragenController.loadRechtsform(frage.Frage);
         } else {
-            antworten.setLayout(new GridLayout(1,2));
-        }
+            this.setText(frage);
+            this.add(LabelFrage);
+            this.setLayout(new GridLayout(2, 1));
+            JPanel antworten = new JPanel();
 
-        this.add(antworten);
-this.revalidate();
+            antwort1.addActionListener(e -> FragenController.nextQuestion(answers[0]));
+            antworten.add(antwort1);
+
+            antwort2.addActionListener(e -> FragenController.nextQuestion(answers[1]));
+            antworten.add(antwort2);
+
+            if (!antwort3.getText().equals("")) {
+                antwort3.addActionListener(e -> FragenController.nextQuestion(answers[2]));
+                antworten.add(antwort3);
+                antworten.setLayout(new GridLayout(1, 3));
+            } else {
+                antworten.setLayout(new GridLayout(1, 2));
+            }
+
+            this.add(antworten);
+
+
+            Window.update();
+
+        }
+    }
+
+    public void loadRechtsform() {
+        Rechtsform rechtsform = new Rechtsform();
+        this.add(rechtsform);
         Window.update();
     }
 
     void setText(Frage frage) {
+        this.clearAnswers();
         this.LabelFrage.setText(frage.Frage);
         for (int i = 0; i < frage.children.length; i++) {
             if (frage.children[i] != null) {
@@ -76,5 +75,11 @@ this.revalidate();
             this.antwort3.setText(answers[2].getAnswer());
         }
 
+    }
+
+    void clearAnswers() {
+        this.answers[0] = null;
+        this.answers[1] = null;
+        this.answers[2] = null;
     }
 }

@@ -20,6 +20,7 @@ public class Window extends JFrame {
         }
 
         screens[0].setVisible(true);
+        SwingUtilities.updateComponentTreeUI(screens[0]);
         System.out.println("done");
     }
 }
