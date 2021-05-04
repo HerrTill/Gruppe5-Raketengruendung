@@ -1,6 +1,6 @@
 package Raketengruendung.Rechtsformenfinder.initial;
 
-import Raketengruendung.RaketengruendungView;
+import Raketengruendung.Master.MasterView;
 import Raketengruendung.Rechtsformenfinder.FinderView;
 
 import javax.swing.*;
@@ -32,7 +32,7 @@ public class Startscreen extends JPanel {
             }
             if (e.getSource() == back) {
                 System.out.println("back");
-                RaketengruendungView.loadHomescreen();
+//                MasterView.loadHomescreen();
             }
         }
     }

@@ -1,6 +1,6 @@
 package Raketengruendung.Rechtsformenfinder;
 
-import Raketengruendung.Initial.Window;
+import Raketengruendung.Master.Initial.Window;
 import Raketengruendung.Rechtsformenfinder.Fragen.FragenController;
 import Raketengruendung.Rechtsformenfinder.initial.FinderLayout;
 import Raketengruendung.Rechtsformenfinder.initial.Startscreen;

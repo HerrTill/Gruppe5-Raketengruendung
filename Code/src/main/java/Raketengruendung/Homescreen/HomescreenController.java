@@ -1,25 +1,21 @@
 package Raketengruendung.Homescreen;
 
+import Raketengruendung.Master.MasterController;
+
 public class HomescreenController {
-    private static HomescreenController[] controllers = new HomescreenController[1];
-    private static HomescreenView view;
-    private static HomescreenModel model;
+    private MasterController parent;
+    private HomescreenView view;
+    private HomescreenModel model;
 
-    public HomescreenController() {
-        model = HomescreenModel.factory();
-        view = new HomescreenView(model);
+    public HomescreenController(MasterController parent, HomescreenModel homescreenModel, HomescreenView homescreenView) {
+        this.parent = parent;
+        this.model = homescreenModel;
+        this.view = homescreenView;
+        initListener();
+    }
 
-    }
-    public static HomescreenView getView() {
-        return view;
-    }
-    public static HomescreenModel getModel() {
-        return model;
-    }
-    public static HomescreenController factory() {
-        if (controllers[0] == null) {
-            controllers[0] = new HomescreenController();
-        }
-        return controllers[0];
+    public void initListener() {
+        view.getBut1().addActionListener(e->parent.loadFinder());
+        // buttons implementation missing for But 2 and 3
     }
 }

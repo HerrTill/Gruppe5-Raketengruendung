@@ -1,4 +1,4 @@
-package Raketengruendung.Initial;
+package Raketengruendung.Master.Initial;
 
 import javax.swing.*;
 

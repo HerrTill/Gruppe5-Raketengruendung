@@ -1,6 +1,6 @@
 package Raketengruendung.Rechtsformenfinder.Fragen;
 
-import Raketengruendung.Initial.Window;
+import Raketengruendung.Master.Initial.Window;
 import Raketengruendung.Rechtsformenfinder.Rechtsform;
 
 import javax.swing.*;
