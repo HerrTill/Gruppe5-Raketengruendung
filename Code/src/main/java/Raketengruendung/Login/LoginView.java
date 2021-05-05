@@ -4,8 +4,10 @@ package Raketengruendung.Login;
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
+import java.util.ResourceBundle;
 
 public class LoginView extends JPanel {
+    private ResourceBundle resourceBundle = ResourceBundle.getBundle("LOGIN");
 
     private JTextField textField;
     private JPasswordField passwordField;
@@ -14,7 +16,7 @@ public class LoginView extends JPanel {
 
     public LoginView() {
         this.setLayout(null);
-        JLabel lblNewLabel = new JLabel("Login");
+        JLabel lblNewLabel = new JLabel(resourceBundle.getString("login"));
         lblNewLabel.setForeground(Color.BLACK);
         lblNewLabel.setFont(new Font("Times New Roman", Font.PLAIN, 46));
         lblNewLabel.setBounds(423, 13, 273, 93);
@@ -31,21 +33,21 @@ public class LoginView extends JPanel {
         passwordField.setBounds(481, 286, 281, 68);
         this.add(passwordField);
 
-        JLabel lblUsername = new JLabel("Username");
+        JLabel lblUsername = new JLabel(resourceBundle.getString("username"));
         lblUsername.setBackground(Color.BLACK);
         lblUsername.setForeground(Color.BLACK);
         lblUsername.setFont(new Font("Tahoma", Font.PLAIN, 31));
         lblUsername.setBounds(250, 166, 193, 52);
         this.add(lblUsername);
 
-        JLabel lblPassword = new JLabel("Password");
+        JLabel lblPassword = new JLabel(resourceBundle.getString("password"));
         lblPassword.setForeground(Color.BLACK);
         lblPassword.setBackground(Color.CYAN);
         lblPassword.setFont(new Font("Tahoma", Font.PLAIN, 31));
         lblPassword.setBounds(250, 286, 193, 52);
         this.add(lblPassword);
 
-        btnNewButton = new JButton("Login");
+        btnNewButton = new JButton(resourceBundle.getString("login"));
         btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 26));
         btnNewButton.setBounds(545, 392, 162, 73);
 

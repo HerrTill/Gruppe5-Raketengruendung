@@ -1,8 +1,10 @@
 package Raketengruendung.Rechtsformenfinder;
 
 import javax.swing.*;
+import java.util.ResourceBundle;
 
 public class FinderView extends JPanel {
+    private ResourceBundle resourceBundle = ResourceBundle.getBundle("FINDER");
     private JButton start;
     private JButton back;
 
@@ -13,11 +15,11 @@ public class FinderView extends JPanel {
     public JPanel Startscreen() {
         JPanel startscreen = new JPanel();
         JLabel welcome = new JLabel();
-        welcome.setText("Willkommen beim Rechtsformenfinder");
+        welcome.setText(resourceBundle.getString("welcome"));
         start = new JButton();
-        start.setText("Starten");
+        start.setText(resourceBundle.getString("start"));
         back = new JButton();
-        back.setText("Hauptmenü");
+        back.setText(resourceBundle.getString("home"));
         startscreen.add(welcome);
         startscreen.add(start);
         startscreen.add(back);

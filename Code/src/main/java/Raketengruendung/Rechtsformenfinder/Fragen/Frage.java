@@ -3,34 +3,49 @@ package Raketengruendung.Rechtsformenfinder.Fragen;
 import Raketengruendung.Rechtsformenfinder.Exceptions.TooManyChildrenException;
 
 public class Frage {
-    public Frage[] children = new Frage[3];
-    public String Frage;
+    private Frage[] children = new Frage[3];
+    public String question;
 
-    public String Antwort_1;
+    public String answer;
 
-    public Frage (String frage, String antwort_1) {
-        this.Antwort_1 = antwort_1;
-        this.Frage = frage;
+    public Frage(String question, String answer) {
+        this.answer = answer;
+        this.question = question;
     }
 
     public String getAnswer() {
-        return Antwort_1;
+        return answer;
     }
+
     public String getQuestion() {
-        return Frage;
+        return question;
     }
+
+    public Frage getChildren1() {
+        return children[1];
+    }
+
+    public Frage[] getChildren() {
+        return children;
+    }
+
+    public Frage getChildren2() {
+        return children[2];
+    }
+    public Frage getChildren0() {
+        return children[0];
+    }
+
 
     public void addChild(Frage child) throws TooManyChildrenException {
-        if (this.children[0] == null){
+        if (this.children[0] == null) {
             this.children[0] = child;
-
         } else if (this.children[1] == null) {
             this.children[1] = child;
-        }else if (this.children[2] == null) {
+        } else if (this.children[2] == null) {
             this.children[2] = child;
         } else {
             throw new TooManyChildrenException("Too many Children added");
         }
-        //child.setParent(this);
     }
 }

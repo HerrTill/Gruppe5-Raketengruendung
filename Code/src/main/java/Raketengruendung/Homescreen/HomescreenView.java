@@ -2,24 +2,23 @@ package Raketengruendung.Homescreen;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.ResourceBundle;
 
 public class HomescreenView extends JPanel {
-/*    private static final String RESOURCE_BUNDLE_PATH = "i18n/homescreen/homescreen"; //NON-NLS
-    private final ResourceBundle resourceBundle;*/
+    private  ResourceBundle resourceBundle = ResourceBundle.getBundle("HOME");
 
     private JButton but1;
     private JButton but2;
     private JButton but3;
 
     public HomescreenView() {
-//        resourceBundle = ResourceBundle.getBundle(RESOURCE_BUNDLE_PATH);
         but1 = new JButton();
         but2 = new JButton();
         but3 = new JButton();
-//        String but = resourceBundle.getString("finder");
-    /*    but1.setText(but);
-        but2.setText(resourceBundle.getString("neue") + " Gründung");
-        but3.setText("Laufende Gründungen");*/
+
+        but1.setText(resourceBundle.getString("finder"));
+        but2.setText(resourceBundle.getString("new_founding"));
+        but3.setText(resourceBundle.getString("current_foundings"));
         this.setLayout(new GridLayout(3, 1));
         this.add(but1);
         this.add(but2);

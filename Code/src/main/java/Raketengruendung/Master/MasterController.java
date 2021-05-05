@@ -9,14 +9,12 @@ import Raketengruendung.Login.LoginView;
 import Raketengruendung.Rechtsformenfinder.FinderController;
 import Raketengruendung.Rechtsformenfinder.FinderModel;
 import Raketengruendung.Rechtsformenfinder.FinderView;
-import Raketengruendung.Rechtsformenfinder.Fragen.Frage;
-import Raketengruendung.Rechtsformenfinder.Fragen.FragenModel;
-import Raketengruendung.Rechtsformenfinder.Fragen.FragenView;
-import Raketengruendung.Rechtsformenfinder.RechtsformView;
 
 import javax.swing.*;
+import java.util.ResourceBundle;
 
 public class MasterController {
+    private ResourceBundle resourceBundle = ResourceBundle.getBundle("MASTER");
     private MasterModel masterModel;
     private MasterView view;
 
@@ -27,6 +25,8 @@ public class MasterController {
     }
 
     public void initView() {
+        view.getFrame().setTitle(resourceBundle.getString("raketengruendung") + resourceBundle.getString("login"));
+
         LoginModel loginModel = new LoginModel();
         LoginView loginView = new LoginView();
         LoginController loginController = new LoginController(this, loginModel, loginView);
@@ -34,7 +34,7 @@ public class MasterController {
     }
 
     public void loadHomescreen() {
-        view.getFrame().setTitle("Raketengründung - Home");
+        view.getFrame().setTitle(resourceBundle.getString("raketengruendung") + resourceBundle.getString("home"));
         view.getFrame().setSize(400,300);
 
         HomescreenModel homescreenModel = new HomescreenModel();
@@ -43,7 +43,7 @@ public class MasterController {
         changePanel(homescreenView);
     }
     public void loadFinder() {
-        view.getFrame().setTitle("Raketengründung - Finder");
+        view.getFrame().setTitle(resourceBundle.getString("raketengruendung")+resourceBundle.getString("finder"));
         view.getFrame().setExtendedState(JFrame.MAXIMIZED_BOTH);
 
         FinderModel finderModel = new FinderModel();
@@ -60,57 +60,4 @@ public class MasterController {
         view.getFrame().add(panel);
         SwingUtilities.updateComponentTreeUI(view.getFrame());
     }
-
-
-
-/*    public MasterModel getModel() {
-        return masterModel;
-    }
-
-    public MasterView getView() {
-        return view;
-    }*/
-
-   /* public static void loadHomescreen() {
-        window = Window.factory();
-        window.getContentPane().removeAll();
-
-        window.setTitle("Raketengründung");
-        window.setSize(500, 500);
-
-        HomescreenController homescreenController = HomescreenController.factory();
-        home = homescreenController.getView();
-        window.add(home);
-
-        Window.update();
-    }
-
-    public static void loadRechtsformenfinder() {
-        window = Window.factory();
-        window.remove(home);
-
-        window.setTitle("Raketengründung - Rechtsformenfinder");
-        window.setExtendedState(JFrame.MAXIMIZED_BOTH);
-
-        finder = FinderView.factory();
-        window.add(finder);
-
-        Window.update();
-    }
-
-    public static void loadLogin() {
-        window = Window.factory();
-        window.getContentPane().removeAll();
-
-        window.setTitle("Raketengründung - Login");
-
-        window.setBounds(450, 190, 1014, 597);
-        window.setResizable(false);
-
-        LoginController loginController = LoginController.factory();
-        login = loginController.getView();
-        window.add(login);
-
-        Window.update();
-    }*/
 }

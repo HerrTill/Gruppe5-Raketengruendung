@@ -4,6 +4,8 @@ package Raketengruendung.Rechtsformenfinder.Fragen;
 import Raketengruendung.Rechtsformenfinder.FinderController;
 import Raketengruendung.Rechtsformenfinder.RechtsformView;
 
+import java.awt.event.ActionListener;
+
 public class FragenController {
     private FragenModel model;
     private FragenView view;
@@ -14,34 +16,43 @@ public class FragenController {
         this.finderController = parent;
         this.model = model;
         this.view = view;
+        view.setText(model.getFirstQuestion());
         initListener();
     }
 
     public void initListener() {
-        view.setText(model.getFrage());
-
         Frage[] answers = view.getAnswers();
-        view.getAntwort1().addActionListener(e -> nextQuestion(answers[0]));
-        view.getAntwort2().addActionListener(e -> nextQuestion(answers[1]));
-        if (answers[2] == null) {
-            view.getAntwort3().addActionListener(e -> nextQuestion(answers[2]));
+        for (ActionListener al : view.getAntwort1().getActionListeners()) {
+            view.getAntwort1().removeActionListener(al);
+        }
+        for (ActionListener al : view.getAntwort2().getActionListeners()) {
+            view.getAntwort2().removeActionListener(al);
+        }
+
+        view.getAntwort1().addActionListener(e -> nextQuestion(view.getAnswers()[0]));
+        view.getAntwort2().addActionListener(e -> nextQuestion(view.getAnswers()[1]));
+        if (answers[2] != null) {
+            view.getAntwort3().addActionListener(e -> nextQuestion(view.getAnswers()[2]));
         }
     }
 
     public void nextQuestion(Frage frage){
         System.out.println("Nächste Frage:"+ frage.getQuestion());
-        if (frage.children[0] == null){
+        if (frage.getChildren()[0] == null){
             System.out.println("Ist Rechtsform");
-            loadRechtsform(frage.Frage);
+            loadRechtsform(frage.question);
         } else {
+
             view.setText(frage);
-            finderController.getMasterController().changePanel(view);
+            initListener();
+//            finderController.getMasterController().changePanel(view);
         }
+
     }
 
     public void loadRechtsform(String rechtsform) {
         System.out.println("Rechtsform = " +rechtsform);
-        this.rechtsform = new RechtsformView();
+        this.rechtsform = new RechtsformView(rechtsform);
         finderController.getMasterController().changePanel(this.rechtsform);
     }
 }

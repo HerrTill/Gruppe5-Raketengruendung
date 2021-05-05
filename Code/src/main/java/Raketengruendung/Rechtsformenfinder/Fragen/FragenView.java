@@ -29,12 +29,23 @@ public class FragenView extends JPanel {
 
     }
 
+    public void addButtons() {
+        answerPanel.add(antwort1);
+        answerPanel.add(antwort2);
+        if (!antwort3.getText().equals("")) {
+            answerPanel.add(antwort3);
+            answerPanel.setLayout(new GridLayout(1, 3));
+        } else {
+            answerPanel.setLayout(new GridLayout(1,2));
+        }
+    }
+
     void setText(Frage frage) {
         this.clearAnswers();
-        this.question.setText(frage.Frage);
-        for (int i = 0; i < frage.children.length; i++) {
-            if (frage.children[i] != null) {
-                answers[i] = frage.children[i];
+        this.question.setText(frage.question);
+        for (int i = 0; i < frage.getChildren().length; i++) {
+            if (frage.getChildren()[i] != null) {
+                answers[i] = frage.getChildren()[i];
             }
         }
         this.antwort1.setText(answers[0].getAnswer());
@@ -42,9 +53,8 @@ public class FragenView extends JPanel {
         if (answers[2] != null) {
             this.antwort3.setText(answers[2].getAnswer());
         }
-
+        addButtons();
     }
-
     void clearAnswers() {
         this.answers[0] = null;
         this.answers[1] = null;

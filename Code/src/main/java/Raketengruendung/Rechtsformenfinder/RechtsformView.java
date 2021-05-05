@@ -4,8 +4,8 @@ import javax.swing.*;
 
 public class RechtsformView extends JPanel {
 
-    public RechtsformView() {
-        JLabel titel = new JLabel("EinzelU");
+    public RechtsformView(String string) {
+        JLabel titel = new JLabel(string);
         this.add(titel);
     }
 
