@@ -110,48 +110,6 @@ public class Register extends JFrame {
         contentPane.add(passwordField);
 
         btnNewButton = new JButton("Register");
-        btnNewButton.addActionListener(e -> {
-            String firstName = firstname.getText();
-            String lastName = lastname.getText();
-            String emailId = email.getText();
-            String userName = username.getText();
-            String mobileNumber = mob.getText();
-            int len = mobileNumber.length();
-            String password = passwordField.getText();
-            String msg = "" + firstName;
-            msg += " \n";
-
-            if (firstName.isEmpty() || lastName.isEmpty() || emailId.isEmpty() || userName.isEmpty() || mobileNumber.isEmpty() || password.isEmpty()) {
-                JOptionPane.showMessageDialog(btnNewButton, "All columns have to be filled in");
-            }else if (len != 10){
-                JOptionPane.showMessageDialog(btnNewButton, "Enter a valid mobile number");
-            }else{
-                try {
-                    String url = "jdbc:mariadb://localhost:3306/tutorial";
-                    String user = "root";
-                    String pwd = "BananenSplit69";
-                    Connection connection = DriverManager.getConnection(url, user, pwd);
-
-                    System.out.println("Successfully Connected");
-
-                    String query = "INSERT INTO account values('" + firstName + "','" + lastName + "','" + userName + "','" + password + "','" + mobileNumber + "','" + emailId + "')";
-
-                    Statement statement = connection.createStatement();
-                    int x = statement.executeUpdate(query);
-                    if (x == 0) {
-                        JOptionPane.showMessageDialog(btnNewButton, "This already exist");
-                    } else {
-                        JOptionPane.showMessageDialog(btnNewButton, "Welcome, " + msg + "Your account is sucessfully created. Now please login with your username and password");
-                    }
-                    connection.close();
-                    dispose();
-                    //hier muss dann der Konstruktor der FirstScreen aufgerufen werden (damit man sich anmelden kann)
-                } catch (Exception exception) {
-                    System.out.println("Connection failed");
-                    exception.printStackTrace();
-                }
-            }
-        });
         btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 22));
         btnNewButton.setBounds(399, 447, 259, 74);
         btnNewButton.setBackground(new java.awt.Color(0, 0, 91));

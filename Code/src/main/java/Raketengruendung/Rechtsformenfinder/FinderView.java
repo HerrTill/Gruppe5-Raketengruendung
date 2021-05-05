@@ -6,18 +6,28 @@ import java.util.ResourceBundle;
 public class FinderView extends JPanel {
     private ResourceBundle resourceBundle = ResourceBundle.getBundle("FINDER");
     private JButton start;
-    private JButton back;
+    private JButton home;
+    private JLabel welcome = new JLabel();
 
     public FinderView() {
-        JLabel welcome = new JLabel();
+        this.setLayout(null);
+
+        //willkommen auf der Seite
         welcome.setText(resourceBundle.getString("welcome"));
+        welcome.setBounds(670, 13, 273, 93);
+        this.add(welcome);
+
+        //Button start
         start = new JButton();
         start.setText(resourceBundle.getString("start"));
-        back = new JButton();
-        back.setText(resourceBundle.getString("home"));
-        this.add(welcome);
+        start.setBounds(700, 200, 160, 30);
         this.add(start);
-        this.add(back);
+
+        //Button zurück zum Hauptmenü
+        home = new JButton();
+        home.setText(resourceBundle.getString("home"));
+        home.setBounds(700, 300, 160, 30);
+        this.add(home);
     }
 
     public JButton getStart() {
@@ -28,11 +38,11 @@ public class FinderView extends JPanel {
         this.start = start;
     }
 
-    public JButton getBack() {
-        return back;
+    public JButton getHome() {
+        return home;
     }
 
-    public void setBack(JButton back) {
-        this.back = back;
+    public void setHome(JButton home) {
+        this.home = home;
     }
 }

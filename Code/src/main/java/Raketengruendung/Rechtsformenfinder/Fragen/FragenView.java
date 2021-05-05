@@ -7,36 +7,51 @@ public class FragenView extends JPanel {
     private Frage[] answers = new Frage[3];
     private JLabel question = new JLabel();
 
-    private JPanel answerPanel = new JPanel();
     private JButton antwort1 = new JButton();
     private JButton antwort2 = new JButton();
     private JButton antwort3 = new JButton();
+    private JButton mainMenu = new JButton();
+    private JButton back = new JButton();
+
     public FragenView() {
-        this.setLayout(new GridLayout(2,1));
+        this.setLayout(null);
+
+        //JLabel Frage oben
+        question.setBounds(700, 150, 193, 52);
         this.add(question);
 
-        answerPanel.add(antwort1);
-        answerPanel.add(antwort2);
-        if (!antwort3.getText().equals("")) {
-            answerPanel.add(antwort3);
-            answerPanel.setLayout(new GridLayout(1, 3));
-        } else {
-            answerPanel.setLayout(new GridLayout(1,2));
-        }
+        //Hauptmenü Button
+        mainMenu.setBounds(700, 300, 160, 30);
+        this.add(mainMenu);
 
+        //"Zurück Button
+        back.setBounds(700, 350, 160, 30);
+        this.add(back);
 
-        this.add(answerPanel);
-
+        //Alle Buttons für Antworten hinzufügen
+        this.addButtons();
     }
 
     public void addButtons() {
-        answerPanel.add(antwort1);
-        answerPanel.add(antwort2);
         if (!antwort3.getText().equals("")) {
-            answerPanel.add(antwort3);
-            answerPanel.setLayout(new GridLayout(1, 3));
+            //Button 1
+            antwort1.setBounds(700, 200, 190, 50);
+            this.add(antwort1);
+
+            //Button2
+            antwort2.setBounds(700, 250, 190, 50);
+            this.add(antwort2);
+
+            //Button 3
+            this.add(antwort3);
         } else {
-            answerPanel.setLayout(new GridLayout(1,2));
+            //Button 1
+            antwort1.setBounds(700, 200, 190, 50);
+            this.add(antwort1);
+
+            //Button2
+            antwort2.setBounds(700, 250, 190, 50);
+            this.add(antwort2);
         }
     }
 

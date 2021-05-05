@@ -41,7 +41,8 @@ public class MasterController {
 
     public void loadHomescreen() {
         view.getFrame().setTitle(resourceBundle.getString("raketengruendung") + resourceBundle.getString("home"));
-        view.getFrame().setSize(400,300);
+        view.getFrame().setResizable(false);
+        view.getFrame().setBounds(450, 190, 1000, 600);
 
         HomescreenModel homescreenModel = new HomescreenModel();
         HomescreenView homescreenView = new HomescreenView();
@@ -50,7 +51,8 @@ public class MasterController {
     }
     public void loadFinder() {
         view.getFrame().setTitle(resourceBundle.getString("raketengruendung")+resourceBundle.getString("finder"));
-        view.getFrame().setExtendedState(JFrame.MAXIMIZED_BOTH);
+        view.getFrame().setResizable(false);
+        view.getFrame().setBounds(450, 190, 1000, 600);
 
         FinderModel finderModel = new FinderModel();
         FinderView finderView = new FinderView();

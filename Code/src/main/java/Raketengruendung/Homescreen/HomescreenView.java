@@ -10,19 +10,26 @@ public class HomescreenView extends JPanel {
     private JButton but1;
     private JButton but2;
     private JButton but3;
+    private JButton but4;
 
     public HomescreenView() {
         but1 = new JButton();
-        but2 = new JButton();
-        but3 = new JButton();
-
         but1.setText(resourceBundle.getString("finder"));
-        but2.setText(resourceBundle.getString("new_founding"));
-        but3.setText(resourceBundle.getString("current_foundings"));
-        this.setLayout(new GridLayout(3, 1));
         this.add(but1);
+
+        but2 = new JButton();
+        but2.setText(resourceBundle.getString("new_founding"));
         this.add(but2);
+
+        but3 = new JButton();
+        but3.setText(resourceBundle.getString("current_foundings"));
         this.add(but3);
+
+        but4 = new JButton();
+        but4.setText(resourceBundle.getString("current_foundings"));
+        this.add(but4);
+
+        this.setLayout(new GridLayout(4, 1));
 
     }
 

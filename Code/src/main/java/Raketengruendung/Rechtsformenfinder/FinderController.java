@@ -22,7 +22,7 @@ public class FinderController {
 
     public void initListener() {
         view.getStart().addActionListener(e->startFinder());
-        view.getBack().addActionListener(e->loadHomescreen());
+        view.getHome().addActionListener(e->loadHomescreen());
     }
 
     public void startFinder() {
