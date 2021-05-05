@@ -9,21 +9,15 @@ public class FinderView extends JPanel {
     private JButton back;
 
     public FinderView() {
-        this.add(Startscreen());
-    }
-
-    public JPanel Startscreen() {
-        JPanel startscreen = new JPanel();
         JLabel welcome = new JLabel();
         welcome.setText(resourceBundle.getString("welcome"));
         start = new JButton();
         start.setText(resourceBundle.getString("start"));
         back = new JButton();
         back.setText(resourceBundle.getString("home"));
-        startscreen.add(welcome);
-        startscreen.add(start);
-        startscreen.add(back);
-        return startscreen;
+        this.add(welcome);
+        this.add(start);
+        this.add(back);
     }
 
     public JButton getStart() {

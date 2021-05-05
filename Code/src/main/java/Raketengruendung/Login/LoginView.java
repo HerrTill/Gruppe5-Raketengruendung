@@ -9,6 +9,7 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.util.Objects;
 import java.util.ResourceBundle;
 
 
@@ -26,8 +27,8 @@ public class LoginView extends JPanel {
         this.setBackground(new Color(17,9,48));
 
         //Hintergrund einfügen bei Anmeldeseiten
-//        try {
-//            BufferedImage myPicture = ImageIO.read(getClass().getResource("/main/resources/img/7.jpg"));
+//       try {
+//            BufferedImage myPicture = ImageIO.read(this.getClass().getResource("../img/7.jpg"));
 //            JLabel picLabel = new JLabel(new ImageIcon(myPicture));
 //            picLabel.setBounds(0, 0, 483, 580);
 //            this.add(picLabel);
