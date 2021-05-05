@@ -11,7 +11,7 @@ public class MasterModel {
 
     public MasterModel() {
         homescreenModel = new HomescreenModel();
-        finderModel = FinderModel.factory();
+        finderModel = new FinderModel();
         loginModel = new LoginModel();
     }
 
