@@ -1,37 +1,42 @@
 package Raketengruendung.Rechtsformenfinder;
 
-import Raketengruendung.Master.Initial.Window;
-import Raketengruendung.Rechtsformenfinder.Fragen.FragenController;
-import Raketengruendung.Rechtsformenfinder.initial.FinderLayout;
-import Raketengruendung.Rechtsformenfinder.initial.Startscreen;
-
 import javax.swing.*;
-import java.awt.*;
 
 public class FinderView extends JPanel {
-    static FinderView[] views = new FinderView[1];
-    private FinderModel model;
+    private JButton start;
+    private JButton back;
 
-    public FinderView(FinderModel model) {
-        this.model = model;
-        this.add(new Startscreen());
+    public FinderView() {
+        this.add(Startscreen());
     }
 
-    public static void startFinder() {
-        FinderLayout layout = new FinderLayout();
-        views[0].removeAll();
-        views[0].setLayout(new GridLayout(2,1));
-        views[0].add(layout);
-
-        views[0].add(FragenController.getView());
-        Window.update();
+    public JPanel Startscreen() {
+        JPanel startscreen = new JPanel();
+        JLabel welcome = new JLabel();
+        welcome.setText("Willkommen beim Rechtsformenfinder");
+        start = new JButton();
+        start.setText("Starten");
+        back = new JButton();
+        back.setText("Hauptmenü");
+        startscreen.add(welcome);
+        startscreen.add(start);
+        startscreen.add(back);
+        return startscreen;
     }
 
-    public static FinderView factory() {
-        if (views[0] == null) {
-            views[0] = new FinderView(FinderController.getModel());
-        }
-        return views[0];
+    public JButton getStart() {
+        return start;
     }
 
+    public void setStart(JButton start) {
+        this.start = start;
+    }
+
+    public JButton getBack() {
+        return back;
+    }
+
+    public void setBack(JButton back) {
+        this.back = back;
+    }
 }

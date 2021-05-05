@@ -6,6 +6,13 @@ import Raketengruendung.Homescreen.HomescreenView;
 import Raketengruendung.Login.LoginController;
 import Raketengruendung.Login.LoginModel;
 import Raketengruendung.Login.LoginView;
+import Raketengruendung.Rechtsformenfinder.FinderController;
+import Raketengruendung.Rechtsformenfinder.FinderModel;
+import Raketengruendung.Rechtsformenfinder.FinderView;
+import Raketengruendung.Rechtsformenfinder.Fragen.Frage;
+import Raketengruendung.Rechtsformenfinder.Fragen.FragenModel;
+import Raketengruendung.Rechtsformenfinder.Fragen.FragenView;
+import Raketengruendung.Rechtsformenfinder.RechtsformView;
 
 import javax.swing.*;
 
@@ -37,12 +44,12 @@ public class MasterController {
     }
     public void loadFinder() {
         view.getFrame().setTitle("Raketengründung - Finder");
-        view.getFrame().setSize(400,300);
+        view.getFrame().setExtendedState(JFrame.MAXIMIZED_BOTH);
 
-        HomescreenModel homescreenModel = new HomescreenModel();
-        HomescreenView homescreenView = new HomescreenView();
-        HomescreenController homescreenController = new HomescreenController(this, homescreenModel, homescreenView);
-        changePanel(homescreenView);
+        FinderModel finderModel = new FinderModel();
+        FinderView finderView = new FinderView();
+        FinderController finderController = new FinderController(this, finderModel, finderView);
+        changePanel(finderView);
     }
 
     public void changePanel(JPanel panel) {

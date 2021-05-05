@@ -1,6 +1,6 @@
 package Raketengruendung.Rechtsformenfinder.Fragen;
 
-import Raketengruendung.Exceptions.TooManyChildrenException;
+import Raketengruendung.Rechtsformenfinder.Exceptions.TooManyChildrenException;
 
 public class FragenModel {
     Frage frage1;
@@ -54,7 +54,7 @@ public class FragenModel {
         }
 
 
-        /**frage5 = new FragenModel("Einlagenhöhe?", ">25.000", "<25.000");
+      /*  frage5 = new FragenModel("Einlagenhöhe?", ">25.000", "<25.000");
         frage5 = new FragenModel("Einlagenhöhe?", "=25.000", "=50.000", "<25.000");
         frage6 = new FragenModel("Buchführung?", "Buchführung nach EÜR, Bilanzierungspflicht, Offenlegung Jahresabschluss", "Bilanzierungspflicht", "Nein");
         frage7 = new FragenModel("Buchführung?", "Bilanzierungspflicht", "Nein");*/

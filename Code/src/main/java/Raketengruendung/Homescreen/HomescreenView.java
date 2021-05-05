@@ -1,28 +1,31 @@
 package Raketengruendung.Homescreen;
 
-import Raketengruendung.Master.MasterView;
-import java.util.*;
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import java.util.*;
 
 public class HomescreenView extends JPanel {
+/*    private static final String RESOURCE_BUNDLE_PATH = "i18n/homescreen/homescreen"; //NON-NLS
+    private final ResourceBundle resourceBundle;*/
+    
     private JButton but1;
     private JButton but2;
     private JButton but3;
 
     public HomescreenView() {
+//        resourceBundle = ResourceBundle.getBundle(RESOURCE_BUNDLE_PATH);
         but1 = new JButton();
         but2 = new JButton();
         but3 = new JButton();
-        but1.setText("Rechtsformenfinder");
-        but2.setText("Neue Gründung");
-        but3.setText("Laufende Gründungen");
+//        String but = resourceBundle.getString("finder");
+    /*    but1.setText(but);
+        but2.setText(resourceBundle.getString("neue") + " Gründung");
+        but3.setText("Laufende Gründungen");*/
         this.setLayout(new GridLayout(3, 1));
         this.add(but1);
         this.add(but2);
         this.add(but3);
+
     }
 
     public JButton getBut1() {

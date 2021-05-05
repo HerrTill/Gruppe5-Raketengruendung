@@ -1,6 +1,6 @@
 package Raketengruendung.Rechtsformenfinder.Fragen;
 
-import Raketengruendung.Exceptions.TooManyChildrenException;
+import Raketengruendung.Rechtsformenfinder.Exceptions.TooManyChildrenException;
 
 public class Frage {
     public Frage[] children = new Frage[3];
