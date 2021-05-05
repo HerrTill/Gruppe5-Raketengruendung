@@ -26,6 +26,12 @@ public class MasterController {
 
     public void initView() {
         view.getFrame().setTitle(resourceBundle.getString("raketengruendung") + resourceBundle.getString("login"));
+        view.getFrame().setResizable(false);
+        view.getFrame().setBounds(450, 190, 1000, 600);
+
+        //Icon oben links verändern
+//        ImageIcon img = new ImageIcon("C:\\Users\\Günter\\Desktop\\7.jpg");
+//        setIconImage(img.getImage());
 
         LoginModel loginModel = new LoginModel();
         LoginView loginView = new LoginView();
