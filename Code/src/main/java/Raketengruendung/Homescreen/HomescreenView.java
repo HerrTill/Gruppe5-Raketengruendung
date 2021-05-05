@@ -2,12 +2,11 @@ package Raketengruendung.Homescreen;
 
 import javax.swing.*;
 import java.awt.*;
-import java.util.*;
 
 public class HomescreenView extends JPanel {
 /*    private static final String RESOURCE_BUNDLE_PATH = "i18n/homescreen/homescreen"; //NON-NLS
     private final ResourceBundle resourceBundle;*/
-    
+
     private JButton but1;
     private JButton but2;
     private JButton but3;
