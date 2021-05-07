@@ -9,9 +9,6 @@ public class FinderController {
     private FinderModel model;
     private FinderView view;
     private MasterController masterController;
-    private FragenModel fragenModel;
-    private FragenView fragenView;
-    private FragenController fragenController;
 
     public FinderController(MasterController parent, FinderModel model, FinderView view) {
         this.masterController = parent;
@@ -26,9 +23,9 @@ public class FinderController {
     }
 
     public void startFinder() {
-        fragenModel = new FragenModel();
-        fragenView = new FragenView();
-        fragenController = new FragenController(this, fragenModel, fragenView);
+        FragenModel fragenModel = new FragenModel();
+        FragenView fragenView = new FragenView();
+        FragenController fragenController = new FragenController(this, fragenModel, fragenView);
 
         masterController.changePanel(fragenView);
     }

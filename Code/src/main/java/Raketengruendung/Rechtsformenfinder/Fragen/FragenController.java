@@ -7,8 +7,10 @@ import Raketengruendung.Rechtsformenfinder.Rechstform.RechtsformModel;
 import Raketengruendung.Rechtsformenfinder.Rechstform.RechtsformView;
 
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 public class FragenController {
+    private ArrayList<Frage> previous_Questions = new ArrayList<>();
     private FragenModel model;
     private FragenView view;
     private FinderController finderController;
@@ -18,6 +20,7 @@ public class FragenController {
         this.finderController = parent;
         this.model = model;
         this.view = view;
+        addPrevious_Questions(model.getFirstQuestion());
         view.setText(model.getFirstQuestion());
         initListener();
     }
@@ -51,23 +54,31 @@ public class FragenController {
     }
 
     public void lastQuestion() {
-
+        if (previous_Questions.get(previous_Questions.size() - 1) == model.getFirstQuestion()) {
+            finderController.getMasterController().loadFinder();
+        } else {
+            Frage f = previous_Questions.get(previous_Questions.size()-2);
+            loadQuestion(f);
+        }
     }
 
     public void loadHomescreen() {
         finderController.getMasterController().loadHomescreen();
     }
 
+    public void loadQuestion(Frage frage) {
+        view.setText(frage);
+        initListener();
+    }
+
     public void nextQuestion(Frage frage){
+        addPrevious_Questions(frage);
         System.out.println("Nächste Frage:"+ frage.getQuestion());
         if (frage.getChildren()[0] == null){
             System.out.println("Ist Rechtsform");
             loadRechtsform(frage.question);
         } else {
-
-            view.setText(frage);
-            initListener();
-//            finderController.getMasterController().changePanel(view);
+            loadQuestion(frage);
         }
 
     }
@@ -78,5 +89,13 @@ public class FragenController {
         RechtsformView view = new RechtsformView();
         RechstformController controller = new RechstformController(this, model, view);
         finderController.getMasterController().changePanel(view);
+    }
+
+    public ArrayList<Frage> getPrevious_Questions() {
+        return previous_Questions;
+    }
+
+    public void addPrevious_Questions(Frage frage) {
+        this.previous_Questions.add(frage);
     }
 }

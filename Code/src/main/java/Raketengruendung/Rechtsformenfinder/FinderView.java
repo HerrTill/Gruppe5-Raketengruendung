@@ -32,7 +32,7 @@ public class FinderView extends JPanel {
         this.add(start);
 
         //Button zurück zum Hauptmenü
-        home.setText(resourceBundle.getString("home"));
+        home.setText(resourceBundle.getString("mainMenu"));
         home.setFont(new Font("Tahoma", Font.PLAIN, 21));
         home.setBounds(525, 300, 375, 200);
         home.setBackground(new Color(60,139,182));
