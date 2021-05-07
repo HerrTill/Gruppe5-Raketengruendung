@@ -21,7 +21,7 @@ public class HomescreenView extends JPanel {
         Das müsste letzendlich Till übernehmen (aber nur wenn es fertig ist)
         --> zB die Probleme mit setText und Maven
          */
-        JLabel willkommen = new JLabel("Herzlich Willkommen bei Raketengründung");
+        JLabel willkommen = new JLabel(resourceBundle.getString("welcome"));
         willkommen.setFont(new Font("Times New Roman", Font.BOLD + Font.ITALIC, 38));
         willkommen.setBounds(120, 50, 730, 150);
         willkommen.setBackground(new Color(60,139,182));
@@ -29,7 +29,7 @@ public class HomescreenView extends JPanel {
         this.add(willkommen);
 
 
-        String text = "Um herauszufinden welche Unternehmensform für Sie geeignet ist klicken sie auf -Rechtsformenfinder-";
+        String text = resourceBundle.getString("finder-info") + resourceBundle.getString("finder");
 
         JLabel j1 = new JLabel("<html><div style='text-align: center;'>" + text + "</div></html>");
         j1.setFont(new Font("Tahoma", Font.PLAIN, 12));
@@ -40,7 +40,7 @@ public class HomescreenView extends JPanel {
         this.add(j1);
 
 
-        String text2 = "To found a new business click on -Create Business-";
+        String text2 = resourceBundle.getString("new_founding-info") +  resourceBundle.getString("new_founding");
 
         JLabel f = new JLabel("<html><div style='text-align: center;'>" + text2 + "</div></html>");
         f.setFont(new Font("Tahoma", Font.PLAIN, 12));
@@ -51,7 +51,7 @@ public class HomescreenView extends JPanel {
         this.add(f);
 
 
-        String text3 = "Um Ihre laufenden Unternehmensgründungen anzuschauen klicken Sie auf -laufende Unternehmensgründungen-";
+        String text3 = resourceBundle.getString("current_foundings-info") +  resourceBundle.getString("current_foundings");
 
         JLabel r = new JLabel("<html><div style='text-align: center;'>" + text3 + "</div></html>");
         r.setFont(new Font("Tahoma", Font.PLAIN, 12));
@@ -62,7 +62,7 @@ public class HomescreenView extends JPanel {
         this.add(r);
 
 
-        String text4 = "Um Ihre abgeschlossenen Unternehmensgründungen anzuschauen klicken Sie auf -abgeschlossene Unternehmensgründungen-";
+        String text4 = resourceBundle.getString("finished_foundings-info") +  resourceBundle.getString("finished_foundings");
 
         JLabel v = new JLabel("<html><div style='text-align: center;'>" + text4 + "</div></html>");
         v.setFont(new Font("Tahoma", Font.PLAIN, 12));
@@ -97,7 +97,7 @@ public class HomescreenView extends JPanel {
         but3.setForeground(new Color(253, 253, 254));
         this.add(but3);
 
-        but4.setText(resourceBundle.getString("current_foundings"));
+        but4.setText(resourceBundle.getString("finished_foundings"));
         but4.setFont(new Font("Tahoma", Font.PLAIN, 16));
         but4.setBounds(725, 260, 200, 90);
         but4.setBackground(new Color(60,139,182));

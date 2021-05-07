@@ -2,7 +2,9 @@ package Raketengruendung.Rechtsformenfinder.Fragen;
 
 
 import Raketengruendung.Rechtsformenfinder.FinderController;
-import Raketengruendung.Rechtsformenfinder.RechtsformView;
+import Raketengruendung.Rechtsformenfinder.Rechstform.RechstformController;
+import Raketengruendung.Rechtsformenfinder.Rechstform.RechtsformModel;
+import Raketengruendung.Rechtsformenfinder.Rechstform.RechtsformView;
 
 import java.awt.event.ActionListener;
 
@@ -72,7 +74,9 @@ public class FragenController {
 
     public void loadRechtsform(String rechtsform) {
         System.out.println("Rechtsform = " +rechtsform);
-        this.rechtsform = new RechtsformView(rechtsform);
-        finderController.getMasterController().changePanel(this.rechtsform);
+        RechtsformModel model = new RechtsformModel(rechtsform);
+        RechtsformView view = new RechtsformView();
+        RechstformController controller = new RechstformController(this, model, view);
+        finderController.getMasterController().changePanel(view);
     }
 }
