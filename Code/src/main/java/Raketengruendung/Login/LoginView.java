@@ -1,10 +1,16 @@
 package Raketengruendung.Login;
 
 
+import Raketengruendung.Main;
+
 import javax.swing.*;
 import javax.swing.border.Border;
 import java.awt.*;
+import java.io.File;
+import java.io.IOException;
 import java.util.ResourceBundle;
+import javax.imageio.ImageIO;
+import java.awt.image.BufferedImage;
 
 
 
@@ -25,14 +31,16 @@ public class LoginView extends JPanel {
         this.setBackground(new Color(17,9,48));
 
         //Hintergrund einfügen bei Anmeldeseiten
-//       try {
-//            BufferedImage myPicture = ImageIO.read(this.getClass().getResource("../img/7.jpg"));
-//            JLabel picLabel = new JLabel(new ImageIcon(myPicture));
-//            picLabel.setBounds(0, 0, 483, 580);
-//            this.add(picLabel);
-//        } catch (IOException ex) {
-//            System.out.println("Das Bild wurde nicht gefunden");
-//        }
+       try {
+           System.out.println(System.getProperty("user.dir"));
+           File file= new File("7.jpg");
+            BufferedImage myPicture = ImageIO.read(file);
+            JLabel picLabel = new JLabel(new ImageIcon(myPicture));
+            picLabel.setBounds(0, 0, 483, 580);
+            this.add(picLabel);
+        } catch (IOException ex) {
+            System.out.println("Das Bild wurde nicht gefunden");
+        }
 
 
         title.setForeground(Color.WHITE);
