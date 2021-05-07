@@ -5,13 +5,11 @@ import java.awt.*;
 
 public class HomescreenView extends JPanel {
 
-
     private JButton but1= new JButton();
     private JButton but2 = new JButton();
     private JButton but3 = new JButton();
     private JButton but4 = new JButton();
     private JButton language = new JButton();
-
 
     private JLabel welcome = new JLabel();
     private JLabel finderL = new JLabel();
@@ -29,14 +27,8 @@ public class HomescreenView extends JPanel {
         this.setLayout(null);
         this.setBackground(new Color(17,9,48));
 
-        /*
-        Hier werden Sachen ausgetestet, die noch nicht vollständig implementiert sind
-        Das müsste letzendlich Till übernehmen (aber nur wenn es fertig ist)
-        --> zB die Probleme mit setText und Maven
-         */
-
-        welcome.setFont(new Font("Times New Roman", Font.BOLD + Font.ITALIC, 38));
-        welcome.setBounds(120, 50, 730, 150);
+        welcome.setFont(new Font("Helvetica", Font.BOLD + Font.ITALIC, 38));
+        welcome.setBounds(100, 50, 800, 150);
         welcome.setBackground(new Color(60,139,182));
         welcome.setForeground(new Color(253, 253, 254));
         this.add(welcome);
@@ -72,8 +64,6 @@ public class HomescreenView extends JPanel {
         //language.setIcon(deutsche Flagge oder englische Flagge);
         language.setBounds(8, 8, 45, 25);
         this.add(language);
-
-//-------------------------------------------------------------------------------------
 
         but1.setFont(new Font("Tahoma", Font.PLAIN, 16));
         but1.setBounds(50, 260, 200, 90);
