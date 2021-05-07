@@ -6,7 +6,7 @@ import java.awt.*;
 import java.util.ResourceBundle;
 
 public class FinderView extends JPanel {
-    private ResourceBundle resourceBundle = ResourceBundle.getBundle("FINDER");
+
     private JButton start = new JButton();
     private JButton home = new JButton();
     private JLabel welcome = new JLabel();
@@ -16,7 +16,6 @@ public class FinderView extends JPanel {
         this.setBackground(new Color(17,9,48));
 
         //willkommen auf der Seite
-        welcome.setText(resourceBundle.getString("welcome"));
         welcome.setFont(new Font("Tahoma", Font.PLAIN, 30));
         welcome.setBounds(250, 50, 700, 150);
         welcome.setBackground(new Color(60,139,182));
@@ -24,7 +23,6 @@ public class FinderView extends JPanel {
         this.add(welcome);
 
         //Button start
-        start.setText(resourceBundle.getString("start"));
         start.setFont(new Font("Tahoma", Font.PLAIN, 21));
         start.setBounds(100, 300, 375, 200);
         start.setBackground(new Color(60,139,182));
@@ -32,7 +30,6 @@ public class FinderView extends JPanel {
         this.add(start);
 
         //Button zurück zum Hauptmenü
-        home.setText(resourceBundle.getString("mainMenu"));
         home.setFont(new Font("Tahoma", Font.PLAIN, 21));
         home.setBounds(525, 300, 375, 200);
         home.setBackground(new Color(60,139,182));
@@ -86,5 +83,13 @@ public class FinderView extends JPanel {
 
     public void setHome(JButton home) {
         this.home = home;
+    }
+
+    public JLabel getWelcome() {
+        return welcome;
+    }
+
+    public void setWelcome(JLabel welcome) {
+        this.welcome = welcome;
     }
 }

@@ -5,7 +5,7 @@ import java.awt.*;
 import java.util.ResourceBundle;
 
 public class FragenView extends JPanel {
-    private ResourceBundle resourceBundle = ResourceBundle.getBundle("FINDER");
+
 
     private Frage[] answers = new Frage[3];
     private JLabel question = new JLabel();
@@ -28,14 +28,12 @@ public class FragenView extends JPanel {
         this.add(question);
 
         //Hauptmenü Button
-        mainMenu.setText(resourceBundle.getString("mainMenu"));
         mainMenu.setBounds(730, 100, 160, 30);
         mainMenu.setBackground(new Color(60,139,182));
         mainMenu.setForeground(new Color(253, 253, 254));
         this.add(mainMenu);
 
         //"Zurück Button
-        back.setText(resourceBundle.getString("back"));
         back.setBounds(730, 50, 160, 30);
         back.setBackground(new Color(60,139,182));
         back.setForeground(new Color(253, 253, 254));
