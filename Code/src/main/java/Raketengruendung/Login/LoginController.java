@@ -1,7 +1,6 @@
 package Raketengruendung.Login;
 
 
-import Raketengruendung.Homescreen.HomescreenView;
 import Raketengruendung.Master.MasterController;
 
 public class LoginController {
@@ -18,7 +17,7 @@ public class LoginController {
     }
 
     public void initListener() {
-        loginView.getBtnNewButton().addActionListener(e->loginto());
+        loginView.getLoginButton().addActionListener(e->loginto());
         // register button implementation
     }
 

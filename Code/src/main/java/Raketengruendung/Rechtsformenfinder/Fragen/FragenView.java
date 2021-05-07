@@ -15,17 +15,25 @@ public class FragenView extends JPanel {
 
     public FragenView() {
         this.setLayout(null);
+        this.setBackground(new Color(17,9,48));
 
         //JLabel Frage oben
-        question.setBounds(700, 150, 193, 52);
+        question.setFont(new Font("Tahoma", Font.PLAIN, 30));
+        question.setBounds(150, 50, 700, 150);
+        question.setBackground(new Color(60,139,182));
+        question.setForeground(new Color(253, 253, 254));
         this.add(question);
 
         //Hauptmenü Button
-        mainMenu.setBounds(700, 300, 160, 30);
+        mainMenu.setBounds(730, 100, 160, 30);
+        mainMenu.setBackground(new Color(60,139,182));
+        mainMenu.setForeground(new Color(253, 253, 254));
         this.add(mainMenu);
 
         //"Zurück Button
-        back.setBounds(700, 350, 160, 30);
+        back.setBounds(730, 50, 160, 30);
+        back.setBackground(new Color(60,139,182));
+        back.setForeground(new Color(253, 253, 254));
         this.add(back);
 
         //Alle Buttons für Antworten hinzufügen
@@ -34,23 +42,45 @@ public class FragenView extends JPanel {
 
     public void addButtons() {
         if (!antwort3.getText().equals("")) {
+
             //Button 1
-            antwort1.setBounds(700, 200, 190, 50);
+            antwort1.setBounds(75, 300, 250, 200);
+            antwort1.setBorder(BorderFactory.createMatteBorder(1, 1, 1, 0, new Color(60,139,182)));
+            antwort1.setFont(new Font("Tahoma", Font.PLAIN, 21));
+            antwort1.setBackground(new Color(17,9,48));
+            antwort1.setForeground(new Color(253, 253, 254));
             this.add(antwort1);
 
             //Button2
-            antwort2.setBounds(700, 250, 190, 50);
+            antwort2.setBounds(325, 300, 250, 200);
+            antwort2.setBorder(BorderFactory.createMatteBorder(1, 1, 1, 0, new Color(60,139,182)));
+            antwort2.setFont(new Font("Tahoma", Font.PLAIN, 21));
+            antwort2.setBackground(new Color(17,9,48));
+            antwort2.setForeground(new Color(253, 253, 254));
             this.add(antwort2);
 
             //Button 3
             this.add(antwort3);
+            antwort3.setBounds(575, 300, 250, 200);
+            antwort3.setBorder(BorderFactory.createMatteBorder(1, 1, 1, 0, new Color(60,139,182)));
+            antwort3.setFont(new Font("Tahoma", Font.PLAIN, 21));
+            antwort3.setBackground(new Color(17,9,48));
+            antwort3.setForeground(new Color(253, 253, 254));
         } else {
             //Button 1
-            antwort1.setBounds(700, 200, 190, 50);
+            antwort1.setBounds(150, 300, 300, 100);
+            antwort1.setBorder(BorderFactory.createMatteBorder(1, 1, 1, 0, new Color(60,139,182)));
+            antwort1.setFont(new Font("Tahoma", Font.PLAIN, 21));
+            antwort1.setBackground(new Color(17,9,48));
+            antwort1.setForeground(new Color(253, 253, 254));
             this.add(antwort1);
 
             //Button2
-            antwort2.setBounds(700, 250, 190, 50);
+            antwort2.setBounds(450, 300, 300, 100);
+            antwort2.setBorder(BorderFactory.createMatteBorder(1, 1, 1, 1, new Color(60,139,182)));
+            antwort2.setFont(new Font("Tahoma", Font.PLAIN, 21));
+            antwort2.setBackground(new Color(17,9,48));
+            antwort2.setForeground(new Color(253, 253, 254));
             this.add(antwort2);
         }
     }

@@ -1,15 +1,9 @@
 package Raketengruendung.Login;
 
 
-import javax.imageio.ImageIO;
 import javax.swing.*;
 import javax.swing.border.Border;
-import javax.swing.border.EmptyBorder;
 import java.awt.*;
-import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
-import java.util.Objects;
 import java.util.ResourceBundle;
 
 
@@ -17,9 +11,13 @@ import java.util.ResourceBundle;
 public class LoginView extends JPanel {
     private ResourceBundle resourceBundle = ResourceBundle.getBundle("LOGIN");
 
-    private JTextField textField;
-    private JPasswordField passwordField;
-    private JButton btnNewButton;
+    private JLabel title = new JLabel();
+    private JLabel lblUsername = new JLabel();
+    private JLabel lblPassword = new JLabel();
+    private JTextField textField = new JTextField();
+    private JPasswordField passwordField = new JPasswordField();
+    private JButton loginButton = new JButton();
+    private JButton registerButton = new JButton();
     private JLabel label;
 
     public LoginView() {
@@ -36,50 +34,56 @@ public class LoginView extends JPanel {
 //            System.out.println("Das Bild wurde nicht gefunden");
 //        }
 
-        JLabel lblNewLabel = new JLabel(resourceBundle.getString("login"));
-        lblNewLabel.setForeground(Color.WHITE);
-        lblNewLabel.setFont(new Font("Times New Roman", Font.PLAIN, 36));
-        lblNewLabel.setBounds(670, 13, 273, 93);
-        this.add(lblNewLabel);
+        title.setText(resourceBundle.getString("login"));
+        title.setForeground(Color.WHITE);
+        title.setFont(new Font("Tahoma", Font.PLAIN, 42));
+        title.setBounds(670, 13, 273, 93);
+        //title.setBorder(BorderFactory.createMatteBorder(1, 1, 1, 0, new Color(60,139,182)));
+        this.add(title);
 
-        textField = new JTextField();
         textField.setFont(new Font("Tahoma", Font.PLAIN, 21));
-        textField.setBounds(700, 170, 160, 30);
+        textField.setBounds(601, 200, 250, 30);
         textField.setBorder(BorderFactory.createMatteBorder(0, 0, 2, 0, new Color(60,139,182)));
         textField.setColumns(10);
-        textField.setForeground(Color.WHITE);
+        textField.setForeground(new Color(100,100,100));
         textField.setOpaque(false);
         this.add(textField);
 
-        passwordField = new JPasswordField();
         passwordField.setFont(new Font("Tahoma", Font.PLAIN, 21));
-        passwordField.setBounds(700, 286, 160, 30);
+        passwordField.setBounds(601, 300, 250, 30);
         passwordField.setOpaque(false);
         passwordField.setForeground(Color.WHITE);
         passwordField.setBorder(BorderFactory.createMatteBorder(0, 0, 2, 0, new Color(60,139,182)));
         this.add(passwordField);
 
-        JLabel lblUsername = new JLabel(resourceBundle.getString("username"));
+        lblUsername.setText(resourceBundle.getString("username"));
         lblUsername.setForeground(new Color(60,139,182));
         lblUsername.setFont(new Font("Tahoma", Font.PLAIN, 20));
-        lblUsername.setBounds(560, 160, 193, 52);
+        lblUsername.setBounds(600, 150, 193, 52);
         this.add(lblUsername);
 
-        JLabel lblPassword = new JLabel(resourceBundle.getString("password"));
+        lblPassword.setText(resourceBundle.getString("password"));
         lblPassword.setForeground(new Color(60,139,182));
         lblPassword.setFont(new Font("Tahoma", Font.PLAIN, 20));
-        lblPassword.setBounds(585, 276, 193, 52);
+        lblPassword.setBounds(600, 250, 193, 52);
         this.add(lblPassword);
 
-        btnNewButton = new JButton(resourceBundle.getString("login"));
-        btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 21));
-        btnNewButton.setBounds(640, 392, 162, 73);
-        btnNewButton.setBorder(new RoundedBorders(30));
-        btnNewButton.setContentAreaFilled(false);
-        btnNewButton.setBackground(new Color(60,139,182));
-        btnNewButton.setForeground(new Color(253, 253, 254));
-        this.add(btnNewButton);
+        loginButton.setText(resourceBundle.getString("login"));
+        loginButton.setFont(new Font("Tahoma", Font.PLAIN, 21));
+        loginButton.setBounds(600, 392, 162, 73);
+        loginButton.setBorder(new RoundedBorders(30));
+        //loginButton.setContentAreaFilled(false);
+        loginButton.setBackground(new Color(17,9,48));
+        loginButton.setForeground(new Color(60,139,182));
+        this.add(loginButton);
 
+        registerButton.setText("No account? Register here");
+        registerButton.setFont(new Font("Tahoma", Font.PLAIN, 11));
+        registerButton.setBounds(714, 335, 140, 20);
+        registerButton.setBorder(BorderFactory.createMatteBorder(0, 0, 0, 0, new Color(60,139,182)));
+        registerButton.setBackground(new Color(17,9,48));
+        registerButton.setForeground(new Color(60,139,182));
+        this.add(registerButton);
     }
 
     class RoundedBorders implements Border {
@@ -123,12 +127,12 @@ public class LoginView extends JPanel {
         this.passwordField = passwordField;
     }
 
-    public JButton getBtnNewButton() {
-        return btnNewButton;
+    public JButton getLoginButton() {
+        return loginButton;
     }
 
-    public void setBtnNewButton(JButton btnNewButton) {
-        this.btnNewButton = btnNewButton;
+    public void setLoginButton(JButton loginButton) {
+        this.loginButton = loginButton;
     }
 
     public JLabel getLabel() {
