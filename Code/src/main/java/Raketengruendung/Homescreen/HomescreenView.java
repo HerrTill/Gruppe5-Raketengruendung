@@ -11,6 +11,8 @@ public class HomescreenView extends JPanel {
     private JButton but3 = new JButton();
     private JButton but4 = new JButton();
 
+    private JButton test = new JButton();
+
     private JLabel welcome = new JLabel();
     private JLabel finderL = new JLabel();
     private JLabel new_foundingL = new JLabel();
@@ -32,6 +34,9 @@ public class HomescreenView extends JPanel {
         Das müsste letzendlich Till übernehmen (aber nur wenn es fertig ist)
         --> zB die Probleme mit setText und Maven
          */
+        test.setBounds(0, 0, 50, 50);
+        this.add(test);
+
 
         welcome.setFont(new Font("Times New Roman", Font.BOLD + Font.ITALIC, 38));
         welcome.setBounds(120, 50, 730, 150);
@@ -196,5 +201,13 @@ public class HomescreenView extends JPanel {
 
     public void setFinished_foundings(String finished_foundings) {
         this.finished_foundings = finished_foundings;
+    }
+
+    public JButton getTest() {
+        return test;
+    }
+
+    public void setTest(JButton test) {
+        this.test = test;
     }
 }

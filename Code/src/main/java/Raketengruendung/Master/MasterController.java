@@ -77,11 +77,11 @@ public class MasterController {
     }
 
     public void switchLocale() {
-        if (this.locale == Locale.ENGLISH) {
+        if (this.locale == Locale.US) {
             this.locale = Locale.GERMAN;
         } else {
-            this.locale = Locale.ENGLISH;
+            this.locale = Locale.US;
         }
-
+        loadHomescreen();
     }
 }

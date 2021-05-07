@@ -35,6 +35,13 @@ public class HomescreenController {
 
     public void initListener() {
         view.getBut1().addActionListener(e->parent.loadFinder());
+
+        view.getTest().addActionListener(e-> switchLocale());
         // buttons implementation missing for But 2 and 3
+    }
+
+    public void switchLocale() {
+        System.out.println("Language Change");
+        parent.switchLocale();
     }
 }
