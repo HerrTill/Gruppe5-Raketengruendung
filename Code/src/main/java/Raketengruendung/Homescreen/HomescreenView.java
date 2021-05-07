@@ -10,6 +10,7 @@ public class HomescreenView extends JPanel {
     private JButton but2 = new JButton();
     private JButton but3 = new JButton();
     private JButton but4 = new JButton();
+    private JButton language = new JButton();
 
     private JButton test = new JButton();
 
@@ -71,6 +72,10 @@ public class HomescreenView extends JPanel {
         finished_foundingsL.setForeground(new Color(253, 253, 254));
         finished_foundingsL.setOpaque(true);
         this.add(finished_foundingsL);
+
+        //language.setIcon(deutsche Flagge oder englische Flagge);
+        language.setBounds(8, 8, 45, 25);
+        this.add(language);
 
 //-------------------------------------------------------------------------------------
 

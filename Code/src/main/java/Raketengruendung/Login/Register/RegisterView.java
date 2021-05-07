@@ -1,114 +1,98 @@
 package Raketengruendung.Login.Register;
 
-import java.awt.Font;
+import Raketengruendung.Login.LoginView;
+
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.Statement;
 
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JOptionPane;
-import javax.swing.JPanel;
-import javax.swing.JPasswordField;
-import javax.swing.JTextField;
+import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 
 public class RegisterView extends JPanel {
+    private JLabel userText = new JLabel();
+    private JLabel firstNameText = new JLabel();
+    private JLabel lastNameText = new JLabel();
+    private JLabel emailText = new JLabel();
+    private JLabel mobileText = new JLabel();
+    private JLabel passwordText = new JLabel();
+    private JLabel passwordText2 = new JLabel();
 
-    private static final long serialVersionUID = 1L;
-    private JTextField firstname;
-    private JTextField lastname;
-    private JTextField email;
-    private JTextField username;
-    private JTextField mob;
-    private JPasswordField passwordField;
-    private JButton btnNewButton;
+    private JTextField firstname = new JTextField();
+    private JTextField lastname = new JTextField();
+    private JTextField email = new JTextField();
+    private JTextField username = new JTextField();
+    private JTextField mob = new JTextField();
+    private JPasswordField passwordField = new JPasswordField();
+    private JPasswordField passwordField2 = new JPasswordField();
+
+    private JButton registerButton = new JButton();
+    private JLabel title = new JLabel();
 
     public RegisterView(){
         this.setLayout(null);
-        this.setBackground(new java.awt.Color(253, 253, 254));
+        this.setBackground(new Color(17,9,48));
 
-        JLabel lblNewUserRegister = new JLabel("New User Register");
-        lblNewUserRegister.setFont(new Font("Times New Roman", Font.PLAIN, 42));
-        lblNewUserRegister.setBounds(362, 52, 325, 50);
-        this.add(lblNewUserRegister);
+        title.setText("Register");
+        title.setFont(new Font("Tahoma", Font.PLAIN, 42));
+        title.setBounds(670, 13, 273, 93);
+        title.setForeground(Color.WHITE);
+        this.add(title);
 
-        JLabel lblName = new JLabel("First name");
-        lblName.setFont(new Font("Tahoma", Font.PLAIN, 20));
-        lblName.setBounds(58, 152, 99, 43);
-        this.add(lblName);
 
-        JLabel lblNewLabel = new JLabel("Last name");
-        lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 20));
-        lblNewLabel.setBounds(58, 243, 110, 29);
-        this.add(lblNewLabel);
+        userText.setText("Username");
+        userText.setFont(new Font("Tahoma", Font.PLAIN, 20));
+        userText.setBounds(550, 120, 100, 52);
+        userText.setForeground(new Color(60,139,182));
+        this.add(userText);
 
-        JLabel lblEmailAddress = new JLabel("Email\r\n address");
-        lblEmailAddress.setFont(new Font("Tahoma", Font.PLAIN, 20));
-        lblEmailAddress.setBounds(58, 324, 124, 36);
-        this.add(lblEmailAddress);
+        passwordText.setText("password");
+        passwordText.setFont(new Font("Tahoma", Font.PLAIN, 20));
+        passwordText.setBounds(550, 180, 100, 52);
+        passwordText.setForeground(new Color(60,139,182));
+        this.add(passwordText);
 
-        firstname = new JTextField();
-        firstname.setFont(new Font("Tahoma", Font.PLAIN, 32));
-        firstname.setBounds(214, 151, 228, 50);
-        this.add(firstname);
-//        this.setColumns(10);
+        passwordText2.setText("password");
+        passwordText2.setFont(new Font("Tahoma", Font.PLAIN, 20));
+        passwordText2.setBounds(550, 240, 100, 52);
+        passwordText2.setForeground(new Color(60,139,182));
+        this.add(passwordText2);
 
-        lastname = new JTextField();
-        lastname.setFont(new Font("Tahoma", Font.PLAIN, 32));
-        lastname.setBounds(214, 235, 228, 50);
-        this.add(lastname);
-    //    this.setColumns(10);
-
-        email = new JTextField();
-
-        email.setFont(new Font("Tahoma", Font.PLAIN, 32));
-        email.setBounds(214, 320, 228, 50);
-        this.add(email);
-        email.setColumns(10);
-
-        username = new JTextField();
-        username.setFont(new Font("Tahoma", Font.PLAIN, 32));
-        username.setBounds(707, 151, 228, 50);
-        this.add(username);
+        username.setFont(new Font("Tahoma", Font.PLAIN, 21));
+        username.setBounds(650, 125, 175, 30);
+        username.setBorder(BorderFactory.createMatteBorder(0, 0, 2, 0, new Color(60,139,182)));
+        username.setForeground(new Color(100,100,100));
         username.setColumns(10);
+        username.setOpaque(false);
+        this.add(username);
 
-        JLabel lblUsername = new JLabel("Username");
-        lblUsername.setFont(new Font("Tahoma", Font.PLAIN, 20));
-        lblUsername.setBounds(542, 159, 99, 29);
-        this.add(lblUsername);
-
-        JLabel lblPassword = new JLabel("Password");
-        lblPassword.setFont(new Font("Tahoma", Font.PLAIN, 20));
-        lblPassword.setBounds(542, 245, 99, 24);
-        this.add(lblPassword);
-
-        JLabel lblMobileNumber = new JLabel("Mobile number");
-        lblMobileNumber.setFont(new Font("Tahoma", Font.PLAIN, 20));
-        lblMobileNumber.setBounds(542, 329, 139, 26);
-        this.add(lblMobileNumber);
-
-        mob = new JTextField();
-        mob.setFont(new Font("Tahoma", Font.PLAIN, 32));
-        mob.setBounds(707, 320, 228, 50);
-        this.add(mob);
-        mob.setColumns(10);
-
-        passwordField = new JPasswordField();
-        passwordField.setFont(new Font("Tahoma", Font.PLAIN, 32));
-        passwordField.setBounds(707, 235, 228, 50);
+        passwordField.setFont(new Font("Tahoma", Font.PLAIN, 21));
+        passwordField.setBounds(650, 185, 175, 30);
+        passwordField.setBorder(BorderFactory.createMatteBorder(0, 0, 2, 0, new Color(60,139,182)));
+        passwordField.setForeground(Color.WHITE);
+        passwordField.setOpaque(false);
         this.add(passwordField);
 
-        btnNewButton = new JButton("Register");
-        btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 22));
-        btnNewButton.setBounds(399, 447, 259, 74);
-        btnNewButton.setBackground(new java.awt.Color(0, 0, 91));
-        btnNewButton.setForeground(new java.awt.Color(253, 253, 254));
-        this.add(btnNewButton);
+        passwordField2.setFont(new Font("Tahoma", Font.PLAIN, 21));
+        passwordField2.setBounds(650, 245, 175, 30);
+        passwordField2.setBorder(BorderFactory.createMatteBorder(0, 0, 2, 0, new Color(60,139,182)));
+        passwordField2.setForeground(Color.WHITE);
+        passwordField2.setOpaque(false);
+        this.add(passwordField2);
+
+        registerButton.setText("register");
+        registerButton.setFont(new Font("Tahoma", Font.PLAIN, 21));
+        registerButton.setBounds(600, 500, 162, 73);
+        //registerButton.setBorder(new LoginView.RoundedBorders(30));
+        //loginButton.setContentAreaFilled(false);
+        registerButton.setBackground(new Color(17,9,48));
+        registerButton.setForeground(new Color(60,139,182));
+        this.add(registerButton);
     }
+
     public JTextField getFirstname() {
         return firstname;
     }
@@ -157,12 +141,10 @@ public class RegisterView extends JPanel {
         this.passwordField = passwordField;
     }
 
-    public JButton getBtnNewButton() {
-        return btnNewButton;
-    }
+    public JButton getRegisterButton() { return registerButton; }
 
-    public void setBtnNewButton(JButton btnNewButton) {
-        this.btnNewButton = btnNewButton;
+    public void setBtnNewButton(JButton registerButton) {
+        this.registerButton = registerButton;
     }
 }
 
