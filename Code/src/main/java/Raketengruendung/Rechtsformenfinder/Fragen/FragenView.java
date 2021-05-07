@@ -2,8 +2,11 @@ package Raketengruendung.Rechtsformenfinder.Fragen;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.ResourceBundle;
 
 public class FragenView extends JPanel {
+    private ResourceBundle resourceBundle = ResourceBundle.getBundle("FINDER");
+
     private Frage[] answers = new Frage[3];
     private JLabel question = new JLabel();
 
@@ -25,12 +28,14 @@ public class FragenView extends JPanel {
         this.add(question);
 
         //Hauptmenü Button
+        mainMenu.setText(resourceBundle.getString("mainMenu"));
         mainMenu.setBounds(730, 100, 160, 30);
         mainMenu.setBackground(new Color(60,139,182));
         mainMenu.setForeground(new Color(253, 253, 254));
         this.add(mainMenu);
 
         //"Zurück Button
+        back.setText(resourceBundle.getString("back"));
         back.setBounds(730, 50, 160, 30);
         back.setBackground(new Color(60,139,182));
         back.setForeground(new Color(253, 253, 254));
@@ -144,5 +149,29 @@ public class FragenView extends JPanel {
 
     public void setAnswers(Frage[] answers) {
         this.answers = answers;
+    }
+
+    public JLabel getQuestion() {
+        return question;
+    }
+
+    public void setQuestion(JLabel question) {
+        this.question = question;
+    }
+
+    public JButton getMainMenu() {
+        return mainMenu;
+    }
+
+    public void setMainMenu(JButton mainMenu) {
+        this.mainMenu = mainMenu;
+    }
+
+    public JButton getBack() {
+        return back;
+    }
+
+    public void setBack(JButton back) {
+        this.back = back;
     }
 }

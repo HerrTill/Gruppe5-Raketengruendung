@@ -28,12 +28,32 @@ public class FragenController {
         for (ActionListener al : view.getAntwort2().getActionListeners()) {
             view.getAntwort2().removeActionListener(al);
         }
+        for (ActionListener al : view.getBack().getActionListeners()) {
+            view.getAntwort2().removeActionListener(al);
+        }
+        for (ActionListener al : view.getMainMenu().getActionListeners()) {
+            view.getAntwort2().removeActionListener(al);
+        }
+
+        view.getBack().addActionListener(e -> lastQuestion());
+        view.getMainMenu().addActionListener(e -> loadHomescreen());
 
         view.getAntwort1().addActionListener(e -> nextQuestion(view.getAnswers()[0]));
         view.getAntwort2().addActionListener(e -> nextQuestion(view.getAnswers()[1]));
         if (answers[2] != null) {
+            for (ActionListener al : view.getAntwort2().getActionListeners()) {
+                view.getAntwort2().removeActionListener(al);
+            }
             view.getAntwort3().addActionListener(e -> nextQuestion(view.getAnswers()[2]));
         }
+    }
+
+    public void lastQuestion() {
+
+    }
+
+    public void loadHomescreen() {
+        finderController.getMasterController().loadHomescreen();
     }
 
     public void nextQuestion(Frage frage){

@@ -142,4 +142,12 @@ public class LoginView extends JPanel {
     public void setLabel(JLabel label) {
         this.label = label;
     }
+
+    public JButton getRegisterButton() {
+        return registerButton;
+    }
+
+    public void setRegisterButton(JButton registerButton) {
+        this.registerButton = registerButton;
+    }
 }
