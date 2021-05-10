@@ -58,42 +58,39 @@ public class RegisterView extends JPanel {
         ALLES AN BILDERN DESIGNEN UND IMPLEMENTIEREN
          */
 
-        title.setText("Register");
+
         title.setFont(new Font("Tahoma", Font.PLAIN, 42));
         title.setBounds(670, 13, 273, 93);
         title.setForeground(Color.WHITE);
         this.add(title);
 
-        userText.setText("Username");
+
         userText.setFont(new Font("Tahoma", Font.PLAIN, 21));
         userText.setBounds(540, 120, 110, 52);
         userText.setForeground(new Color(60,139,182));
         userText.setHorizontalAlignment(JLabel.RIGHT);
         this.add(userText);
 
-        passwordText.setText("password");
+
         passwordText.setFont(new Font("Tahoma", Font.PLAIN, 21));
         passwordText.setBounds(540, 180, 110, 52);
         passwordText.setForeground(new Color(60,139,182));
         passwordText.setHorizontalAlignment(JLabel.RIGHT);
         this.add(passwordText);
 
-        passwordText2.setText("password");
+
         passwordText2.setFont(new Font("Tahoma", Font.PLAIN, 21));
         passwordText2.setBounds(540, 240, 110, 52);
         passwordText2.setForeground(new Color(60,139,182));
         passwordText2.setHorizontalAlignment(JLabel.RIGHT);
         this.add(passwordText2);
 
-        emailText.setText("email");
+
         emailText.setFont(new Font("Tahoma", Font.PLAIN, 21));
         emailText.setBounds(540, 300, 110, 52);
         emailText.setForeground(new Color(60,139,182));
         emailText.setHorizontalAlignment(JLabel.RIGHT);
         this.add(emailText);
-
-
-
 
         username.setFont(new Font("Tahoma", Font.PLAIN, 19));
         username.setBounds(660, 127, 175, 30);
@@ -125,7 +122,6 @@ public class RegisterView extends JPanel {
         email.setOpaque(false);
         this.add(email);
 
-        registerButton.setText("register");
         registerButton.setFont(new Font("Tahoma", Font.PLAIN, 21));
         registerButton.setBounds(650, 450, 162, 73);
         //registerButton.setBorder(new LoginView.RoundedBorders(30));
@@ -187,6 +183,82 @@ public class RegisterView extends JPanel {
 
     public void setBtnNewButton(JButton registerButton) {
         this.registerButton = registerButton;
+    }
+
+    public JLabel getUserText() {
+        return userText;
+    }
+
+    public void setUserText(JLabel userText) {
+        this.userText = userText;
+    }
+
+    public JLabel getFirstNameText() {
+        return firstNameText;
+    }
+
+    public void setFirstNameText(JLabel firstNameText) {
+        this.firstNameText = firstNameText;
+    }
+
+    public JLabel getLastNameText() {
+        return lastNameText;
+    }
+
+    public void setLastNameText(JLabel lastNameText) {
+        this.lastNameText = lastNameText;
+    }
+
+    public JLabel getEmailText() {
+        return emailText;
+    }
+
+    public void setEmailText(JLabel emailText) {
+        this.emailText = emailText;
+    }
+
+    public JLabel getMobileText() {
+        return mobileText;
+    }
+
+    public void setMobileText(JLabel mobileText) {
+        this.mobileText = mobileText;
+    }
+
+    public JLabel getPasswordText() {
+        return passwordText;
+    }
+
+    public void setPasswordText(JLabel passwordText) {
+        this.passwordText = passwordText;
+    }
+
+    public JLabel getPasswordText2() {
+        return passwordText2;
+    }
+
+    public void setPasswordText2(JLabel passwordText2) {
+        this.passwordText2 = passwordText2;
+    }
+
+    public JPasswordField getPasswordField2() {
+        return passwordField2;
+    }
+
+    public void setPasswordField2(JPasswordField passwordField2) {
+        this.passwordField2 = passwordField2;
+    }
+
+    public void setRegisterButton(JButton registerButton) {
+        this.registerButton = registerButton;
+    }
+
+    public JLabel getTitle() {
+        return title;
+    }
+
+    public void setTitle(JLabel title) {
+        this.title = title;
     }
 }
 

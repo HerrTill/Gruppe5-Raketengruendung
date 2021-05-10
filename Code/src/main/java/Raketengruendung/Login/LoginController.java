@@ -37,7 +37,6 @@ public class LoginController {
     public void initListener() {
         loginView.getLoginButton().addActionListener(e->loginto());
         loginView.getRegisterButton().addActionListener(e->register());
-        // register button implementation
     }
 
     public void loginto() {
@@ -50,6 +49,14 @@ public class LoginController {
         RegisterView view = new RegisterView();
         RegisterController controller = new RegisterController(this, view, model);
         parent.changePanel(view);
+    }
+
+    public void loadHomescreen() {
+        parent.loadHomescreen();
+    }
+
+    public MasterController getMasterController() {
+        return parent;
     }
 
 }
