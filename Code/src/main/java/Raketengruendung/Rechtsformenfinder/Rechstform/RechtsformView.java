@@ -26,8 +26,6 @@ public class RechtsformView extends JPanel {
         description.setForeground(new Color(150,150,150));
         this.add(description);
 
-
-
         back.setBounds(820, 30, 70, 30);
         back.setBackground(new Color(17,9,48));
         back.setForeground(new Color(253, 253, 254));
