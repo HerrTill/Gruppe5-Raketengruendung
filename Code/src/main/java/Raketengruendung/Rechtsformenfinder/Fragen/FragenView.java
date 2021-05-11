@@ -28,13 +28,13 @@ public class FragenView extends JPanel {
         this.add(question);
 
         //Hauptmenü Button
-        mainMenu.setBounds(730, 100, 160, 30);
+        mainMenu.setBounds(870, 20, 110, 27);
         mainMenu.setBackground(new Color(60,139,182));
         mainMenu.setForeground(new Color(253, 253, 254));
         this.add(mainMenu);
 
         //"Zurück Button
-        back.setBounds(730, 50, 160, 30);
+        back.setBounds(875, 50, 100, 27);
         back.setBackground(new Color(60,139,182));
         back.setForeground(new Color(253, 253, 254));
         this.add(back);

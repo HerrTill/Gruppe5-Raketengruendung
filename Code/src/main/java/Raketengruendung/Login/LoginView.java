@@ -78,7 +78,7 @@ public class LoginView extends JPanel {
 
 
         loginButton.setFont(new Font("Tahoma", Font.PLAIN, 21));
-        loginButton.setBounds(600, 392, 162, 73);
+        loginButton.setBounds(640, 395, 162, 73);
         loginButton.setBorder(new RoundedBorders(30));
         //loginButton.setContentAreaFilled(false);
         loginButton.setBackground(new Color(17,9,48));
@@ -87,7 +87,7 @@ public class LoginView extends JPanel {
 
 
         registerButton.setFont(new Font("Tahoma", Font.PLAIN, 11));
-        registerButton.setBounds(714, 335, 140, 20);
+        registerButton.setBounds(689, 335, 165, 20);
         registerButton.setBorder(BorderFactory.createMatteBorder(0, 0, 0, 0, new Color(60,139,182)));
         registerButton.setBackground(new Color(17,9,48));
         registerButton.setForeground(new Color(60,139,182));

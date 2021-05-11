@@ -54,6 +54,7 @@ public class RegisterView extends JPanel {
         Buttondesign bei Fragen sieht eig gut aaus
         bei FragenView selbes Design wie bei LoginView mit Raketengründung links
         "Neues Unternehmen gründen" noch ausprogrammieren
+        "Willkommen beim Rechtsformfinder" untereinander schreiben
 
         ALLES AN BILDERN DESIGNEN UND IMPLEMENTIEREN
          */

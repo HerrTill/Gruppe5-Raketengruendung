@@ -16,32 +16,29 @@ public class FinderView extends JPanel {
         this.setBackground(new Color(17,9,48));
 
         //willkommen auf der Seite
-        welcome.setFont(new Font("Tahoma", Font.PLAIN, 30));
-        welcome.setBounds(250, 50, 700, 150);
+        welcome.setFont(new Font("Tahoma", Font.PLAIN, 27));
+        welcome.setBounds(520, 13, 460, 93);
         welcome.setBackground(new Color(60,139,182));
         welcome.setForeground(new Color(253, 253, 254));
         this.add(welcome);
 
         //Button start
         start.setFont(new Font("Tahoma", Font.PLAIN, 21));
-        start.setBounds(100, 300, 375, 200);
-        start.setBackground(new Color(60,139,182));
+        start.setBounds(580, 200, 340, 80);
+        start.setBackground(new Color(17,9,48));
         start.setForeground(new Color(253, 253, 254));
+        start.setBorder(BorderFactory.createMatteBorder(1, 1, 1, 1, new Color(60,139,182)));
         this.add(start);
 
         //Button zurück zum Hauptmenü
         home.setFont(new Font("Tahoma", Font.PLAIN, 21));
-        home.setBounds(525, 300, 375, 200);
-        home.setBackground(new Color(60,139,182));
+        home.setBounds(580, 300, 340, 80);
+        home.setBackground(new Color(17,9,48));
         home.setForeground(new Color(253, 253, 254));
+        home.setBorder(BorderFactory.createMatteBorder(1, 1, 1, 1, new Color(60,139,182)));
         this.add(home);
 
-        home.setBorder(new RoundedBorders(30));
-        start.setBorder(new RoundedBorders(30));
 
-
-//        btnNewButton.setBorder(new RoundedBorders(30));
-//        btnNewButton.setContentAreaFilled(false);
     }
 
     class RoundedBorders implements Border {
