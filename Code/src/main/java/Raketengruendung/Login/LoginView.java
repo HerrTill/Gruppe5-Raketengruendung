@@ -8,13 +8,14 @@ import javax.swing.border.Border;
 import java.awt.*;
 import java.io.File;
 import java.io.IOException;
+import java.util.Objects;
 import java.util.ResourceBundle;
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 
 
 
-public class LoginView extends JPanel {
+public class LoginView extends JPanel implements test{
 
 
     private JLabel title = new JLabel();
@@ -30,16 +31,13 @@ public class LoginView extends JPanel {
         this.setLayout(null);
         this.setBackground(new Color(17,9,48));
 
-        //Hintergrund einfügen bei Anmeldeseiten
-       try {
-           System.out.println(System.getProperty("user.dir"));
-           File file= new File("7.jpg");
-            BufferedImage myPicture = ImageIO.read(file);
-            JLabel picLabel = new JLabel(new ImageIcon(myPicture));
-            picLabel.setBounds(0, 0, 483, 580);
-            this.add(picLabel);
+        try {
+           BufferedImage myPicture = ImageIO.read(Objects.requireNonNull(getClass().getResourceAsStream("/7.jpg")));
+           JLabel picLabel = new JLabel(new ImageIcon(myPicture));
+           picLabel.setBounds(0, 0, 483, 580);
+           this.add(picLabel);
         } catch (IOException ex) {
-            System.out.println("Das Bild wurde nicht gefunden");
+           System.out.println("Das Bild wurde nicht gefunden");
         }
 
 
@@ -76,7 +74,7 @@ public class LoginView extends JPanel {
         lblPassword.setBounds(600, 250, 193, 52);
         this.add(lblPassword);
 
-
+//        loginButton.addActionListener(e->logInAfterClick());
         loginButton.setFont(new Font("Tahoma", Font.PLAIN, 21));
         loginButton.setBounds(640, 395, 162, 73);
         loginButton.setBorder(new RoundedBorders(30));
@@ -92,6 +90,10 @@ public class LoginView extends JPanel {
         registerButton.setBackground(new Color(17,9,48));
         registerButton.setForeground(new Color(60,139,182));
         this.add(registerButton);
+    }
+
+    public void logInAfterClick() {
+
     }
 
     class RoundedBorders implements Border {
@@ -118,6 +120,8 @@ public class LoginView extends JPanel {
             g.drawRoundRect(x, y, width-1, height-1, radius, radius);
         }
     }
+
+
 
     public JTextField getTextField() {
         return textField;
