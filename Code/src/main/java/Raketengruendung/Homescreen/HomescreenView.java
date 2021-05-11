@@ -22,7 +22,6 @@ public class HomescreenView extends JPanel {
     private String current_founding;
     private String finished_foundings;
 
-
     public HomescreenView() {
         this.setLayout(null);
         this.setBackground(new Color(17,9,48));

@@ -1,8 +1,12 @@
 package Raketengruendung.Rechtsformenfinder;
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import javax.swing.border.Border;
 import java.awt.*;
+import java.awt.image.BufferedImage;
+import java.io.IOException;
+import java.util.Objects;
 import java.util.ResourceBundle;
 
 public class FinderView extends JPanel {
@@ -15,30 +19,34 @@ public class FinderView extends JPanel {
         this.setLayout(null);
         this.setBackground(new Color(17,9,48));
 
-        //willkommen auf der Seite
+        try {
+            BufferedImage myPicture = ImageIO.read(Objects.requireNonNull(getClass().getResourceAsStream("/7.jpg")));
+            JLabel picLabel = new JLabel(new ImageIcon(myPicture));
+            picLabel.setBounds(0, 0, 483, 580);
+            this.add(picLabel);
+        } catch (IOException ex) {
+            System.out.println("Das Bild wurde nicht gefunden");
+        }
+
         welcome.setFont(new Font("Tahoma", Font.PLAIN, 27));
-        welcome.setBounds(520, 13, 460, 93);
+        welcome.setBounds(500, 20, 460, 93);
         welcome.setBackground(new Color(60,139,182));
         welcome.setForeground(new Color(253, 253, 254));
         this.add(welcome);
 
-        //Button start
         start.setFont(new Font("Tahoma", Font.PLAIN, 21));
-        start.setBounds(580, 200, 340, 80);
+        start.setBounds(550, 200, 340, 80);
+        start.setBorder(BorderFactory.createMatteBorder(1, 1, 1, 1, new Color(60,139,182)));
         start.setBackground(new Color(17,9,48));
         start.setForeground(new Color(253, 253, 254));
-        start.setBorder(BorderFactory.createMatteBorder(1, 1, 1, 1, new Color(60,139,182)));
         this.add(start);
 
-        //Button zurück zum Hauptmenü
         home.setFont(new Font("Tahoma", Font.PLAIN, 21));
-        home.setBounds(580, 300, 340, 80);
+        home.setBounds(550, 300, 340, 80);
+        home.setBorder(BorderFactory.createMatteBorder(1, 1, 1, 1, new Color(60,139,182)));
         home.setBackground(new Color(17,9,48));
         home.setForeground(new Color(253, 253, 254));
-        home.setBorder(BorderFactory.createMatteBorder(1, 1, 1, 1, new Color(60,139,182)));
         this.add(home);
-
-
     }
 
     class RoundedBorders implements Border {

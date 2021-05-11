@@ -4,12 +4,11 @@ import javax.swing.*;
 import java.awt.*;
 
 public class RechtsformView extends JPanel {
+
     private JLabel titel;
     private JLabel rechtsform = new JLabel("GmbH");
     private JLabel description = new JLabel("die GmbH ist eine Gesellschaft mit beschränkter Haftung. blablablalba-------------------------------------------------");
     private JButton back = new JButton("Back");;
-
-
 
     public RechtsformView() {
 //        this.add(titel);
@@ -23,13 +22,14 @@ public class RechtsformView extends JPanel {
 
         description.setFont(new Font("Tahoma", Font.PLAIN, 21));
         description.setBounds(200, 150, 600, 100);
+        //description.setBorder(BorderFactory.createMatteBorder(1, 1, 1, 1, new Color(60,139,182)));
         description.setForeground(new Color(150,150,150));
         this.add(description);
 
-        back.setBounds(820, 30, 70, 30);
+        back.setBounds(850, 30, 80, 30);
+        back.setBorder(BorderFactory.createMatteBorder(1, 1, 1, 1, new Color(60,139,182)));
         back.setBackground(new Color(17,9,48));
         back.setForeground(new Color(253, 253, 254));
-        back.setBorder(BorderFactory.createMatteBorder(1, 1, 1, 1, new Color(60,139,182)));
         this.add(back);
     }
 

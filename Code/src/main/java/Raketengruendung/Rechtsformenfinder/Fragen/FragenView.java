@@ -1,11 +1,14 @@
 package Raketengruendung.Rechtsformenfinder.Fragen;
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
+import java.awt.image.BufferedImage;
+import java.io.IOException;
+import java.util.Objects;
 import java.util.ResourceBundle;
 
 public class FragenView extends JPanel {
-
 
     private Frage[] answers = new Frage[3];
     private JLabel question = new JLabel();
@@ -20,68 +23,71 @@ public class FragenView extends JPanel {
         this.setLayout(null);
         this.setBackground(new Color(17,9,48));
 
-        //JLabel Frage oben
+        try {
+            BufferedImage myPicture = ImageIO.read(Objects.requireNonNull(getClass().getResourceAsStream("/7.jpg")));
+            JLabel picLabel = new JLabel(new ImageIcon(myPicture));
+            picLabel.setBounds(0, 0, 483, 580);
+            this.add(picLabel);
+        } catch (IOException ex) {
+            System.out.println("Das Bild wurde nicht gefunden");
+        }
+
         question.setFont(new Font("Tahoma", Font.PLAIN, 30));
-        question.setBounds(150, 50, 700, 150);
+        question.setBounds(500, 50, 500, 100);
         question.setBackground(new Color(60,139,182));
         question.setForeground(new Color(253, 253, 254));
         this.add(question);
 
-        //Hauptmenü Button
-        mainMenu.setBounds(870, 20, 110, 27);
-        mainMenu.setBackground(new Color(60,139,182));
-        mainMenu.setForeground(new Color(253, 253, 254));
+        mainMenu.setBounds(866, 485, 110, 27);
+        mainMenu.setBorder(BorderFactory.createMatteBorder(1, 1, 1, 1, new Color(60,139,182)));
+        mainMenu.setBackground(new Color(17,9,48));
+        mainMenu.setForeground(new Color(60,139,182));
         this.add(mainMenu);
 
-        //"Zurück Button
-        back.setBounds(875, 50, 100, 27);
-        back.setBackground(new Color(60,139,182));
-        back.setForeground(new Color(253, 253, 254));
+        back.setBounds(866, 520, 110, 27);
+        back.setBorder(BorderFactory.createMatteBorder(1, 1, 1, 1, new Color(60,139,182)));
+        back.setBackground(new Color(17,9,48));
+        back.setForeground(new Color(60,139,182));
         this.add(back);
 
-        //Alle Buttons für Antworten hinzufügen
         this.addButtons();
     }
 
     public void addButtons() {
         if (!antwort3.getText().equals("")) {
 
-            //Button 1
-            antwort1.setBounds(75, 300, 250, 200);
-            antwort1.setBorder(BorderFactory.createMatteBorder(1, 1, 1, 0, new Color(60,139,182)));
             antwort1.setFont(new Font("Tahoma", Font.PLAIN, 21));
+            antwort1.setBounds(490, 150, 460, 65);
+            antwort1.setBorder(BorderFactory.createMatteBorder(1, 1, 1, 1, new Color(60,139,182)));
             antwort1.setBackground(new Color(17,9,48));
             antwort1.setForeground(new Color(253, 253, 254));
             this.add(antwort1);
 
-            //Button2
-            antwort2.setBounds(325, 300, 250, 200);
-            antwort2.setBorder(BorderFactory.createMatteBorder(1, 1, 1, 0, new Color(60,139,182)));
             antwort2.setFont(new Font("Tahoma", Font.PLAIN, 21));
+            antwort2.setBounds(490, 225, 460, 65);
+            antwort2.setBorder(BorderFactory.createMatteBorder(1, 1, 1, 1, new Color(60,139,182)));
             antwort2.setBackground(new Color(17,9,48));
             antwort2.setForeground(new Color(253, 253, 254));
             this.add(antwort2);
 
-            //Button 3
-            this.add(antwort3);
-            antwort3.setBounds(575, 300, 250, 200);
-            antwort3.setBorder(BorderFactory.createMatteBorder(1, 1, 1, 0, new Color(60,139,182)));
             antwort3.setFont(new Font("Tahoma", Font.PLAIN, 21));
+            antwort3.setBounds(490, 300, 460, 65);
+            antwort3.setBorder(BorderFactory.createMatteBorder(1, 1, 1, 1, new Color(60,139,182)));
             antwort3.setBackground(new Color(17,9,48));
             antwort3.setForeground(new Color(253, 253, 254));
+            this.add(antwort3);
         } else {
-            //Button 1
-            antwort1.setBounds(150, 300, 300, 100);
-            antwort1.setBorder(BorderFactory.createMatteBorder(1, 1, 1, 0, new Color(60,139,182)));
+
             antwort1.setFont(new Font("Tahoma", Font.PLAIN, 21));
+            antwort1.setBounds(490, 200, 460, 65);
+            antwort1.setBorder(BorderFactory.createMatteBorder(1, 1, 1, 1, new Color(60,139,182)));
             antwort1.setBackground(new Color(17,9,48));
             antwort1.setForeground(new Color(253, 253, 254));
             this.add(antwort1);
 
-            //Button2
-            antwort2.setBounds(450, 300, 300, 100);
-            antwort2.setBorder(BorderFactory.createMatteBorder(1, 1, 1, 1, new Color(60,139,182)));
             antwort2.setFont(new Font("Tahoma", Font.PLAIN, 21));
+            antwort2.setBounds(490, 275, 460, 65);
+            antwort2.setBorder(BorderFactory.createMatteBorder(1, 1, 1, 1, new Color(60,139,182)));
             antwort2.setBackground(new Color(17,9,48));
             antwort2.setForeground(new Color(253, 253, 254));
             this.add(antwort2);
