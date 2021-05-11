@@ -3,6 +3,7 @@ package Raketengruendung.Master;
 import Raketengruendung.Homescreen.HomescreenController;
 import Raketengruendung.Homescreen.HomescreenModel;
 import Raketengruendung.Homescreen.HomescreenView;
+import Raketengruendung.Login.Login;
 import Raketengruendung.Login.LoginController;
 import Raketengruendung.Login.LoginModel;
 import Raketengruendung.Login.LoginView;
@@ -37,7 +38,7 @@ public class MasterController {
 //        setIconImage(img.getImage());
 
         LoginModel loginModel = new LoginModel();
-        LoginView loginView = new LoginView();
+        Login loginView = new Login();
         LoginController loginController = new LoginController(this, loginModel, loginView);
         changePanel(loginView);
     }
