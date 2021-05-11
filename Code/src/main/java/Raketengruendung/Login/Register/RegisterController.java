@@ -21,7 +21,7 @@ public class RegisterController {
     }
 
     public void initListener() {
-        view.getRegisterButton().addActionListener(e->loadHomescreen());
+        view.setOnRegister(this::loadHomescreen);
     }
 
     public void loadHomescreen() {
@@ -29,11 +29,11 @@ public class RegisterController {
     }
 
     public void setText() {
-        view.getRegisterButton().setText(resourceBundle.getString("register"));
-        view.getEmailText().setText(resourceBundle.getString("email"));
-        view.getPasswordText2().setText(resourceBundle.getString("password"));
-        view.getPasswordText().setText(resourceBundle.getString("password"));
-        view.getUserText().setText(resourceBundle.getString("username"));
-        view.getTitle().setText(resourceBundle.getString("register"));
+        view.setTitleText(resourceBundle.getString("register"));
+        view.setEMailText(resourceBundle.getString("email"));
+        view.setUsernameText(resourceBundle.getString("username"));
+        view.setPasswordText(resourceBundle.getString("password"));
+        view.setPasswordReppText(resourceBundle.getString("password"));
+        view.setRegisterText(resourceBundle.getString("register"));
     }
 }

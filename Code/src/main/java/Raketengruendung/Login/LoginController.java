@@ -1,6 +1,7 @@
 package Raketengruendung.Login;
 
 
+import Raketengruendung.Login.Register.Register;
 import Raketengruendung.Login.Register.RegisterController;
 import Raketengruendung.Login.Register.RegisterModel;
 import Raketengruendung.Login.Register.RegisterView;
@@ -46,7 +47,7 @@ public class LoginController {
 
     public void register() {
         RegisterModel model = new RegisterModel();
-        RegisterView view = new RegisterView();
+        Register view = new Register();
         RegisterController controller = new RegisterController(this, view, model);
         parent.changePanel(view);
     }
