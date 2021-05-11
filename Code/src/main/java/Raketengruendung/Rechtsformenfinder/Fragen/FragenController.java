@@ -8,13 +8,15 @@ import Raketengruendung.Rechtsformenfinder.Rechstform.RechtsformView;
 
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
+import java.util.ResourceBundle;
 
 public class FragenController {
     private ArrayList<Frage> previous_Questions = new ArrayList<>();
     private FragenModel model;
     private FragenView view;
     private FinderController finderController;
-    private RechtsformView rechtsform;
+
+    private ResourceBundle resourceBundle;
 
     public FragenController(FinderController parent, FragenModel model, FragenView view) {
         this.finderController = parent;
@@ -23,6 +25,13 @@ public class FragenController {
         addPrevious_Questions(model.getFirstQuestion());
         view.setText(model.getFirstQuestion());
         initListener();
+        resourceBundle = ResourceBundle.getBundle("FINDER", finderController.getMasterController().getLocale());
+        setText();
+    }
+
+    public void setText() {
+        view.getMainMenu().setText(resourceBundle.getString("mainMenu"));
+        view.getBack().setText(resourceBundle.getString("back"));
     }
 
     public void initListener() {
@@ -34,10 +43,10 @@ public class FragenController {
             view.getAntwort2().removeActionListener(al);
         }
         for (ActionListener al : view.getBack().getActionListeners()) {
-            view.getAntwort2().removeActionListener(al);
+            view.getBack().removeActionListener(al);
         }
         for (ActionListener al : view.getMainMenu().getActionListeners()) {
-            view.getAntwort2().removeActionListener(al);
+            view.getMainMenu().removeActionListener(al);
         }
 
         view.getBack().addActionListener(e -> lastQuestion());
@@ -54,10 +63,11 @@ public class FragenController {
     }
 
     public void lastQuestion() {
-        if (previous_Questions.get(previous_Questions.size() - 1) == model.getFirstQuestion()) {
+        if (previous_Questions.get(previous_Questions.size()-1) == model.getFirstQuestion()) {
             finderController.getMasterController().loadFinder();
-        } else {
-            Frage f = previous_Questions.get(previous_Questions.size()-2);
+        } else  {
+            previous_Questions.remove(previous_Questions.size()-1);
+            Frage f = previous_Questions.get(previous_Questions.size()-1);
             loadQuestion(f);
         }
     }

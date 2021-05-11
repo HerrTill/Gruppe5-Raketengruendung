@@ -1,15 +1,21 @@
 package Raketengruendung.Login;
 
 
+import Raketengruendung.Main;
+
 import javax.swing.*;
 import javax.swing.border.Border;
 import java.awt.*;
+import java.io.File;
+import java.io.IOException;
 import java.util.ResourceBundle;
+import javax.imageio.ImageIO;
+import java.awt.image.BufferedImage;
 
 
 
 public class LoginView extends JPanel {
-    private ResourceBundle resourceBundle = ResourceBundle.getBundle("LOGIN");
+
 
     private JLabel title = new JLabel();
     private JLabel lblUsername = new JLabel();
@@ -25,16 +31,18 @@ public class LoginView extends JPanel {
         this.setBackground(new Color(17,9,48));
 
         //Hintergrund einfügen bei Anmeldeseiten
-//       try {
-//            BufferedImage myPicture = ImageIO.read(this.getClass().getResource("../img/7.jpg"));
-//            JLabel picLabel = new JLabel(new ImageIcon(myPicture));
-//            picLabel.setBounds(0, 0, 483, 580);
-//            this.add(picLabel);
-//        } catch (IOException ex) {
-//            System.out.println("Das Bild wurde nicht gefunden");
-//        }
+       try {
+           System.out.println(System.getProperty("user.dir"));
+           File file= new File("7.jpg");
+            BufferedImage myPicture = ImageIO.read(file);
+            JLabel picLabel = new JLabel(new ImageIcon(myPicture));
+            picLabel.setBounds(0, 0, 483, 580);
+            this.add(picLabel);
+        } catch (IOException ex) {
+            System.out.println("Das Bild wurde nicht gefunden");
+        }
 
-        title.setText(resourceBundle.getString("login"));
+
         title.setForeground(Color.WHITE);
         title.setFont(new Font("Tahoma", Font.PLAIN, 42));
         title.setBounds(670, 13, 273, 93);
@@ -56,30 +64,30 @@ public class LoginView extends JPanel {
         passwordField.setBorder(BorderFactory.createMatteBorder(0, 0, 2, 0, new Color(60,139,182)));
         this.add(passwordField);
 
-        lblUsername.setText(resourceBundle.getString("username"));
+
         lblUsername.setForeground(new Color(60,139,182));
         lblUsername.setFont(new Font("Tahoma", Font.PLAIN, 20));
         lblUsername.setBounds(600, 150, 193, 52);
         this.add(lblUsername);
 
-        lblPassword.setText(resourceBundle.getString("password"));
+
         lblPassword.setForeground(new Color(60,139,182));
         lblPassword.setFont(new Font("Tahoma", Font.PLAIN, 20));
         lblPassword.setBounds(600, 250, 193, 52);
         this.add(lblPassword);
 
-        loginButton.setText(resourceBundle.getString("login"));
+
         loginButton.setFont(new Font("Tahoma", Font.PLAIN, 21));
-        loginButton.setBounds(600, 392, 162, 73);
+        loginButton.setBounds(640, 395, 162, 73);
         loginButton.setBorder(new RoundedBorders(30));
         //loginButton.setContentAreaFilled(false);
         loginButton.setBackground(new Color(17,9,48));
         loginButton.setForeground(new Color(60,139,182));
         this.add(loginButton);
 
-        registerButton.setText("No account? Register here");
+
         registerButton.setFont(new Font("Tahoma", Font.PLAIN, 11));
-        registerButton.setBounds(714, 335, 140, 20);
+        registerButton.setBounds(689, 335, 165, 20);
         registerButton.setBorder(BorderFactory.createMatteBorder(0, 0, 0, 0, new Color(60,139,182)));
         registerButton.setBackground(new Color(17,9,48));
         registerButton.setForeground(new Color(60,139,182));
@@ -149,5 +157,29 @@ public class LoginView extends JPanel {
 
     public void setRegisterButton(JButton registerButton) {
         this.registerButton = registerButton;
+    }
+
+    public JLabel getTitle() {
+        return title;
+    }
+
+    public void setTitle(JLabel title) {
+        this.title = title;
+    }
+
+    public JLabel getLblUsername() {
+        return lblUsername;
+    }
+
+    public void setLblUsername(JLabel lblUsername) {
+        this.lblUsername = lblUsername;
+    }
+
+    public JLabel getLblPassword() {
+        return lblPassword;
+    }
+
+    public void setLblPassword(JLabel lblPassword) {
+        this.lblPassword = lblPassword;
     }
 }

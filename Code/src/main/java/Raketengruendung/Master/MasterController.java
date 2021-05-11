@@ -11,12 +11,15 @@ import Raketengruendung.Rechtsformenfinder.FinderModel;
 import Raketengruendung.Rechtsformenfinder.FinderView;
 
 import javax.swing.*;
+import java.util.Locale;
 import java.util.ResourceBundle;
 
 public class MasterController {
-    private ResourceBundle resourceBundle = ResourceBundle.getBundle("MASTER");
+
     private MasterModel masterModel;
     private MasterView view;
+    private Locale locale= Locale.getDefault();
+    private ResourceBundle resourceBundle = ResourceBundle.getBundle("MASTER", locale);
 
     public MasterController(MasterModel model, MasterView view) {
         this.masterModel = model;
@@ -67,5 +70,18 @@ public class MasterController {
         view.setPanel(panel);
         view.getFrame().add(panel);
         SwingUtilities.updateComponentTreeUI(view.getFrame());
+    }
+
+    public Locale getLocale() {
+        return locale;
+    }
+
+    public void switchLocale() {
+        if (this.locale == Locale.US) {
+            this.locale = Locale.GERMAN;
+        } else {
+            this.locale = Locale.US;
+        }
+        loadHomescreen();
     }
 }

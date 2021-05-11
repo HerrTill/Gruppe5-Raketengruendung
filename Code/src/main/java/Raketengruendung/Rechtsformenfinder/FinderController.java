@@ -5,16 +5,28 @@ import Raketengruendung.Rechtsformenfinder.Fragen.FragenController;
 import Raketengruendung.Rechtsformenfinder.Fragen.FragenModel;
 import Raketengruendung.Rechtsformenfinder.Fragen.FragenView;
 
+import java.util.ResourceBundle;
+
 public class FinderController {
     private FinderModel model;
     private FinderView view;
     private MasterController masterController;
+
+    private ResourceBundle resourceBundle;
 
     public FinderController(MasterController parent, FinderModel model, FinderView view) {
         this.masterController = parent;
         this.model = model;
         this.view = view;
         initListener();
+        resourceBundle  = ResourceBundle.getBundle("FINDER", parent.getLocale());
+        setText();
+    }
+
+    public void setText() {
+        view.getWelcome().setText(resourceBundle.getString("welcome"));
+        view.getStart().setText(resourceBundle.getString("start"));
+        view.getHome().setText(resourceBundle.getString("mainMenu"));
     }
 
     public void initListener() {
