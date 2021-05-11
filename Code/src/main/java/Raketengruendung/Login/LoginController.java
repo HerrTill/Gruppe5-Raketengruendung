@@ -27,20 +27,19 @@ public class LoginController {
     }
 
     public void setText() {
-        loginView.getTitle().setText(resourceBundle.getString("login"));
-        loginView.getLblUsername().setText(resourceBundle.getString("username"));
-        loginView.getLblPassword().setText(resourceBundle.getString("password"));
-        loginView.getLoginButton().setText(resourceBundle.getString("login"));
-        loginView.getRegisterButton().setText(resourceBundle.getString("register"));
+        loginView.setTitleText(resourceBundle.getString("login"));
+        loginView.setUsernameText(resourceBundle.getString("username"));
+        loginView.setPasswordText(resourceBundle.getString("password"));
+        loginView.setLoginText(resourceBundle.getString("login"));
+        loginView.setRegisterText(resourceBundle.getString("register"));
     }
 
     public void initListener() {
-        loginView.getLoginButton().addActionListener(e->loginto());
-        loginView.getRegisterButton().addActionListener(e->register());
+        loginView.setOnLogin(this::loginto);
+        loginView.setOnRegister(this::register);
     }
 
     public void loginto() {
-
         // compare entered data with database missing
         parent.loadHomescreen();
     }
