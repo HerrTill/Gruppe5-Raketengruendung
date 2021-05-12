@@ -23,7 +23,7 @@ public class LoginController {
         this.loginModel = loginModel;
         this.loginView = loginView;
         initListener();
-        resourceBundle = ResourceBundle.getBundle("LOGIN", parent.getLocale());
+        resourceBundle = ResourceBundle.getBundle("LOGIN/LOGIN", parent.getLocale());
         setText();
     }
 

@@ -1,12 +1,12 @@
 package Raketengruendung.Rechtsformenfinder.Rechstform;
 
 public class RechtsformModel {
-    private String title;
-    public RechtsformModel(String string) {
-        this.title = string;
+    private Rechtsformen rechtsform;
+    public RechtsformModel(Rechtsformen rechtsform) {
+        this.rechtsform = rechtsform;
     }
 
-    public String getTitle() {
-        return title;
+    public Rechtsformen getRechtsform() {
+        return rechtsform;
     }
 }

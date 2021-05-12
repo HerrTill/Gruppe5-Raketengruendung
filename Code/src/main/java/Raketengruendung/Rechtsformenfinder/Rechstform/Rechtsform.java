@@ -17,10 +17,10 @@ public class Rechtsform extends JPanel implements RechtsformView {
         this.setLayout(null);
         this.setBackground(new Color(17,9,48));
 
-        rechtsform.setFont(new Font("Tahoma", Font.PLAIN, 50));
-        rechtsform.setBounds(400, 50, 200, 70);
-        rechtsform.setForeground(new Color(253, 253, 254));
-        this.add(rechtsform);
+        this.rechtsform.setFont(new Font("Tahoma", Font.PLAIN, 50));
+        this.rechtsform.setBounds(400, 50, 200, 70);
+        this.rechtsform.setForeground(new Color(253, 253, 254));
+        this.add(this.rechtsform);
 
         description.setFont(new Font("Tahoma", Font.PLAIN, 21));
         description.setBounds(200, 150, 600, 100);
@@ -43,7 +43,7 @@ public class Rechtsform extends JPanel implements RechtsformView {
 
     @Override
     public void setTitleText(String titleText) {
-        this.titel.setText(titleText);
+        this.rechtsform.setText(titleText);
     }
 
     @Override

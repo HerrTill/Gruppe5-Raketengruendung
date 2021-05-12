@@ -20,7 +20,7 @@ public class FinderController {
         this.model = model;
         this.view = view;
         initListener();
-        resourceBundle  = ResourceBundle.getBundle("FINDER", parent.getLocale());
+        resourceBundle  = ResourceBundle.getBundle("FINDER/FINDER", parent.getLocale());
         setText();
     }
 

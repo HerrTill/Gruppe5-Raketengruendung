@@ -16,7 +16,7 @@ public class RegisterController {
         this.view = view;
         this.model = model;
         initListener();
-        resourceBundle  = ResourceBundle.getBundle("REGISTER", parent.getMasterController().getLocale());
+        resourceBundle  = ResourceBundle.getBundle("REGISTER/REGISTER", parent.getMasterController().getLocale());
         setText();
     }
 

@@ -2,10 +2,7 @@ package Raketengruendung.Rechtsformenfinder.Fragen;
 
 
 import Raketengruendung.Rechtsformenfinder.FinderController;
-import Raketengruendung.Rechtsformenfinder.Rechstform.RechstformController;
-import Raketengruendung.Rechtsformenfinder.Rechstform.Rechtsform;
-import Raketengruendung.Rechtsformenfinder.Rechstform.RechtsformModel;
-import Raketengruendung.Rechtsformenfinder.Rechstform.RechtsformView;
+import Raketengruendung.Rechtsformenfinder.Rechstform.*;
 
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
@@ -98,8 +95,36 @@ public class FragenController {
 
     }
 
-    public void loadRechtsform(String rechtsform) {
-        System.out.println("Rechtsform = " +rechtsform);
+    public void loadRechtsform(String rechtsformString) {
+        Rechtsformen rechtsform = Rechtsformen.EINZELU;
+        System.out.println("Rechtsform = " +rechtsformString);
+        switch (rechtsformString) {
+            case ("EinzelU"):
+                rechtsform = Rechtsformen.EINZELU;
+                break;
+            case ("GmbH"):
+                rechtsform = Rechtsformen.GMBH;
+                break;
+            case ("UG"):
+                rechtsform = Rechtsformen.UG;
+                break;
+            case ("KG"):
+                rechtsform = Rechtsformen.KG;
+                break;
+            case ("AG"):
+                rechtsform = Rechtsformen.AG;
+                break;
+            case ("OHG"):
+                rechtsform = Rechtsformen.OHG;
+                break;
+            case ("PartG"):
+                rechtsform = Rechtsformen.PARTG;
+                break;
+            case ("GbR"):
+                rechtsform = Rechtsformen.GBR;
+                break;
+        }
+
         RechtsformModel model = new RechtsformModel(rechtsform);
         Rechtsform view = new Rechtsform();
         RechstformController controller = new RechstformController(this, model, view);

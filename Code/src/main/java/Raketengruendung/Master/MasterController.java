@@ -22,7 +22,7 @@ public class MasterController {
     private MasterModel masterModel;
     private MasterView view;
     private Locale locale= Locale.getDefault();
-    private ResourceBundle resourceBundle = ResourceBundle.getBundle("MASTER", locale);
+    private ResourceBundle resourceBundle = ResourceBundle.getBundle("MASTER/MASTER", locale);
 
     public MasterController(MasterModel model, MasterView view) {
         this.masterModel = model;

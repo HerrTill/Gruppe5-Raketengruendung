@@ -16,7 +16,7 @@ public class HomescreenController {
         this.model = homescreenModel;
         this.view = homescreenView;
         initListener();
-        resourceBundle = ResourceBundle.getBundle("HOME", parent.getLocale());
+        resourceBundle = ResourceBundle.getBundle("HOME/HOME", parent.getLocale());
         setText();
     }
 
