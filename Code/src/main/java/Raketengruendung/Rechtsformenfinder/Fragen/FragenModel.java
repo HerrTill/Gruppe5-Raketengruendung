@@ -41,7 +41,7 @@ public class FragenModel {
 //
 
 
-    private ResourceBundle resourceBundle = ResourceBundle.getBundle("FINDER");
+    private ResourceBundle resourceBundle = ResourceBundle.getBundle("FINDER/FINDER");
     Frage frage1;
     Frage frage2_1, frage2_2;
     Frage frage3_1_1, frage3_1_2, frage3_2_1, frage3_2_2;

@@ -25,7 +25,7 @@ public class FragenController {
         addPrevious_Questions(model.getFirstQuestion());
         this.setQuestion(model.getFirstQuestion());
         initListener();
-        resourceBundle = ResourceBundle.getBundle("FINDER", finderController.getMasterController().getLocale());
+        resourceBundle = ResourceBundle.getBundle("FINDER/FINDER", finderController.getMasterController().getLocale());
         setText();
     }
 
