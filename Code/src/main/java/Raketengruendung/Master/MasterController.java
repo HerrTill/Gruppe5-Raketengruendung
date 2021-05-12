@@ -8,6 +8,7 @@ import Raketengruendung.Login.Login;
 import Raketengruendung.Login.LoginController;
 import Raketengruendung.Login.LoginModel;
 import Raketengruendung.Login.LoginView;
+import Raketengruendung.Rechtsformenfinder.Finder;
 import Raketengruendung.Rechtsformenfinder.FinderController;
 import Raketengruendung.Rechtsformenfinder.FinderModel;
 import Raketengruendung.Rechtsformenfinder.FinderView;
@@ -60,7 +61,7 @@ public class MasterController {
 //        view.getFrame().setBounds(450, 190, 1000, 600);
 
         FinderModel finderModel = new FinderModel();
-        FinderView finderView = new FinderView();
+        Finder finderView = new Finder();
         FinderController finderController = new FinderController(this, finderModel, finderView);
         changePanel(finderView);
     }

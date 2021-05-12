@@ -1,6 +1,7 @@
 package Raketengruendung.Rechtsformenfinder;
 
 import Raketengruendung.Master.MasterController;
+import Raketengruendung.Rechtsformenfinder.Fragen.Fragen;
 import Raketengruendung.Rechtsformenfinder.Fragen.FragenController;
 import Raketengruendung.Rechtsformenfinder.Fragen.FragenModel;
 import Raketengruendung.Rechtsformenfinder.Fragen.FragenView;
@@ -24,19 +25,19 @@ public class FinderController {
     }
 
     public void setText() {
-        view.getWelcome().setText(resourceBundle.getString("welcome"));
-        view.getStart().setText(resourceBundle.getString("start"));
-        view.getHome().setText(resourceBundle.getString("mainMenu"));
+        view.setMainmenuText(resourceBundle.getString("mainMenu"));
+        view.setTitleText(resourceBundle.getString("welcome"));
+        view.setStartText(resourceBundle.getString("start"));
     }
 
     public void initListener() {
-        view.getStart().addActionListener(e->startFinder());
-        view.getHome().addActionListener(e->loadHomescreen());
+        view.setOnClickMainmenu(this::loadHomescreen);
+        view.setOnClickStart(this::startFinder);
     }
 
     public void startFinder() {
         FragenModel fragenModel = new FragenModel();
-        FragenView fragenView = new FragenView();
+        Fragen fragenView = new Fragen();
         FragenController fragenController = new FragenController(this, fragenModel, fragenView);
 
         masterController.changePanel(fragenView);
