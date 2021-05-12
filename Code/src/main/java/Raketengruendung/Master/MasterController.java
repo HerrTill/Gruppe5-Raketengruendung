@@ -1,5 +1,6 @@
 package Raketengruendung.Master;
 
+import Raketengruendung.Homescreen.Homescreen;
 import Raketengruendung.Homescreen.HomescreenController;
 import Raketengruendung.Homescreen.HomescreenModel;
 import Raketengruendung.Homescreen.HomescreenView;
@@ -49,7 +50,7 @@ public class MasterController {
 //        view.getFrame().setBounds(450, 190, 1000, 600);
 
         HomescreenModel homescreenModel = new HomescreenModel();
-        HomescreenView homescreenView = new HomescreenView();
+        Homescreen homescreenView = new Homescreen();
         HomescreenController homescreenController = new HomescreenController(this, homescreenModel, homescreenView);
         changePanel(homescreenView);
     }

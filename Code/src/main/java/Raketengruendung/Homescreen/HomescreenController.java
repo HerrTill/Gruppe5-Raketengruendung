@@ -21,22 +21,21 @@ public class HomescreenController {
     }
 
     public void setText() {
-        view.getWelcome().setText(resourceBundle.getString("welcome"));
-        view.getBut1().setText(resourceBundle.getString("finder"));
-        view.getBut2().setText(resourceBundle.getString("new_founding"));
-        view.getBut3().setText(resourceBundle.getString("current_foundings"));
-        view.getBut4().setText(resourceBundle.getString("finished_foundings"));
-
-        view.getFinderL().setText("<html><div style='text-align: center;'>" + resourceBundle.getString("finder-info") + resourceBundle.getString("finder") +  "</div></html>");
-        view.getNew_foundingL().setText("<html><div style='text-align: center;'>" +resourceBundle.getString("new_founding-info") +  resourceBundle.getString("new_founding")+ "</div></html>");
-        view.getCurrent_foundingL().setText("<html><div style='text-align: center;'>" + resourceBundle.getString("current_foundings-info") +  resourceBundle.getString("current_foundings") + "</div></html>");
-        view.getFinished_foundingsL().setText("<html><div style='text-align: center;'>" + resourceBundle.getString("finished_foundings-info") +  resourceBundle.getString("finished_foundings") + "</div></html>");
+        view.setWelcomeText(resourceBundle.getString("welcome"));
+        view.setFinderText(resourceBundle.getString("finder"));
+        view.setFinderInformationText("<html><div style='text-align: center;'>" + resourceBundle.getString("finder-info") + resourceBundle.getString("finder") + "</div></html>");
+        view.setNewFoundingText(resourceBundle.getString("new_founding"));
+        view.setNewFoundingInformationText("<html><div style='text-align: center;'>" + resourceBundle.getString("new_founding-info") + resourceBundle.getString("new_founding") + "</div></html>");
+        view.setCurrentFoundingText(resourceBundle.getString("current_foundings"));
+        view.setCurrentFoundingInformationText("<html><div style='text-align: center;'>" + resourceBundle.getString("current_foundings-info") + resourceBundle.getString("current_foundings") + "</div></html>");
+        view.setFinishedFoundingText(resourceBundle.getString("finished_foundings"));
+        view.setFinishedFoundingInformationText("<html><div style='text-align: center;'>" + resourceBundle.getString("finished_foundings-info") + resourceBundle.getString("finished_foundings") + "</div></html>");
     }
 
     public void initListener() {
-        view.getBut1().addActionListener(e->parent.loadFinder());
+        view.setOnClickFinder(()->parent.loadFinder());
 
-        view.getLanguage().addActionListener(e-> switchLocale());
+        view.setOnLanguageSwitch(this::switchLocale);
         // buttons implementation missing for But 2 and 3
     }
 
