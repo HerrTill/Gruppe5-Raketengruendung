@@ -13,7 +13,7 @@ public class Rechtsform extends JPanel implements RechtsformView {
 
     public Rechtsform() {
 //        this.add(titel);
-        //lol
+
         this.setLayout(null);
         this.setBackground(new Color(17,9,48));
 

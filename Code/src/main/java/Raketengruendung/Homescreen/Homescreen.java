@@ -61,9 +61,13 @@ public class Homescreen extends JPanel implements HomescreenView{
         finished_foundingsL.setOpaque(true);
         this.add(finished_foundingsL);
 
-        //language.setIcon(deutsche Flagge oder englische Flagge);
+        //Switch language
+        // Sprache ändern
         language.addActionListener(e->this.onLanguageCallback.execute());
-        language.setBounds(8, 8, 45, 25);
+        language.setBounds(8, 8, 90, 25);
+        language.setBorder(BorderFactory.createMatteBorder(1, 1, 1, 1, new Color(60,139,182)));
+        language.setBackground(new Color(17,9,48));
+        language.setForeground(new Color(253, 253, 254));
         this.add(language);
 
         but1.addActionListener(e->this.onClickFinderCallback.execute());
