@@ -1,6 +1,6 @@
 package Raketengruendung.LegalFormFinder.LegalForm;
 
-public enum Rechtsformen {
+public enum LegalForms {
     EINZELU,
     GMBH,
     UG,

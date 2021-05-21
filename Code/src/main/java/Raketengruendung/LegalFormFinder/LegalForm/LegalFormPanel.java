@@ -3,7 +3,7 @@ package Raketengruendung.LegalFormFinder.LegalForm;
 import javax.swing.*;
 import java.awt.*;
 
-public class Rechtsform extends JPanel implements RechtsformView {
+public class LegalFormPanel extends JPanel implements LegalFormView {
 
     private JLabel titel;
     private JLabel rechtsform = new JLabel();
@@ -11,7 +11,7 @@ public class Rechtsform extends JPanel implements RechtsformView {
     private JButton back = new JButton();
     private onClickBack onClickBackCallback;
 
-    public Rechtsform() {
+    public LegalFormPanel() {
 //        this.add(titel);
 
         this.setLayout(null);

@@ -1,5 +1,5 @@
 package Raketengruendung.LegalFormFinder.LegalForm;
-public interface RechtsformView {
+public interface LegalFormView {
     interface onClickBack {
         void execute();
     }

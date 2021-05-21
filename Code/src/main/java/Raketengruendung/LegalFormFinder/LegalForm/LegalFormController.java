@@ -4,13 +4,13 @@ import Raketengruendung.LegalFormFinder.Questions.QuestionController;
 
 import java.util.ResourceBundle;
 
-public class RechstformController {
+public class LegalFormController {
     private QuestionController parent;
-    private RechtsformModel model;
-    private RechtsformView view;
+    private LegalFormModel model;
+    private LegalFormView view;
     private ResourceBundle resourceBundle;
 
-    public RechstformController(QuestionController parent, RechtsformModel model, RechtsformView view) {
+    public LegalFormController(QuestionController parent, LegalFormModel model, LegalFormView view) {
         this.parent = parent;
         this.model = model;
         this.view = view;

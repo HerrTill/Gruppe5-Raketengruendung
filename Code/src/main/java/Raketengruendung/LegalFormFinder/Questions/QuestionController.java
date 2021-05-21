@@ -96,36 +96,36 @@ public class QuestionController {
     }
 
     public void loadRechtsform(String rechtsformString) {
-        Rechtsformen rechtsform;
+        LegalForms rechtsform;
         switch (rechtsformString) {
             case ("GmbH"):
-                rechtsform = Rechtsformen.GMBH;
+                rechtsform = LegalForms.GMBH;
                 break;
             case ("UG"):
-                rechtsform = Rechtsformen.UG;
+                rechtsform = LegalForms.UG;
                 break;
             case ("KG"):
-                rechtsform = Rechtsformen.KG;
+                rechtsform = LegalForms.KG;
                 break;
             case ("AG"):
-                rechtsform = Rechtsformen.AG;
+                rechtsform = LegalForms.AG;
                 break;
             case ("OHG"):
-                rechtsform = Rechtsformen.OHG;
+                rechtsform = LegalForms.OHG;
                 break;
             case ("PartG"):
-                rechtsform = Rechtsformen.PARTG;
+                rechtsform = LegalForms.PARTG;
                 break;
             case ("GbR"):
-                rechtsform = Rechtsformen.GBR;
+                rechtsform = LegalForms.GBR;
                 break;
             default:
-                rechtsform = Rechtsformen.EINZELU;
+                rechtsform = LegalForms.EINZELU;
         }
 
-        RechtsformModel model = new RechtsformModel(rechtsform);
-        Rechtsform view = new Rechtsform();
-        RechstformController controller = new RechstformController(this, model, view);
+        LegalFormModel model = new LegalFormModel(rechtsform);
+        LegalFormPanel view = new LegalFormPanel();
+        LegalFormController controller = new LegalFormController(this, model, view);
         this.parent.changePanel(view);
     }
 
