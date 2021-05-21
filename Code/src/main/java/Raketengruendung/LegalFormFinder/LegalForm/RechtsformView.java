@@ -1,4 +1,4 @@
-package Raketengruendung.Rechtsformenfinder.Rechstform;
+package Raketengruendung.LegalFormFinder.LegalForm;
 public interface RechtsformView {
     interface onClickBack {
         void execute();

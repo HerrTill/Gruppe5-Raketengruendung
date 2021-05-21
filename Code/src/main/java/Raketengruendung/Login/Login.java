@@ -1,6 +1,8 @@
 package Raketengruendung.Login;
 
 
+import Raketengruendung.Master.Design.RoundedBorders;
+
 import javax.swing.*;
 import javax.swing.border.Border;
 import java.awt.*;
@@ -36,55 +38,53 @@ public class Login extends JPanel implements LoginView{
         }
 
 
-        title.setForeground(Color.WHITE);
-        title.setFont(new Font("Tahoma", Font.PLAIN, 42));
-        title.setBounds(670, 13, 273, 93);
-        //title.setBorder(BorderFactory.createMatteBorder(1, 1, 1, 0, new Color(60,139,182)));
+        this.title.setForeground(Color.WHITE);
+        this.title.setFont(new Font("Tahoma", Font.PLAIN, 42));
+        this.title.setBounds(670, 13, 273, 93);
         this.add(title);
 
-        textField.setFont(new Font("Tahoma", Font.PLAIN, 21));
-        textField.setBounds(601, 200, 250, 30);
-        textField.setBorder(BorderFactory.createMatteBorder(0, 0, 2, 0, new Color(60,139,182)));
-        textField.setColumns(10);
-        textField.setForeground(new Color(100,100,100));
-        textField.setOpaque(false);
-        this.add(textField);
+        this.textField.setFont(new Font("Tahoma", Font.PLAIN, 21));
+        this.textField.setBounds(601, 200, 250, 30);
+        this.textField.setBorder(BorderFactory.createMatteBorder(0, 0, 2, 0, new Color(60,139,182)));
+        this.textField.setColumns(10);
+        this.textField.setForeground(new Color(100,100,100));
+        this.textField.setOpaque(false);
+        this.add(this.textField);
 
-        passwordField.setFont(new Font("Tahoma", Font.PLAIN, 21));
-        passwordField.setBounds(601, 300, 250, 30);
-        passwordField.setOpaque(false);
-        passwordField.setForeground(Color.WHITE);
-        passwordField.setBorder(BorderFactory.createMatteBorder(0, 0, 2, 0, new Color(60,139,182)));
-        this.add(passwordField);
-
-
-        lblUsername.setForeground(new Color(60,139,182));
-        lblUsername.setFont(new Font("Tahoma", Font.PLAIN, 20));
-        lblUsername.setBounds(600, 150, 193, 52);
-        this.add(lblUsername);
+        this.passwordField.setFont(new Font("Tahoma", Font.PLAIN, 21));
+        this.passwordField.setBounds(601, 300, 250, 30);
+        this.passwordField.setOpaque(false);
+        this.passwordField.setForeground(Color.WHITE);
+        this.passwordField.setBorder(BorderFactory.createMatteBorder(0, 0, 2, 0, new Color(60,139,182)));
+        this.add(this.passwordField);
 
 
-        lblPassword.setForeground(new Color(60,139,182));
-        lblPassword.setFont(new Font("Tahoma", Font.PLAIN, 20));
-        lblPassword.setBounds(600, 250, 193, 52);
-        this.add(lblPassword);
+        this.lblUsername.setForeground(new Color(60,139,182));
+        this.lblUsername.setFont(new Font("Tahoma", Font.PLAIN, 20));
+        this.lblUsername.setBounds(600, 150, 193, 52);
+        this.add(this.lblUsername);
 
-        loginButton.addActionListener(e->this.onLoginCallback.execute());
-        loginButton.setFont(new Font("Tahoma", Font.PLAIN, 21));
-        loginButton.setBounds(640, 395, 162, 73);
-        loginButton.setBorder(new RoundedBorders(30));
-        //loginButton.setContentAreaFilled(false);
-        loginButton.setBackground(new Color(17,9,48));
-        loginButton.setForeground(new Color(60,139,182));
-        this.add(loginButton);
 
-        registerButton.addActionListener(e->this.onRegisterCallback.execute());
-        registerButton.setFont(new Font("Tahoma", Font.PLAIN, 11));
-        registerButton.setBounds(689, 335, 165, 20);
-        registerButton.setBorder(BorderFactory.createMatteBorder(0, 0, 0, 0, new Color(60,139,182)));
-        registerButton.setBackground(new Color(17,9,48));
-        registerButton.setForeground(new Color(60,139,182));
-        this.add(registerButton);
+        this.lblPassword.setForeground(new Color(60,139,182));
+        this.lblPassword.setFont(new Font("Tahoma", Font.PLAIN, 20));
+        this.lblPassword.setBounds(600, 250, 193, 52);
+        this.add(this.lblPassword);
+
+        this.loginButton.addActionListener(e->this.onLoginCallback.execute());
+        this.loginButton.setFont(new Font("Tahoma", Font.PLAIN, 21));
+        this.loginButton.setBounds(640, 395, 162, 73);
+        this.loginButton.setBorder(new RoundedBorders(30));
+        this.loginButton.setBackground(new Color(17,9,48));
+        this.loginButton.setForeground(new Color(60,139,182));
+        this.add(this.loginButton);
+
+        this.registerButton.addActionListener(e->this.onRegisterCallback.execute());
+        this.registerButton.setFont(new Font("Tahoma", Font.PLAIN, 11));
+        this.registerButton.setBounds(689, 335, 165, 20);
+        this.registerButton.setBorder(BorderFactory.createMatteBorder(0, 0, 0, 0, new Color(60,139,182)));
+        this.registerButton.setBackground(new Color(17,9,48));
+        this.registerButton.setForeground(new Color(60,139,182));
+        this.add(this.registerButton);
     }
 
     @Override
@@ -122,28 +122,4 @@ public class Login extends JPanel implements LoginView{
         onRegisterCallback = callback;
     }
 
-    class RoundedBorders implements Border {
-
-        private int radius;
-
-
-        RoundedBorders(int radius) {
-            this.radius = radius;
-        }
-
-
-        public Insets getBorderInsets(Component c) {
-            return new Insets(this.radius+1, this.radius+1, this.radius+2, this.radius);
-        }
-
-
-        public boolean isBorderOpaque() {
-            return true;
-        }
-
-
-        public void paintBorder(Component c, Graphics g, int x, int y, int width, int height) {
-            g.drawRoundRect(x, y, width-1, height-1, radius, radius);
-        }
-    }
 }

@@ -1,14 +1,14 @@
-package Raketengruendung.Rechtsformenfinder.Fragen;
+package Raketengruendung.LegalFormFinder.Questions;
 
-import Raketengruendung.Rechtsformenfinder.Exceptions.TooManyChildrenException;
+import Raketengruendung.LegalFormFinder.Exceptions.TooManyChildrenException;
 
-public class Frage {
-    private Frage[] children = new Frage[3];
+public class Question {
+    private Question[] children = new Question[3];
     public String question;
 
     public String answer;
 
-    public Frage(String question, String answer) {
+    public Question(String question, String answer) {
         this.answer = answer;
         this.question = question;
     }
@@ -21,23 +21,12 @@ public class Frage {
         return question;
     }
 
-    public Frage getChildren1() {
-        return children[1];
-    }
-
-    public Frage[] getChildren() {
+    public Question[] getChildren() {
         return children;
     }
 
-    public Frage getChildren2() {
-        return children[2];
-    }
-    public Frage getChildren0() {
-        return children[0];
-    }
 
-
-    public void addChild(Frage child) throws TooManyChildrenException {
+    public void addChild(Question child) throws TooManyChildrenException {
         if (this.children[0] == null) {
             this.children[0] = child;
         } else if (this.children[1] == null) {

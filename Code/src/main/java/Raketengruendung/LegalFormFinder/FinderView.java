@@ -1,4 +1,4 @@
-package Raketengruendung.Rechtsformenfinder;
+package Raketengruendung.LegalFormFinder;
 public interface FinderView {
     interface onClickStart {
         void execute();

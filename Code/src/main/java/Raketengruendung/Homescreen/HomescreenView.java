@@ -21,7 +21,7 @@ public interface HomescreenView{
 
     void setOnLanguageSwitch(onLanguage callback);
     void setOnClickFinder(onClickFinder callback);
-    void setOnClickNewFoundings(onClickNewFoundings callback);
+    void setOnClickNewFounding(onClickNewFoundings callback);
     void setOnClickCurrentFoundings(onClickCurrentFoundings callback);
     void setOnClickFinishedFoundings(onClickFinishedFoundings callback);
 
