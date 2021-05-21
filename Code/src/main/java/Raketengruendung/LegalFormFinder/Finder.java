@@ -2,7 +2,6 @@ package Raketengruendung.LegalFormFinder;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
-import javax.swing.border.Border;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
@@ -21,7 +20,7 @@ public class Finder extends JPanel implements FinderView{
         this.setBackground(new Color(17,9,48));
 
         try {
-            BufferedImage myPicture = ImageIO.read(Objects.requireNonNull(getClass().getResourceAsStream("/7.jpg")));
+            BufferedImage myPicture = ImageIO.read(Objects.requireNonNull(getClass().getResourceAsStream("/Theme.jpg")));
             JLabel picLabel = new JLabel(new ImageIcon(myPicture));
             picLabel.setBounds(0, 0, 483, 580);
             this.add(picLabel);

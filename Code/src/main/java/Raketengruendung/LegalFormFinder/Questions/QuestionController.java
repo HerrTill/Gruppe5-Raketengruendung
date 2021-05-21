@@ -98,9 +98,6 @@ public class QuestionController {
     public void loadRechtsform(String rechtsformString) {
         Rechtsformen rechtsform;
         switch (rechtsformString) {
-            case ("EinzelU"):
-                rechtsform = Rechtsformen.EINZELU;
-                break;
             case ("GmbH"):
                 rechtsform = Rechtsformen.GMBH;
                 break;

@@ -30,7 +30,7 @@ public class QuestionsPanel extends JPanel implements QuestionView {
         this.setBackground(new Color(17,9,48));
 
         try {
-            BufferedImage myPicture = ImageIO.read(Objects.requireNonNull(getClass().getResourceAsStream("/7.jpg")));
+            BufferedImage myPicture = ImageIO.read(Objects.requireNonNull(getClass().getResourceAsStream("/Theme.jpg")));
             JLabel picLabel = new JLabel(new ImageIcon(myPicture));
             picLabel.setBounds(0, 0, 483, 580);
             this.add(picLabel);

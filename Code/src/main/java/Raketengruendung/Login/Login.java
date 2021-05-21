@@ -4,7 +4,6 @@ package Raketengruendung.Login;
 import Raketengruendung.Master.Design.RoundedBorders;
 
 import javax.swing.*;
-import javax.swing.border.Border;
 import java.awt.*;
 import java.io.IOException;
 import java.util.Objects;
@@ -29,7 +28,7 @@ public class Login extends JPanel implements LoginView{
         this.setBackground(new Color(17,9,48));
 
         try {
-           BufferedImage myPicture = ImageIO.read(Objects.requireNonNull(getClass().getResourceAsStream("/7.jpg")));
+           BufferedImage myPicture = ImageIO.read(Objects.requireNonNull(getClass().getResourceAsStream("/Theme.jpg")));
            JLabel picLabel = new JLabel(new ImageIcon(myPicture));
            picLabel.setBounds(0, 0, 483, 580);
            this.add(picLabel);
