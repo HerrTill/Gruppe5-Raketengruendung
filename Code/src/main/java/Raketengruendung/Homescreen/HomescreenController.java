@@ -2,6 +2,7 @@ package Raketengruendung.Homescreen;
 
 import Raketengruendung.Master.MasterController;
 
+import java.util.Locale;
 import java.util.ResourceBundle;
 
 public class HomescreenController {
@@ -32,6 +33,12 @@ public class HomescreenController {
         this.view.setCurrentFoundingInformationText("<html><div style='text-align: center;'>" + resourceBundle.getString("current_foundings-info") + resourceBundle.getString("current_foundings") + "</div></html>");
         this.view.setFinishedFoundingText(resourceBundle.getString("finished_foundings"));
         this.view.setFinishedFoundingInformationText("<html><div style='text-align: center;'>" + resourceBundle.getString("finished_foundings-info") + resourceBundle.getString("finished_foundings") + "</div></html>");
+        if (parent.getLocale() == Locale.GERMAN) {
+            this.view.setLanguageSwitchText(resourceBundle.getString("languageSwitchDE"));
+        } else {
+            this.view.setLanguageSwitchText(resourceBundle.getString("languageSwitchEN"));
+        }
+
     }
 
     public void initListener() {
