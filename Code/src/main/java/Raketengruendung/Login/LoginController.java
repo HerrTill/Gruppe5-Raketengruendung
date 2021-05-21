@@ -4,45 +4,47 @@ package Raketengruendung.Login;
 import Raketengruendung.Login.Register.Register;
 import Raketengruendung.Login.Register.RegisterController;
 import Raketengruendung.Login.Register.RegisterModel;
-import Raketengruendung.Login.Register.RegisterView;
 import Raketengruendung.Master.MasterController;
 
+import java.util.Locale;
 import java.util.ResourceBundle;
 
 public class LoginController {
 
     private MasterController parent;
-    private LoginView loginView;
-    private LoginModel loginModel;
+    private LoginView view;
+    private LoginModel model;
 
     private ResourceBundle resourceBundle;
 
 
     public LoginController(MasterController parent, LoginModel loginModel, LoginView loginView) {
         this.parent = parent;
-        this.loginModel = loginModel;
-        this.loginView = loginView;
-        initListener();
-        resourceBundle = ResourceBundle.getBundle("LOGIN/LOGIN", parent.getLocale());
-        setText();
+        this.model = loginModel;
+        this.view = loginView;
+
+        this.resourceBundle = ResourceBundle.getBundle("LOGIN/LOGIN", this.getLocale());
+
+        this.initListener();
+        this.setText();
     }
 
     public void setText() {
-        loginView.setTitleText(resourceBundle.getString("login"));
-        loginView.setUsernameText(resourceBundle.getString("username"));
-        loginView.setPasswordText(resourceBundle.getString("password"));
-        loginView.setLoginText(resourceBundle.getString("login"));
-        loginView.setRegisterText(resourceBundle.getString("register"));
+        this.view.setTitleText(resourceBundle.getString("login"));
+        this.view.setUsernameText(resourceBundle.getString("username"));
+        this.view.setPasswordText(resourceBundle.getString("password"));
+        this.view.setLoginText(resourceBundle.getString("login"));
+        this.view.setRegisterText(resourceBundle.getString("register"));
     }
 
     public void initListener() {
-        loginView.setOnLogin(this::loginto);
-        loginView.setOnRegister(this::register);
+        this.view.setOnLogin(this::loginto);
+        this.view.setOnRegister(this::register);
     }
 
     public void loginto() {
         // compare entered data with database missing
-        parent.loadHomescreen();
+        this.loadHomescreen();
     }
 
     public void register() {
@@ -60,4 +62,7 @@ public class LoginController {
         return parent;
     }
 
+    public Locale getLocale() {
+        return this.parent.getLocale();
+    }
 }

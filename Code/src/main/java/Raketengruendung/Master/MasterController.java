@@ -3,15 +3,12 @@ package Raketengruendung.Master;
 import Raketengruendung.Homescreen.Homescreen;
 import Raketengruendung.Homescreen.HomescreenController;
 import Raketengruendung.Homescreen.HomescreenModel;
-import Raketengruendung.Homescreen.HomescreenView;
 import Raketengruendung.Login.Login;
 import Raketengruendung.Login.LoginController;
 import Raketengruendung.Login.LoginModel;
-import Raketengruendung.Login.LoginView;
-import Raketengruendung.Rechtsformenfinder.Finder;
-import Raketengruendung.Rechtsformenfinder.FinderController;
-import Raketengruendung.Rechtsformenfinder.FinderModel;
-import Raketengruendung.Rechtsformenfinder.FinderView;
+import Raketengruendung.LegalFormFinder.Finder;
+import Raketengruendung.LegalFormFinder.FinderController;
+import Raketengruendung.LegalFormFinder.FinderModel;
 
 import javax.swing.*;
 import java.util.Locale;
@@ -31,9 +28,9 @@ public class MasterController {
     }
 
     public void initView() {
-        view.getFrame().setTitle(resourceBundle.getString("raketengruendung") + resourceBundle.getString("login"));
-        view.getFrame().setResizable(false);
-        view.getFrame().setBounds(450, 190, 1000, 600);
+        view.setTitle(resourceBundle.getString("raketengruendung") + resourceBundle.getString("login"));
+        view.setResizable(false);
+        view.setBounds(450, 190, 1000, 600);
 
         //Icon oben links verändern
 //        ImageIcon img = new ImageIcon("C:\\Users\\Günter\\Desktop\\7.jpg");
@@ -46,9 +43,8 @@ public class MasterController {
     }
 
     public void loadHomescreen() {
-        view.getFrame().setTitle(resourceBundle.getString("raketengruendung") + resourceBundle.getString("home"));
-        view.getFrame().setResizable(false);
-//        view.getFrame().setBounds(450, 190, 1000, 600);
+        view.setTitle(resourceBundle.getString("raketengruendung") + resourceBundle.getString("home"));
+        view.setResizable(false);
 
         HomescreenModel homescreenModel = new HomescreenModel();
         Homescreen homescreenView = new Homescreen();
@@ -56,8 +52,8 @@ public class MasterController {
         changePanel(homescreenView);
     }
     public void loadFinder() {
-        view.getFrame().setTitle(resourceBundle.getString("raketengruendung")+resourceBundle.getString("finder"));
-        view.getFrame().setResizable(false);
+        view.setTitle(resourceBundle.getString("raketengruendung")+resourceBundle.getString("finder"));
+        view.setResizable(false);
 //        view.getFrame().setBounds(450, 190, 1000, 600);
 
         FinderModel finderModel = new FinderModel();
@@ -67,11 +63,11 @@ public class MasterController {
     }
 
     public void changePanel(JPanel panel) {
-        if (view.getPanel() != null) {
-            view.getFrame().remove(view.getPanel());
+        if (!view.isPanelNull()) {
+            view.remove(view.getPanel());
         }
         view.setPanel(panel);
-        view.getFrame().add(panel);
+        view.add(panel);
         SwingUtilities.updateComponentTreeUI(view.getFrame());
     }
 

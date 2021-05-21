@@ -1,4 +1,4 @@
-package Raketengruendung.Rechtsformenfinder.Rechstform;
+package Raketengruendung.LegalFormFinder.LegalForm;
 
 import javax.swing.*;
 import java.awt.*;

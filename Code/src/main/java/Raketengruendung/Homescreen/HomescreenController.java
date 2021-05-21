@@ -15,32 +15,33 @@ public class HomescreenController {
         this.parent = parent;
         this.model = homescreenModel;
         this.view = homescreenView;
-        initListener();
-        resourceBundle = ResourceBundle.getBundle("HOME/HOME", parent.getLocale());
-        setText();
+
+        this.resourceBundle = ResourceBundle.getBundle("HOME/HOME", parent.getLocale());
+
+        this.initListener();
+        this.setText();
     }
 
     public void setText() {
-        view.setWelcomeText(resourceBundle.getString("welcome"));
-        view.setFinderText(resourceBundle.getString("finder"));
-        view.setFinderInformationText("<html><div style='text-align: center;'>" + resourceBundle.getString("finder-info") + resourceBundle.getString("finder") + "</div></html>");
-        view.setNewFoundingText(resourceBundle.getString("new_founding"));
-        view.setNewFoundingInformationText("<html><div style='text-align: center;'>" + resourceBundle.getString("new_founding-info") + resourceBundle.getString("new_founding") + "</div></html>");
-        view.setCurrentFoundingText(resourceBundle.getString("current_foundings"));
-        view.setCurrentFoundingInformationText("<html><div style='text-align: center;'>" + resourceBundle.getString("current_foundings-info") + resourceBundle.getString("current_foundings") + "</div></html>");
-        view.setFinishedFoundingText(resourceBundle.getString("finished_foundings"));
-        view.setFinishedFoundingInformationText("<html><div style='text-align: center;'>" + resourceBundle.getString("finished_foundings-info") + resourceBundle.getString("finished_foundings") + "</div></html>");
+        this.view.setWelcomeText(resourceBundle.getString("welcome"));
+        this.view.setFinderText(resourceBundle.getString("finder"));
+        this.view.setFinderInformationText("<html><div style='text-align: center;'>" + resourceBundle.getString("finder-info") + resourceBundle.getString("finder") + "</div></html>");
+        this.view.setNewFoundingText(resourceBundle.getString("new_founding"));
+        this.view.setNewFoundingInformationText("<html><div style='text-align: center;'>" + resourceBundle.getString("new_founding-info") + resourceBundle.getString("new_founding") + "</div></html>");
+        this.view.setCurrentFoundingText(resourceBundle.getString("current_foundings"));
+        this.view.setCurrentFoundingInformationText("<html><div style='text-align: center;'>" + resourceBundle.getString("current_foundings-info") + resourceBundle.getString("current_foundings") + "</div></html>");
+        this.view.setFinishedFoundingText(resourceBundle.getString("finished_foundings"));
+        this.view.setFinishedFoundingInformationText("<html><div style='text-align: center;'>" + resourceBundle.getString("finished_foundings-info") + resourceBundle.getString("finished_foundings") + "</div></html>");
     }
 
     public void initListener() {
-        view.setOnClickFinder(()->parent.loadFinder());
+        this.view.setOnClickFinder(()->parent.loadFinder());
+        // buttons implementation missing for But 2, 3 and 4
 
-        view.setOnLanguageSwitch(this::switchLocale);
-        // buttons implementation missing for But 2 and 3
+        this.view.setOnLanguageSwitch(this::switchLocale);
     }
 
     public void switchLocale() {
-        System.out.println("Language Change");
-        parent.switchLocale();
+        this.parent.switchLocale();
     }
 }

@@ -5,21 +5,21 @@ import java.awt.*;
 
 public class Homescreen extends JPanel implements HomescreenView{
 
-    private JButton but1= new JButton();
-    private JButton but2 = new JButton();
-    private JButton but3 = new JButton();
-    private JButton but4 = new JButton();
-    private JButton language = new JButton();
+    private JButton finderButton = new JButton();
+    private JButton newFoundingButton = new JButton();
+    private JButton currentFoundingsButton = new JButton();
+    private JButton finshedFoundingsButton = new JButton();
+    private JButton languageButton = new JButton();
 
-    private JLabel welcome = new JLabel();
-    private JLabel finderL = new JLabel();
-    private JLabel new_foundingL = new JLabel();
-    private JLabel current_foundingL = new JLabel();
-    private JLabel finished_foundingsL = new JLabel();
+    private JLabel welcomeLabel = new JLabel();
+    private JLabel finderLabel = new JLabel();
+    private JLabel newFoundingLabel = new JLabel();
+    private JLabel currentFoundingLabel = new JLabel();
+    private JLabel finishedFoundingsLabel = new JLabel();
 
     private onLanguage onLanguageCallback;
     private onClickFinder onClickFinderCallback;
-    private onClickNewFoundings onClickNewFoundingsCallback;
+    private onClickNewFoundings onClickNewFoundingCallback;
     private onClickCurrentFoundings onClickCurrentFoundingsCallback;
     private onClickFinishedFoundings onClickFinishedFoundingsCallback;
 
@@ -27,76 +27,72 @@ public class Homescreen extends JPanel implements HomescreenView{
         this.setLayout(null);
         this.setBackground(new Color(17,9,48));
 
-        welcome.setFont(new Font("Helvetica", Font.BOLD + Font.ITALIC, 38));
-        welcome.setBounds(100, 50, 800, 150);
-        welcome.setBackground(new Color(60,139,182));
-        welcome.setForeground(new Color(253, 253, 254));
-        this.add(welcome);
+        this.welcomeLabel.setFont(new Font("Helvetica", Font.BOLD + Font.ITALIC, 38));
+        this.welcomeLabel.setBounds(100, 50, 800, 150);
+        this.welcomeLabel.setBackground(new Color(60,139,182));
+        this.welcomeLabel.setForeground(new Color(253, 253, 254));
+        this.add(this.welcomeLabel);
 
-        finderL.setFont(new Font("Tahoma", Font.PLAIN, 12));
-        finderL.setBounds(50, 340, 200, 150);
-        finderL.setBackground(new Color(60,139,210));
-        finderL.setForeground(new Color(253, 253, 254));
-        finderL.setOpaque(true);
-        this.add(finderL);
+        this.finderLabel.setFont(new Font("Tahoma", Font.PLAIN, 12));
+        this.finderLabel.setBounds(50, 340, 200, 150);
+        this.finderLabel.setBackground(new Color(60,139,210));
+        this.finderLabel.setForeground(new Color(253, 253, 254));
+        this.finderLabel.setOpaque(true);
+        this.add(this.finderLabel);
 
-        new_foundingL.setFont(new Font("Tahoma", Font.PLAIN, 12));
-        new_foundingL.setBounds(275, 340, 200, 150);
-        new_foundingL.setBackground(new Color(60,139,210));
-        new_foundingL.setForeground(new Color(253, 253, 254));
-        new_foundingL.setOpaque(true);
-        this.add(new_foundingL);
+        this.newFoundingLabel.setFont(new Font("Tahoma", Font.PLAIN, 12));
+        this.newFoundingLabel.setBounds(275, 340, 200, 150);
+        this.newFoundingLabel.setBackground(new Color(60,139,210));
+        this.newFoundingLabel.setForeground(new Color(253, 253, 254));
+        this.newFoundingLabel.setOpaque(true);
+        this.add(this.newFoundingLabel);
 
-        current_foundingL.setFont(new Font("Tahoma", Font.PLAIN, 12));
-        current_foundingL.setBounds(500, 340, 200, 150);
-        current_foundingL.setBackground(new Color(60,139,210));
-        current_foundingL.setForeground(new Color(253, 253, 254));
-        current_foundingL.setOpaque(true);
-        this.add(current_foundingL);
+        this.currentFoundingLabel.setFont(new Font("Tahoma", Font.PLAIN, 12));
+        this.currentFoundingLabel.setBounds(500, 340, 200, 150);
+        this.currentFoundingLabel.setBackground(new Color(60,139,210));
+        this.currentFoundingLabel.setForeground(new Color(253, 253, 254));
+        this.currentFoundingLabel.setOpaque(true);
+        this.add(this.currentFoundingLabel);
 
-        finished_foundingsL.setFont(new Font("Tahoma", Font.PLAIN, 12));
-        finished_foundingsL.setBounds(725, 340, 200, 150);
-        finished_foundingsL.setBackground(new Color(60,139,210));
-        finished_foundingsL.setForeground(new Color(253, 253, 254));
-        finished_foundingsL.setOpaque(true);
-        this.add(finished_foundingsL);
+        this.finishedFoundingsLabel.setFont(new Font("Tahoma", Font.PLAIN, 12));
+        this.finishedFoundingsLabel.setBounds(725, 340, 200, 150);
+        this.finishedFoundingsLabel.setBackground(new Color(60,139,210));
+        this.finishedFoundingsLabel.setForeground(new Color(253, 253, 254));
+        this.finishedFoundingsLabel.setOpaque(true);
+        this.add(this.finishedFoundingsLabel);
 
-        //Switch language
-        // Sprache ändern
-        language.addActionListener(e->this.onLanguageCallback.execute());
-        language.setBounds(8, 8, 90, 25);
-        language.setBorder(BorderFactory.createMatteBorder(1, 1, 1, 1, new Color(60,139,182)));
-        language.setBackground(new Color(17,9,48));
-        language.setForeground(new Color(253, 253, 254));
-        this.add(language);
+        //language.setIcon(deutsche Flagge oder englische Flagge);
+        this.languageButton.addActionListener(e->this.onLanguageCallback.execute());
+        this.languageButton.setBounds(8, 8, 45, 25);
+        this.add(this.languageButton);
 
-        but1.addActionListener(e->this.onClickFinderCallback.execute());
-        but1.setFont(new Font("Tahoma", Font.PLAIN, 16));
-        but1.setBounds(50, 260, 200, 90);
-        but1.setBackground(new Color(60,139,182));
-        but1.setForeground(new Color(253, 253, 254));
-        this.add(but1);
+        this.finderButton.addActionListener(e->this.onClickFinderCallback.execute());
+        this.finderButton.setFont(new Font("Tahoma", Font.PLAIN, 16));
+        this.finderButton.setBounds(50, 260, 200, 90);
+        this.finderButton.setBackground(new Color(60,139,182));
+        this.finderButton.setForeground(new Color(253, 253, 254));
+        this.add(this.finderButton);
 
-        but2.addActionListener(e->this.onClickNewFoundingsCallback.execute());
-        but2.setFont(new Font("Tahoma", Font.PLAIN, 16));
-        but2.setBounds(275, 260, 200, 90);
-        but2.setBackground(new Color(60,139,182));
-        but2.setForeground(new Color(253, 253, 254));
-        this.add(but2);
+        this.newFoundingButton.addActionListener(e->this.onClickNewFoundingCallback.execute());
+        this.newFoundingButton.setFont(new Font("Tahoma", Font.PLAIN, 16));
+        this.newFoundingButton.setBounds(275, 260, 200, 90);
+        this.newFoundingButton.setBackground(new Color(60,139,182));
+        this.newFoundingButton.setForeground(new Color(253, 253, 254));
+        this.add(this.newFoundingButton);
 
-        but3.addActionListener(e->this.onClickCurrentFoundingsCallback.execute());
-        but3.setFont(new Font("Tahoma", Font.PLAIN, 16));
-        but3.setBounds(500, 260, 200, 90);
-        but3.setBackground(new Color(60,139,182));
-        but3.setForeground(new Color(253, 253, 254));
-        this.add(but3);
+        this.currentFoundingsButton.addActionListener(e->this.onClickCurrentFoundingsCallback.execute());
+        this.currentFoundingsButton.setFont(new Font("Tahoma", Font.PLAIN, 16));
+        this.currentFoundingsButton.setBounds(500, 260, 200, 90);
+        this.currentFoundingsButton.setBackground(new Color(60,139,182));
+        this.currentFoundingsButton.setForeground(new Color(253, 253, 254));
+        this.add(this.currentFoundingsButton);
 
-        but4.addActionListener(e->this.onClickFinishedFoundingsCallback.execute());
-        but4.setFont(new Font("Tahoma", Font.PLAIN, 16));
-        but4.setBounds(725, 260, 200, 90);
-        but4.setBackground(new Color(60,139,182));
-        but4.setForeground(new Color(253, 253, 254));
-        this.add(but4);
+        this.finshedFoundingsButton.addActionListener(e->this.onClickFinishedFoundingsCallback.execute());
+        this.finshedFoundingsButton.setFont(new Font("Tahoma", Font.PLAIN, 16));
+        this.finshedFoundingsButton.setBounds(725, 260, 200, 90);
+        this.finshedFoundingsButton.setBackground(new Color(60,139,182));
+        this.finshedFoundingsButton.setForeground(new Color(253, 253, 254));
+        this.add(this.finshedFoundingsButton);
     }
 
     @Override
@@ -110,8 +106,8 @@ public class Homescreen extends JPanel implements HomescreenView{
     }
 
     @Override
-    public void setOnClickNewFoundings(onClickNewFoundings callback) {
-        this.onClickNewFoundingsCallback = callback;
+    public void setOnClickNewFounding(onClickNewFoundings callback) {
+        this.onClickNewFoundingCallback = callback;
     }
 
     @Override
@@ -126,46 +122,46 @@ public class Homescreen extends JPanel implements HomescreenView{
 
     @Override
     public void setWelcomeText(String welcomeText) {
-        this.welcome.setText(welcomeText);
+        this.welcomeLabel.setText(welcomeText);
     }
 
     @Override
     public void setFinderInformationText(String finderInformationText) {
-        this.finderL.setText(finderInformationText);
+        this.finderLabel.setText(finderInformationText);
     }
 
     @Override
     public void setFinderText(String finderButtonText) {
-        this.but1.setText(finderButtonText);
+        this.finderButton.setText(finderButtonText);
     }
 
     @Override
     public void setNewFoundingInformationText(String newFoundingInformationText) {
-        this.new_foundingL.setText(newFoundingInformationText);
+        this.newFoundingLabel.setText(newFoundingInformationText);
     }
 
     @Override
     public void setNewFoundingText(String newFoundingText) {
-        this.but2.setText(newFoundingText);
+        this.newFoundingButton.setText(newFoundingText);
     }
 
     @Override
     public void setCurrentFoundingInformationText(String currentFoundingInformationText) {
-        this.current_foundingL.setText(currentFoundingInformationText);
+        this.currentFoundingLabel.setText(currentFoundingInformationText);
     }
 
     @Override
     public void setCurrentFoundingText(String currentFoundingText) {
-        this.but3.setText(currentFoundingText);
+        this.currentFoundingsButton.setText(currentFoundingText);
     }
 
     @Override
     public void setFinishedFoundingInformationText(String finishedFoundingInformationText) {
-        this.finished_foundingsL.setText(finishedFoundingInformationText);
+        this.finishedFoundingsLabel.setText(finishedFoundingInformationText);
     }
 
     @Override
     public void setFinishedFoundingText(String finishedFoundingText) {
-        this.but4.setText(finishedFoundingText);
+        this.finshedFoundingsButton.setText(finishedFoundingText);
     }
 }

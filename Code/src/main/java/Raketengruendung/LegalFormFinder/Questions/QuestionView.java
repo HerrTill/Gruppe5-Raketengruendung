@@ -1,6 +1,6 @@
-package Raketengruendung.Rechtsformenfinder.Fragen;
+package Raketengruendung.LegalFormFinder.Questions;
 
-public interface FragenView {
+public interface QuestionView {
     interface onClickAnswerOne {
         void execute();
     }

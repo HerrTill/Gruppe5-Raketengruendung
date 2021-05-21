@@ -1,16 +1,16 @@
-package Raketengruendung.Rechtsformenfinder.Rechstform;
+package Raketengruendung.LegalFormFinder.LegalForm;
 
-import Raketengruendung.Rechtsformenfinder.Fragen.FragenController;
+import Raketengruendung.LegalFormFinder.Questions.QuestionController;
 
 import java.util.ResourceBundle;
 
 public class RechstformController {
-    private FragenController parent;
+    private QuestionController parent;
     private RechtsformModel model;
     private RechtsformView view;
     private ResourceBundle resourceBundle;
 
-    public RechstformController(FragenController parent, RechtsformModel model, RechtsformView view) {
+    public RechstformController(QuestionController parent, RechtsformModel model, RechtsformView view) {
         this.parent = parent;
         this.model = model;
         this.view = view;

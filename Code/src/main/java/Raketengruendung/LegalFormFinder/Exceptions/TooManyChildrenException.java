@@ -1,4 +1,4 @@
-package Raketengruendung.Rechtsformenfinder.Exceptions;
+package Raketengruendung.LegalFormFinder.Exceptions;
 
 public class TooManyChildrenException extends Exception{
     public TooManyChildrenException(String message) {
