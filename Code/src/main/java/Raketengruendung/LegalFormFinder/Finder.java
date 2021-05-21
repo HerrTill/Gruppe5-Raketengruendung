@@ -12,6 +12,7 @@ public class Finder extends JPanel implements FinderView{
     private JButton startButton = new JButton();
     private JButton homeButton = new JButton();
     private JLabel welcomeLabel = new JLabel();
+
     private onClickStart onClickStartCallback;
     private onClickMainmenu onClickMainmenuCallback;
 

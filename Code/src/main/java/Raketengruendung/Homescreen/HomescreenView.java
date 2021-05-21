@@ -34,4 +34,5 @@ public interface HomescreenView{
     void setCurrentFoundingText(String currentFoundingText);
     void setFinishedFoundingInformationText(String finishedFoundingInformationText);
     void setFinishedFoundingText(String finishedFoundingText);
+    void setLanguageSwitchText(String languageSwitchText);
 }

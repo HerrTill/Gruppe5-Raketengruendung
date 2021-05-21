@@ -61,9 +61,11 @@ public class Homescreen extends JPanel implements HomescreenView{
         this.finishedFoundingsLabel.setOpaque(true);
         this.add(this.finishedFoundingsLabel);
 
-        //language.setIcon(deutsche Flagge oder englische Flagge);
         this.languageButton.addActionListener(e->this.onLanguageCallback.execute());
-        this.languageButton.setBounds(8, 8, 45, 25);
+        this.languageButton.setBounds(8, 8, 90, 25);
+        this.languageButton.setBorder(BorderFactory.createMatteBorder(1, 1, 1, 1, new Color(60,139,182)));
+        this.languageButton.setBackground(new Color(17,9,48));
+        this.languageButton.setForeground(new Color(253, 253, 254));
         this.add(this.languageButton);
 
         this.finderButton.addActionListener(e->this.onClickFinderCallback.execute());
@@ -163,5 +165,10 @@ public class Homescreen extends JPanel implements HomescreenView{
     @Override
     public void setFinishedFoundingText(String finishedFoundingText) {
         this.finshedFoundingsButton.setText(finishedFoundingText);
+    }
+
+    @Override
+    public void setLanguageSwitchText(String languageSwitchText) {
+        this.languageButton.setText(languageSwitchText);
     }
 }
