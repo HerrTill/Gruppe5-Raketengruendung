@@ -12,8 +12,11 @@ public class Finder extends JPanel implements FinderView{
     private JButton startButton = new JButton();
     private JButton homeButton = new JButton();
     private JLabel welcomeLabel = new JLabel();
+
     private onClickStart onClickStartCallback;
     private onClickMainmenu onClickMainmenuCallback;
+
+    private String pictureNotFound;
 
     public Finder() {
         this.setLayout(null);
@@ -25,7 +28,8 @@ public class Finder extends JPanel implements FinderView{
             picLabel.setBounds(0, 0, 483, 580);
             this.add(picLabel);
         } catch (IOException ex) {
-            System.out.println("Das Bild wurde nicht gefunden");
+
+            System.out.println(pictureNotFound);
         }
 
         this.welcomeLabel.setFont(new Font("Tahoma", Font.PLAIN, 27));
@@ -74,6 +78,11 @@ public class Finder extends JPanel implements FinderView{
     @Override
     public void setMainmenuText(String mainmenuText) {
         this.homeButton.setText(mainmenuText);
+    }
+
+    @Override
+    public void setPictureNotFoundText(String pictureNotFoundText) {
+        this.pictureNotFound = pictureNotFoundText;
     }
 
 }
