@@ -32,35 +32,35 @@ public class LegalFormController {
         switch (model.getRechtsform()) {
             case EINZELU:
                 view.setTitleText(resourceBundle.getString("EINZELU"));
-                view.setDescriptionText(resourceBundle.getString("EINZELU_description"));
+                view.setDescriptionText("<html><div style='text-align: center;'>" + resourceBundle.getString("EINZELU_description") + "</div></html>");
                 break;
             case GMBH:
                 view.setTitleText(resourceBundle.getString("GMBH"));
-                view.setDescriptionText(resourceBundle.getString("GMBH_description"));
+                view.setDescriptionText("<html><div style='text-align: center;'>" + resourceBundle.getString("GMBH_description") + "</div></html>");
                 break;
             case UG:
                 view.setTitleText(resourceBundle.getString("UG"));
-                view.setDescriptionText(resourceBundle.getString("UG_description"));
+                view.setDescriptionText("<html><div style='text-align: center;'>" + resourceBundle.getString("UG_description") + "</div></html>");
                 break;
             case KG:
                 view.setTitleText(resourceBundle.getString("KG"));
-                view.setDescriptionText(resourceBundle.getString("KG_description"));
+                view.setDescriptionText("<html><div style='text-align: center;'>" + resourceBundle.getString("KG_description") + "</div></html>");
                 break;
             case AG:
                 view.setTitleText(resourceBundle.getString("AG"));
-                view.setDescriptionText(resourceBundle.getString("AG_description"));
+                view.setDescriptionText("<html><div style='text-align: center;'>" + resourceBundle.getString("AG_description") + "</div></html>");
                 break;
             case OHG:
                 view.setTitleText(resourceBundle.getString("OHG"));
-                view.setDescriptionText(resourceBundle.getString("OHG_description"));
+                view.setDescriptionText("<html><div style='text-align: center;'>" + resourceBundle.getString("OHG_description") + "</div></html>");
                 break;
             case PARTG:
                 view.setTitleText(resourceBundle.getString("PARTG"));
-                view.setDescriptionText(resourceBundle.getString("PARTG_description"));
+                view.setDescriptionText("<html><div style='text-align: center;'>" + resourceBundle.getString("PARTG_description") + "</div></html>");
                 break;
             case GBR:
                 view.setTitleText(resourceBundle.getString("GBR"));
-                view.setDescriptionText(resourceBundle.getString("GBR_description"));
+                view.setDescriptionText("<html><div style='text-align: center;'>" + resourceBundle.getString("GBR_description") + "</div></html>");
                 break;
         }
     }

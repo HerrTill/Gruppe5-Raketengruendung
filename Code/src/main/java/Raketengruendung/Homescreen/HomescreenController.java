@@ -25,13 +25,13 @@ public class HomescreenController {
 
     public void setText() {
         this.view.setWelcomeText(resourceBundle.getString("welcome"));
-        this.view.setFinderText(resourceBundle.getString("finder"));
+        this.view.setFinderText("<html><div style='text-align: center;'>" + resourceBundle.getString("finder") + "</div></html>");
         this.view.setFinderInformationText("<html><div style='text-align: center;'>" + resourceBundle.getString("finder-info") + " " + resourceBundle.getString("finder") + "</div></html>");
-        this.view.setNewFoundingText(resourceBundle.getString("new_founding"));
+        this.view.setNewFoundingText("<html><div style='text-align: center;'>" + resourceBundle.getString("new_founding") + "</div></html>");
         this.view.setNewFoundingInformationText("<html><div style='text-align: center;'>" + resourceBundle.getString("new_founding-info") + " " + resourceBundle.getString("new_founding") + "</div></html>");
-        this.view.setCurrentFoundingText(resourceBundle.getString("current_foundings"));
+        this.view.setCurrentFoundingText("<html><div style='text-align: center;'>" + resourceBundle.getString("current_foundings") + "</div></html>");
         this.view.setCurrentFoundingInformationText("<html><div style='text-align: center;'>" + resourceBundle.getString("current_foundings-info") + " " + resourceBundle.getString("current_foundings") + "</div></html>");
-        this.view.setFinishedFoundingText(resourceBundle.getString("finished_foundings"));
+        this.view.setFinishedFoundingText("<html><div style='text-align: center;'>" + resourceBundle.getString("finished_foundings") + "</div></html>");
         this.view.setFinishedFoundingInformationText("<html><div style='text-align: center;'>" + resourceBundle.getString("finished_foundings-info") + " " + resourceBundle.getString("finished_foundings") + "</div></html>");
         if (parent.getLocale() == Locale.GERMAN) {
             this.view.setLanguageSwitchText(resourceBundle.getString("languageSwitchDE"));
