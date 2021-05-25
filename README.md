@@ -21,7 +21,7 @@ und einfache Anmeldung des Unternehmens bei den zuständigen Ämtern.
 
 #  Hintergrund
 Seit einigen Jahren haben es kleine Unternehmen immer schwerer neben den dominierenden
-Unternehmensgiganten zu bestehen (siehe Statistik 1). Dadurch geht Vielfalt verloren und
+Unternehmensgiganten zu bestehen. Dadurch geht Vielfalt verloren und
 Personen verlieren ihre Existenz.
 „Raketengründung“ will genau diese Vielfalt der Gründer und ihrer kreativen Ideen waren und
 die Möglichkeit bieten ihren Traum in die Realität umzusetzen.
