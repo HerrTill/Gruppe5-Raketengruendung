@@ -45,6 +45,7 @@ Die Dokumentation unserer Vorgehensweise und Strukturieung findet sich [hier](ht
 
 Eine Übersicht über die implementierten Rechtsformen mit Informationen findet sich [hier](https://github.com/HerrTill/Gruppe5-Raketengruendung/blob/master/Thema/Steckbriefe%20Gesellschaftsformen.pdf).
 
+Eine Übersicht zu dem Hintergund des Entscheidungsbaums findet sich [hier](https://github.com/HerrTill/Gruppe5-Raketengruendung/blob/master/Thema/Entscheidungsbaum.pdf).
 
 
 # Prototyp
