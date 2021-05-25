@@ -38,7 +38,7 @@ Im Rahmen des Projektes wurde lediglich der Rechtsformen-Finder komplett impleme
 Der endgültig angedachte Scope erzieht sich über den gesamten Gründungsprozess.
 
 # Prototyp
-Unseren Prototypen finden sich im Ordner Prototyp
+Unseren Prototypen finden sich im Ordner [Prototyp](https://github.com/HerrTill/Gruppe5-Raketengruendung/tree/master/Prototyp)
 
 # Das Team
 Das Team rund um Raketengründung besteht aus Henri Sigge, Anne Wosien, Björn Taus, Kai Wörnle und Till Müller
