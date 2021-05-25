@@ -25,7 +25,7 @@ Unternehmensgiganten zu bestehen. Dadurch geht Vielfalt verloren und
 Personen verlieren ihre Existenz.
 „Raketengründung“ will genau diese Vielfalt der Gründer und ihrer kreativen Ideen waren und
 die Möglichkeit bieten ihren Traum in die Realität umzusetzen.
-Mehr Informationen finden sich in der [Datei](https://github.com/HerrTill/Gruppe5-Raketengruendung/blob/master/Thema/Raketengru%CC%88ndung_Thesolution.pdf)
+Mehr Informationen finden sich in der [Datei](https://github.com/HerrTill/Gruppe5-Raketengruendung/blob/master/Thema/Raketengru%CC%88ndung%20-%20The%20Solution.pdf)
 
 
 # Installation
@@ -39,9 +39,9 @@ Im Rahmen des Projektes wurde lediglich der Rechtsformen-Finder komplett impleme
 Der endgültig angedachte Scope erzieht sich über den gesamten Gründungsprozess.
 
 # Dokumentation
-Die Technische Dokumentation mit Programmaufbau und Programmablaufplan findet sich [hier](https://github.com/HerrTill/Gruppe5-Raketengruendung/blob/master/Code/Technische%20Dokumentation.pdf).
+Die Technische Dokumentation mit Programmaufbau und Programmablaufplan findet sich [hier](https://github.com/HerrTill/Gruppe5-Raketengruendung/blob/master/Technische%20Dokumentation/Technische%20Dokumentation.pdf).
 
-Die Dokumentation unserer Vorgehensweise und Strukturieung findet sich [hier](https://github.com/HerrTill/Gruppe5-Raketengruendung/blob/master/Thema/ATdIT_ProzessDokumentation.pdf).
+Die Dokumentation unserer Vorgehensweise und Strukturieung findet sich [hier](https://github.com/HerrTill/Gruppe5-Raketengruendung/blob/master/Thema/Prozessdokumentation.pdf).
 
 Eine Übersicht über die implementierten Rechtsformen mit Informationen findet sich [hier](https://github.com/HerrTill/Gruppe5-Raketengruendung/blob/master/Thema/Steckbriefe%20Gesellschaftsformen.pdf).
 
