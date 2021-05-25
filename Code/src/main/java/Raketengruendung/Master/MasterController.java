@@ -18,7 +18,7 @@ public class MasterController {
 
     private MasterModel model;
     private MasterView view;
-    private Locale locale= Locale.getDefault();
+    private Locale locale= Locale.US;
     private ResourceBundle resourceBundle = ResourceBundle.getBundle("MASTER/MASTER", locale);
 
     public MasterController(MasterModel model, MasterView view) {
@@ -31,10 +31,6 @@ public class MasterController {
         view.setTitle(resourceBundle.getString("raketengruendung") + resourceBundle.getString("login"));
         view.setResizable(false);
         view.setBounds(450, 190, 1000, 600);
-
-        //Icon oben links verändern
-//        ImageIcon img = new ImageIcon("C:\\Users\\Günter\\Desktop\\Theme.jpg");
-//        setIconImage(img.getImage());
 
         LoginModel loginModel = new LoginModel();
         Login loginView = new Login();
@@ -54,7 +50,6 @@ public class MasterController {
     public void loadFinder() {
         view.setTitle(resourceBundle.getString("raketengruendung")+resourceBundle.getString("finder"));
         view.setResizable(false);
-//        view.getFrame().setBounds(450, 190, 1000, 600);
 
         FinderModel finderModel = new FinderModel();
         Finder finderView = new Finder();

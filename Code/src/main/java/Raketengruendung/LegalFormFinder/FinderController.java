@@ -31,7 +31,6 @@ public class FinderController {
         this.view.setMainmenuText(resourceBundle.getString("mainMenu"));
         this.view.setTitleText(resourceBundle.getString("welcome"));
         this.view.setStartText(resourceBundle.getString("start"));
-        this.view.setPictureNotFoundText(resourceBundle.getString("pictureNotFound"));
     }
 
     public void initListener() {
@@ -40,11 +39,11 @@ public class FinderController {
     }
 
     public void startFinder() {
-        QuestionModel fragenModel = new QuestionModel();
-        QuestionsPanel fragenView = new QuestionsPanel();
-        QuestionController fragenController = new QuestionController(this, fragenModel, fragenView);
+        QuestionModel questionModel = new QuestionModel();
+        QuestionsPanel questionsPanel = new QuestionsPanel();
+        QuestionController questionController = new QuestionController(this, questionModel, questionsPanel);
 
-        this.parent.changePanel(fragenView);
+        this.parent.changePanel(questionsPanel);
     }
 
     public void loadHomescreen() {

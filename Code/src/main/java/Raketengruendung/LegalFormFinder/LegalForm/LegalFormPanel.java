@@ -12,8 +12,6 @@ public class LegalFormPanel extends JPanel implements LegalFormView {
     private onClickBack onClickBackCallback;
 
     public LegalFormPanel() {
-//        this.add(titel);
-
         this.setLayout(null);
         this.setBackground(new Color(17,9,48));
 
@@ -22,18 +20,17 @@ public class LegalFormPanel extends JPanel implements LegalFormView {
         this.rechtsform.setForeground(new Color(253, 253, 254));
         this.add(this.rechtsform);
 
-        description.setFont(new Font("Tahoma", Font.PLAIN, 21));
-        description.setBounds(200, 150, 600, 100);
-        //description.setBorder(BorderFactory.createMatteBorder(1, 1, 1, 1, new Color(60,139,182)));
-        description.setForeground(new Color(150,150,150));
-        this.add(description);
+        this.description.setFont(new Font("Tahoma", Font.PLAIN, 21));
+        this.description.setBounds(200, 20, 700, 500);
+        this.description.setForeground(new Color(150,150,150));
+        this.add(this.description);
 
-        back.addActionListener(e->this.onClickBackCallback.execute());
-        back.setBounds(850, 30, 80, 30);
-        back.setBorder(BorderFactory.createMatteBorder(1, 1, 1, 1, new Color(60,139,182)));
-        back.setBackground(new Color(17,9,48));
-        back.setForeground(new Color(253, 253, 254));
-        this.add(back);
+        this.back.addActionListener(e->this.onClickBackCallback.execute());
+        this.back.setBounds(850, 30, 80, 30);
+        this.back.setBorder(BorderFactory.createMatteBorder(1, 1, 1, 1, new Color(60,139,182)));
+        this.back.setBackground(new Color(17,9,48));
+        this.back.setForeground(new Color(253, 253, 254));
+        this.add(this.back);
     }
 
     @Override

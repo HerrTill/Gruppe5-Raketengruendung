@@ -41,31 +41,8 @@ public class Register extends JPanel implements RegisterView{
             picLabel.setBounds(0, 0, 483, 580);
             this.add(picLabel);
         } catch (IOException ex) {
-            System.out.println("Das Bild wurde nicht gefunden");
+            System.out.println(ex.getMessage());
         }
-
-        /*
-        WICHTIG:
-        Hier noch ein Checkfield, dass man die Datenschutzbedingungen akzeptiert?
-        LanguageButton auch schon bei Anmeldung und Registrierung!
-        Überprüfen, ob überall Werte eingegeben wurden (Register)
-        Überprüfen, ob die Passwörter übereinstimmen (Register)
-        Username, password, etc Rechtsbündig!!!!!! (Register)
-        RegisterButton noch implementieren --> führt einen zum Homescreen
-        "Neues Unternehmen gründen" noch implementieren
-        Rechtschreibfehler im Homescreen
-        Bilder hinzufügen!!!!!!!!
-        kein Account? Registriere hier --> rechtsbündig und breiter machen weil duetsch länger ist
-        Hauptmenü Logo rechts neben willkommen
-        evtl logoutbutton mainscreen
-        Button Border mit drüberhovern !!!!!!!!!!!!!!!!!!!!!!!!!! bei drüberhovern soll das auf Button angezeigt werden
-        Buttondesign bei Fragen sieht eig gut aaus
-        bei FragenView selbes Design wie bei LoginView mit Raketengründung links
-        "Neues Unternehmen gründen" noch ausprogrammieren
-        "Willkommen beim Rechtsformfinder" untereinander schreiben
-
-        ALLES AN BILDERN DESIGNEN UND IMPLEMENTIEREN
-         */
 
         this.title.setFont(new Font("Tahoma", Font.PLAIN, 42));
         this.title.setBounds(620, 13, 273, 93);

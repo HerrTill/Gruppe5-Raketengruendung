@@ -38,12 +38,12 @@ public class QuestionController {
 
     public void initListener() {
         this.view.setOnClickMainmenu(this::loadHomescreen);
-        this.view.setOnClickBack(this::lastQuestion);
+        this.view.setOnClickBack(this::loadPreviousQuestion);
 
-        this.view.setOnClickAnswerOne(()->nextQuestion(answers.get(0)));
-        this.view.setOnClickAnswerTwo(()->nextQuestion(answers.get(1)));
+        this.view.setOnClickAnswerOne(()-> loadNextQuestion(answers.get(0)));
+        this.view.setOnClickAnswerTwo(()-> loadNextQuestion(answers.get(1)));
         if (this.answers.size() == 3) {
-            this.view.setOnClickAnswerThree(()->nextQuestion(answers.get(2)));
+            this.view.setOnClickAnswerThree(()-> loadNextQuestion(answers.get(2)));
         }
     }
 
@@ -66,7 +66,7 @@ public class QuestionController {
         this.initListener();
     }
 
-    public void lastQuestion() {
+    public void loadPreviousQuestion() {
         if (this.previous_Questions.get(this.previous_Questions.size()-1) == this.model.getFirstQuestion()) {
             this.parent.loadFinder();
         } else  {
@@ -85,17 +85,17 @@ public class QuestionController {
         this.initListener();
     }
 
-    public void nextQuestion(Question question){
+    public void loadNextQuestion(Question question){
         this.addPrevious_Questions(question);
         if (question.getChildren()[0] == null){
-            this.loadRechtsform(question.question);
+            this.loadLegalForm(question.question);
         } else {
             this.loadQuestion(question);
         }
 
     }
 
-    public void loadRechtsform(String legalFormString) {
+    public void loadLegalForm(String legalFormString) {
         LegalForms legalForm;
         switch (legalFormString) {
             case ("GmbH"):
