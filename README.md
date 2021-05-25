@@ -1,29 +1,55 @@
+##### ATdIT Projektgruppe 5
 # Raketengründung
+
+## Inhaltsverzeichnis
+### [Was ist Raketengründung](#was-ist-raketengründung-1)
+### [Hintergrund](#hintergrund-1)
+### [Installation](#installation-1)
+### [Implementierter Scope](#implementierter-scope-1)
+### [Dokumentation](#dokumentation-1)
+### [Prototyp](#prototyp-1)
+### [Das Team](#das-team-1)
+
+
+# Was ist Raketengründung?
 „Raketengründung“ revolutioniert den Gründungsprozess und erspart den Gründern viel Zeit,
 Aufwand und Nerven, damit sie sich primär auf ihr Unternehmen und dessen Fortschritt
 fokussieren können.
 Unsere App vereint die Möglichkeit einer Rechtsformberatung und gleichzeitig eine zentrale
 und einfache Anmeldung des Unternehmens bei den zuständigen Ämtern.
 
+
+#  Hintergrund
 Seit einigen Jahren haben es kleine Unternehmen immer schwerer neben den dominierenden
-Unternehmensgiganten zu bestehen (siehe Statistik 1). Dadurch geht Vielfalt verloren und
+Unternehmensgiganten zu bestehen. Dadurch geht Vielfalt verloren und
 Personen verlieren ihre Existenz.
 „Raketengründung“ will genau diese Vielfalt der Gründer und ihrer kreativen Ideen waren und
 die Möglichkeit bieten ihren Traum in die Realität umzusetzen.
+Mehr Informationen finden sich in der [Datei](https://github.com/HerrTill/Gruppe5-Raketengruendung/blob/master/Thema/Raketengru%CC%88ndung_Thesolution.pdf)
 
-Unsere App soll Gründer auf dem gesamten Unternehmensanmeldungsprozess begleiten und
-unterstützen. So werden vor allem jüngere und unerfahrenere Unternehmer entlastet, welche
-oftmals kein großes Team zur Unterstützung und meistens nur begrenzte finanzielle Mittel im
-Gründungsprozess haben (siehe Statistik 2, 3, 4).
 
-Jeder der bereits Erfahrungen und erste Eindrücke in diesem Bereich gesammelt hat, weiß wie
-umständlich und langwierig solch ein Anmeldungsprozess sein kann. Trotz des Zeitalters der
-Digitalisierung und der hohen Nachfrage nach digitalen Lösungen für die Bewältigung der
-Bürokratie (siehe Statistik 5), mangelt es oft an Übersichtlichkeit und Struktur auf den
-verschiedenen Ämtern. Auch die Möglichkeit zum Einholen von benötigten Informationen
-erweist sich oft als kompliziert.
+# Installation
+Zur Installation muss das Projekt in eine IDE gepullt und das Maven Script geladen werden.
 
-„Raketengründung“ hat sich das Ziel gesetzt, all diese Probleme und Schwierigkeiten
-anzugehen und das Gründen wieder attraktiver zu machen.
+_Da es sich hierbei noch um einen Prototypen handelt, gibt es bisher keine andere Start-Möglichkeit_
 
-(Statistiken siehe Raketengründung - The Solution)
+
+# Implementierter Scope
+Im Rahmen des Projektes wurde lediglich der Rechtsformen-Finder komplett implementiert.
+Der endgültig angedachte Scope erzieht sich über den gesamten Gründungsprozess.
+
+# Dokumentation
+Die Technische Dokumentation mit Programmaufbau und Programmablaufplan findet sich [hier](https://github.com/HerrTill/Gruppe5-Raketengruendung/blob/master/Code/Technische%20Dokumentation.pdf).
+
+Die Dokumentation unserer Vorgehensweise und Strukturieung findet sich [hier](https://github.com/HerrTill/Gruppe5-Raketengruendung/blob/master/Thema/ATdIT_ProzessDokumentation.pdf).
+
+Eine Übersicht über die implementierten Rechtsformen mit Informationen findet sich [hier](https://github.com/HerrTill/Gruppe5-Raketengruendung/blob/master/Thema/Steckbriefe%20Gesellschaftsformen.pdf).
+
+Eine Übersicht zu dem Hintergund des Entscheidungsbaums findet sich [hier](https://github.com/HerrTill/Gruppe5-Raketengruendung/blob/master/Thema/Entscheidungsbaum.pdf).
+
+
+# Prototyp
+Unseren Prototypen finden sich im Ordner [Prototyp](https://github.com/HerrTill/Gruppe5-Raketengruendung/tree/master/Prototyp)
+
+# Das Team
+Das Team rund um Raketengründung besteht aus Henri Sigge, Anne Wosien, Björn Taus, Kai Wörnle und Till Müller
