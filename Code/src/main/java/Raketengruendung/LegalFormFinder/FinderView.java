@@ -13,4 +13,5 @@ public interface FinderView {
     void setTitleText(String titleText);
     void setStartText(String startText);
     void setMainmenuText(String mainmenuText);
+    void setPictureNotFoundText(String pictureNotFoundText);
 }

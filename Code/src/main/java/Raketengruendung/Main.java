@@ -10,10 +10,12 @@ import java.util.ResourceBundle;
 
 public class Main {
     private static ResourceBundle resourceBundle;
+    private static MasterModel model;
+    private static MasterView view;
     public static void main(String[] args) {
         resourceBundle = ResourceBundle.getBundle("MASTER/MASTER");
-        MasterModel masterModel = new MasterModel();
-        Master masterView = new Master(resourceBundle.getString("raketengruendung"));
-        MasterController masterController= new MasterController(masterModel,masterView);
+        model = new MasterModel();
+        view = new Master(resourceBundle.getString("raketengruendung"));
+        MasterController masterController= new MasterController(model,view);
     }
 }

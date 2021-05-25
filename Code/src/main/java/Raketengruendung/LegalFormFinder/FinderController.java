@@ -31,6 +31,7 @@ public class FinderController {
         this.view.setMainmenuText(resourceBundle.getString("mainMenu"));
         this.view.setTitleText(resourceBundle.getString("welcome"));
         this.view.setStartText(resourceBundle.getString("start"));
+        this.view.setPictureNotFoundText(resourceBundle.getString("pictureNotFound"));
     }
 
     public void initListener() {

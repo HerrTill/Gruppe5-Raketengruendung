@@ -4,7 +4,6 @@ package Raketengruendung.Login;
 import Raketengruendung.Master.Design.RoundedBorders;
 
 import javax.swing.*;
-import javax.swing.border.Border;
 import java.awt.*;
 import java.io.IOException;
 import java.util.Objects;
@@ -29,7 +28,7 @@ public class Login extends JPanel implements LoginView{
         this.setBackground(new Color(17,9,48));
 
         try {
-           BufferedImage myPicture = ImageIO.read(Objects.requireNonNull(getClass().getResourceAsStream("/7.jpg")));
+           BufferedImage myPicture = ImageIO.read(Objects.requireNonNull(getClass().getResourceAsStream("/Theme.jpg")));
            JLabel picLabel = new JLabel(new ImageIcon(myPicture));
            picLabel.setBounds(0, 0, 483, 580);
            this.add(picLabel);
@@ -37,24 +36,23 @@ public class Login extends JPanel implements LoginView{
            System.out.println("Das Bild wurde nicht gefunden");
         }
 
-
-        this.title.setForeground(Color.WHITE);
         this.title.setFont(new Font("Tahoma", Font.PLAIN, 42));
         this.title.setBounds(670, 13, 273, 93);
+        this.title.setForeground(Color.WHITE);
         this.add(title);
 
         this.textField.setFont(new Font("Tahoma", Font.PLAIN, 21));
         this.textField.setBounds(601, 200, 250, 30);
         this.textField.setBorder(BorderFactory.createMatteBorder(0, 0, 2, 0, new Color(60,139,182)));
         this.textField.setColumns(10);
-        this.textField.setForeground(new Color(100,100,100));
+        this.textField.setForeground(new Color(130,130,130));
         this.textField.setOpaque(false);
         this.add(this.textField);
 
         this.passwordField.setFont(new Font("Tahoma", Font.PLAIN, 21));
         this.passwordField.setBounds(601, 300, 250, 30);
         this.passwordField.setOpaque(false);
-        this.passwordField.setForeground(Color.WHITE);
+        this.passwordField.setForeground(new Color(130,130,130));
         this.passwordField.setBorder(BorderFactory.createMatteBorder(0, 0, 2, 0, new Color(60,139,182)));
         this.add(this.passwordField);
 
@@ -62,6 +60,7 @@ public class Login extends JPanel implements LoginView{
         this.lblUsername.setForeground(new Color(60,139,182));
         this.lblUsername.setFont(new Font("Tahoma", Font.PLAIN, 20));
         this.lblUsername.setBounds(600, 150, 193, 52);
+        this.lblUsername.setForeground(new Color(60,139,182));
         this.add(this.lblUsername);
 
 

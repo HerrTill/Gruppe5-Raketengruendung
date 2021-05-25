@@ -16,13 +16,13 @@ import java.util.ResourceBundle;
 
 public class MasterController {
 
-    private MasterModel masterModel;
+    private MasterModel model;
     private MasterView view;
     private Locale locale= Locale.getDefault();
     private ResourceBundle resourceBundle = ResourceBundle.getBundle("MASTER/MASTER", locale);
 
     public MasterController(MasterModel model, MasterView view) {
-        this.masterModel = model;
+        this.model = model;
         this.view = view;
         initView();
     }
@@ -33,7 +33,7 @@ public class MasterController {
         view.setBounds(450, 190, 1000, 600);
 
         //Icon oben links verändern
-//        ImageIcon img = new ImageIcon("C:\\Users\\Günter\\Desktop\\7.jpg");
+//        ImageIcon img = new ImageIcon("C:\\Users\\Günter\\Desktop\\Theme.jpg");
 //        setIconImage(img.getImage());
 
         LoginModel loginModel = new LoginModel();
