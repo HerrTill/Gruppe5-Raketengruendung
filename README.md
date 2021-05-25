@@ -6,6 +6,7 @@
 ### [Hintergrund](#hintergrund-1)
 ### [Installation](#installation-1)
 ### [Implementierter Scope](#implementierter-scope-1)
+### [Dokumentation](#dokumentation-1)
 ### [Prototyp](#prototyp-1)
 ### [Das Team](#das-team-1)
 
@@ -24,7 +25,7 @@ Unternehmensgiganten zu bestehen (siehe Statistik 1). Dadurch geht Vielfalt verl
 Personen verlieren ihre Existenz.
 „Raketengründung“ will genau diese Vielfalt der Gründer und ihrer kreativen Ideen waren und
 die Möglichkeit bieten ihren Traum in die Realität umzusetzen.
-Mehr Informationen finden sich in der Datei: raketegruendung_Thesolution
+Mehr Informationen finden sich in der [Datei](https://github.com/HerrTill/Gruppe5-Raketengruendung/blob/master/Thema/Raketengru%CC%88ndung_Thesolution.pdf)
 
 
 # Installation
@@ -36,6 +37,13 @@ _Da es sich hierbei noch um einen Prototypen handelt, gibt es bisher keine ander
 # Implementierter Scope
 Im Rahmen des Projektes wurde lediglich der Rechtsformen-Finder komplett implementiert.
 Der endgültig angedachte Scope erzieht sich über den gesamten Gründungsprozess.
+
+# Dokumentation
+Die Technische Dokumentation findet sich [hier](https://github.com/HerrTill/Gruppe5-Raketengruendung/blob/master/Code/Technische%20Dokumentation.pdf)
+Die Dokumentation unserer Vorgehensweise und Strukturieung findet sich [hier](https://github.com/HerrTill/Gruppe5-Raketengruendung/blob/master/Thema/ATdIT_ProzessDokumentation.pdf)
+Eine Übersicht über die implementierten Rechtsformen mit Informationen findet sich [hier](https://github.com/HerrTill/Gruppe5-Raketengruendung/blob/master/Thema/Steckbriefe%20Gesellschaftsformen.pdf)
+
+
 
 # Prototyp
 Unseren Prototypen finden sich im Ordner [Prototyp](https://github.com/HerrTill/Gruppe5-Raketengruendung/tree/master/Prototyp)
