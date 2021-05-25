@@ -80,50 +80,50 @@ public class QuestionController {
         this.parent.loadHomescreen();
     }
 
-    public void loadQuestion(Question frage) {
-        this.setQuestion(frage);
+    public void loadQuestion(Question question) {
+        this.setQuestion(question);
         this.initListener();
     }
 
-    public void nextQuestion(Question frage){
-        this.addPrevious_Questions(frage);
-        if (frage.getChildren()[0] == null){
-            this.loadRechtsform(frage.question);
+    public void nextQuestion(Question question){
+        this.addPrevious_Questions(question);
+        if (question.getChildren()[0] == null){
+            this.loadRechtsform(question.question);
         } else {
-            this.loadQuestion(frage);
+            this.loadQuestion(question);
         }
 
     }
 
-    public void loadRechtsform(String rechtsformString) {
-        LegalForms rechtsform;
-        switch (rechtsformString) {
+    public void loadRechtsform(String legalFormString) {
+        LegalForms legalForm;
+        switch (legalFormString) {
             case ("GmbH"):
-                rechtsform = LegalForms.GMBH;
+                legalForm = LegalForms.GMBH;
                 break;
             case ("UG"):
-                rechtsform = LegalForms.UG;
+                legalForm = LegalForms.UG;
                 break;
             case ("KG"):
-                rechtsform = LegalForms.KG;
+                legalForm = LegalForms.KG;
                 break;
             case ("AG"):
-                rechtsform = LegalForms.AG;
+                legalForm = LegalForms.AG;
                 break;
             case ("OHG"):
-                rechtsform = LegalForms.OHG;
+                legalForm = LegalForms.OHG;
                 break;
             case ("PartG"):
-                rechtsform = LegalForms.PARTG;
+                legalForm = LegalForms.PARTG;
                 break;
             case ("GbR"):
-                rechtsform = LegalForms.GBR;
+                legalForm = LegalForms.GBR;
                 break;
             default:
-                rechtsform = LegalForms.EINZELU;
+                legalForm = LegalForms.EINZELU;
         }
 
-        LegalFormModel model = new LegalFormModel(rechtsform);
+        LegalFormModel model = new LegalFormModel(legalForm);
         LegalFormPanel view = new LegalFormPanel();
         LegalFormController controller = new LegalFormController(this, model, view);
         this.parent.changePanel(view);
