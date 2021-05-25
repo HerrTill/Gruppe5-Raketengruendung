@@ -35,7 +35,7 @@ public class QuestionsPanel extends JPanel implements QuestionView {
             picLabel.setBounds(0, 0, 483, 580);
             this.add(picLabel);
         } catch (IOException ex) {
-            System.out.println("Das Bild wurde nicht gefunden");
+            System.out.println(ex.getMessage());
         }
 
         this.questionLabel.setFont(new Font("Tahoma", Font.PLAIN, 30));

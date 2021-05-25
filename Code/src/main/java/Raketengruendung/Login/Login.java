@@ -33,7 +33,7 @@ public class Login extends JPanel implements LoginView{
            picLabel.setBounds(0, 0, 483, 580);
            this.add(picLabel);
         } catch (IOException ex) {
-           System.out.println("Das Bild wurde nicht gefunden");
+            System.out.println(ex.getMessage());
         }
 
         this.title.setFont(new Font("Tahoma", Font.PLAIN, 42));

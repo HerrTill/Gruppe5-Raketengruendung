@@ -32,10 +32,6 @@ public class MasterController {
         view.setResizable(false);
         view.setBounds(450, 190, 1000, 600);
 
-        //Icon oben links verändern
-//        ImageIcon img = new ImageIcon("C:\\Users\\Günter\\Desktop\\Theme.jpg");
-//        setIconImage(img.getImage());
-
         LoginModel loginModel = new LoginModel();
         Login loginView = new Login();
         LoginController loginController = new LoginController(this, loginModel, loginView);
@@ -54,7 +50,6 @@ public class MasterController {
     public void loadFinder() {
         view.setTitle(resourceBundle.getString("raketengruendung")+resourceBundle.getString("finder"));
         view.setResizable(false);
-//        view.getFrame().setBounds(450, 190, 1000, 600);
 
         FinderModel finderModel = new FinderModel();
         Finder finderView = new Finder();

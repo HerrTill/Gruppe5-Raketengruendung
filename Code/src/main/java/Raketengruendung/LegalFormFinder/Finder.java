@@ -28,8 +28,7 @@ public class Finder extends JPanel implements FinderView{
             picLabel.setBounds(0, 0, 483, 580);
             this.add(picLabel);
         } catch (IOException ex) {
-
-            System.out.println(pictureNotFound);
+            System.out.println(ex.getMessage());
         }
 
         this.welcomeLabel.setFont(new Font("Tahoma", Font.PLAIN, 27));
@@ -80,9 +79,5 @@ public class Finder extends JPanel implements FinderView{
         this.homeButton.setText(mainmenuText);
     }
 
-    @Override
-    public void setPictureNotFoundText(String pictureNotFoundText) {
-        this.pictureNotFound = pictureNotFoundText;
-    }
 
 }
