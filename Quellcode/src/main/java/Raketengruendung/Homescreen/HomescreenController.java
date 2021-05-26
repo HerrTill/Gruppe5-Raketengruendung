@@ -43,12 +43,20 @@ public class HomescreenController {
 
     public void initListener() {
         this.view.setOnClickFinder(()->parent.loadFinder());
-        // buttons implementation missing for But 2, 3 and 4
+
+        //implementation for founding needs to be implemented
+        this.view.setOnClickNewFounding(this::doNothing);
+        this.view.setOnClickCurrentFoundings(this::doNothing);
+        this.view.setOnClickFinishedFoundings(this::doNothing);
 
         this.view.setOnLanguageSwitch(this::switchLocale);
     }
 
     public void switchLocale() {
         this.parent.switchLocale();
+    }
+
+    public void doNothing() {
+
     }
 }
