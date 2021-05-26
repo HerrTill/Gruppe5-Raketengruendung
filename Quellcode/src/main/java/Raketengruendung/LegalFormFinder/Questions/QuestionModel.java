@@ -50,12 +50,12 @@ public class QuestionModel {
         try {
             this.question1.addChild(this.question2_1);
         } catch (TooManyChildrenException e) {
-            System.out.println(e.getMessage());
+            System.out.println(resourceBundle.getString("TooManyChildrenException"));
         }
         try {
             this.question1.addChild(this.question2_2);
         } catch (TooManyChildrenException e) {
-            System.out.println(e.getMessage());
+            System.out.println(resourceBundle.getString("TooManyChildrenException"));
         }
 
         this.question3_1_1 = new Question("EinzelU", resourceBundle.getString("yes"));
@@ -63,12 +63,12 @@ public class QuestionModel {
         try {
             this.question2_1.addChild(this.question3_1_1);
         } catch (TooManyChildrenException e) {
-            e.printStackTrace();
+            System.out.println(resourceBundle.getString("TooManyChildrenException"));
         }
         try {
             this.question2_1.addChild(this.question3_1_2);
         } catch (TooManyChildrenException e) {
-            e.printStackTrace();
+            System.out.println(resourceBundle.getString("TooManyChildrenException"));
         }
 
         this.question3_2_1 = new Question(resourceBundle.getString("capital_contribution"), resourceBundle.getString("yes"));
@@ -77,12 +77,12 @@ public class QuestionModel {
         try {
             this.question2_2.addChild(this.question3_2_1);
         } catch (TooManyChildrenException e) {
-            e.printStackTrace();
+            System.out.println(resourceBundle.getString("TooManyChildrenException"));
         }
         try {
             this.question2_2.addChild(this.question3_2_2);
         } catch (TooManyChildrenException e) {
-            e.printStackTrace();
+            System.out.println(resourceBundle.getString("TooManyChildrenException"));
         }
 
         this.question4_1_1 = new Question(resourceBundle.getString("deposit_amount"), resourceBundle.getString("yes"));
@@ -90,36 +90,36 @@ public class QuestionModel {
         try {
             this.question3_1_2.addChild(this.question4_1_1);
         } catch (TooManyChildrenException e) {
-            e.printStackTrace();
+            System.out.println(resourceBundle.getString("TooManyChildrenException"));
         }
         try {
             this.question3_1_2.addChild(this.question4_1_2);
         } catch (TooManyChildrenException e) {
-            e.printStackTrace();
+            System.out.println(resourceBundle.getString("TooManyChildrenException"));
         }
         this.question4_2_1 = new Question(resourceBundle.getString("accounting"), resourceBundle.getString("yes"));
         this.question4_2_2 = new Question(resourceBundle.getString("accounting"), resourceBundle.getString("no"));
         try {
             this.question3_2_1.addChild(this.question4_2_1);
         } catch (TooManyChildrenException e) {
-            e.printStackTrace();
+            System.out.println(resourceBundle.getString("TooManyChildrenException"));
         }
         try {
             this.question3_2_1.addChild(this.question4_2_2);
         } catch (TooManyChildrenException e) {
-            e.printStackTrace();
+            System.out.println(resourceBundle.getString("TooManyChildrenException"));
         }
         this.question4_3_1 = new Question(resourceBundle.getString("deposit_amount"), resourceBundle.getString("yes"));
         this.question4_3_2 = new Question(resourceBundle.getString("accounting"), resourceBundle.getString("no"));
         try {
             this.question3_2_2.addChild(this.question4_3_1);
         } catch (TooManyChildrenException e) {
-            e.printStackTrace();
+            System.out.println(resourceBundle.getString("TooManyChildrenException"));
         }
         try {
             this.question3_2_2.addChild(this.question4_3_2);
         } catch (TooManyChildrenException e) {
-            e.printStackTrace();
+            System.out.println(resourceBundle.getString("TooManyChildrenException"));
         }
 
         this.question5_1_1 = new Question("GmbH", ">25.000€");
@@ -127,36 +127,36 @@ public class QuestionModel {
         try {
             this.question4_1_1.addChild(this.question5_1_1);
         } catch (TooManyChildrenException e) {
-            e.printStackTrace();
+            System.out.println(resourceBundle.getString("TooManyChildrenException"));
         }
         try {
             this.question4_1_1.addChild(this.question5_1_2);
         } catch (TooManyChildrenException e) {
-            e.printStackTrace();
+            System.out.println(resourceBundle.getString("TooManyChildrenException"));
         }
         this.question5_2_1 = new Question("OHG", resourceBundle.getString("Bilanzpflicht"));
         this.question5_2_2 = new Question("GbR", resourceBundle.getString("no"));
         try {
             this.question4_2_1.addChild(this.question5_2_1);
         } catch (TooManyChildrenException e) {
-            e.printStackTrace();
+            System.out.println(resourceBundle.getString("TooManyChildrenException"));
         }
         try {
             this.question4_2_1.addChild(this.question5_2_2);
         } catch (TooManyChildrenException e) {
-            e.printStackTrace();
+            System.out.println(resourceBundle.getString("TooManyChildrenException"));
         }
         this.question5_3_1 = new Question("OHG", resourceBundle.getString("Bilanzpflicht"));
         this.question5_3_2 = new Question("GbR", resourceBundle.getString("no"));
         try {
             this.question4_2_2.addChild(this.question5_3_1);
         } catch (TooManyChildrenException e) {
-            e.printStackTrace();
+            System.out.println(resourceBundle.getString("TooManyChildrenException"));
         }
         try {
             this.question4_2_2.addChild(this.question5_3_2);
         } catch (TooManyChildrenException e) {
-            e.printStackTrace();
+             System.out.println(resourceBundle.getString("TooManyChildrenException"));
         }
         this.question5_4_1 = new Question("GmbH", "=25.000€");
         this.question5_4_2 = new Question("AG", "=50.000€");
@@ -164,17 +164,17 @@ public class QuestionModel {
         try {
             this.question4_3_1.addChild(this.question5_4_1);
         } catch (TooManyChildrenException e) {
-            e.printStackTrace();
+            System.out.println(resourceBundle.getString("TooManyChildrenException"));
         }
         try {
             this.question4_3_1.addChild(this.question5_4_2);
         } catch (TooManyChildrenException e) {
-            e.printStackTrace();
+            System.out.println(resourceBundle.getString("TooManyChildrenException"));
         }
         try {
             this.question4_3_1.addChild(this.question5_4_3);
         } catch (TooManyChildrenException e) {
-            e.printStackTrace();
+            System.out.println(resourceBundle.getString("TooManyChildrenException"));
         }
         this.question5_5_1 = new Question("UG", resourceBundle.getString("Accounting_EUR"));
         this.question5_5_2 = new Question("KG", resourceBundle.getString("Bilanzpflicht"));
@@ -182,17 +182,17 @@ public class QuestionModel {
         try {
             this.question4_3_2.addChild(this.question5_5_1);
         } catch (TooManyChildrenException e) {
-            e.printStackTrace();
+            System.out.println(resourceBundle.getString("TooManyChildrenException"));
         }
         try {
             this.question4_3_2.addChild(this.question5_5_2);
         } catch (TooManyChildrenException e) {
-            e.printStackTrace();
+            System.out.println(resourceBundle.getString("TooManyChildrenException"));
         }
         try {
             this.question4_3_2.addChild(this.question5_5_3);
         } catch (TooManyChildrenException e) {
-            e.printStackTrace();
+            System.out.println(resourceBundle.getString("TooManyChildrenException"));
         }
     }
 
