@@ -8,6 +8,7 @@
 ### [Implementierter Scope](#implementierter-scope-1)
 ### [Dokumentation](#dokumentation-1)
 ### [Prototyp](#prototyp-1)
+### [Präsentation](#präsentation-1)
 ### [Das Team](#das-team-1)
 
 
@@ -47,6 +48,9 @@ Eine Übersicht über die implementierten Rechtsformen mit Informationen findet 
 
 Eine Übersicht zu dem Hintergund des Entscheidungsbaums findet sich [hier](https://github.com/HerrTill/Gruppe5-Raketengruendung/blob/master/Thema/Entscheidungsbaum.pdf).
 
+# Präsentation
+Unsere Präsentationen finden sich im Präsentationen Ordner.
+Alternativ gelangen Sie [hier](https://github.com/HerrTill/Gruppe5-Raketengruendung/blob/master/Pr%C3%A4sentation/Abschlusspr%C3%A4sentation_RG.pdf) zu unserer Abschlusspräsentation
 
 # Prototyp
 Unseren Prototypen finden sich im Ordner [Prototyp](https://github.com/HerrTill/Gruppe5-Raketengruendung/blob/master/Prototyp/RaketenGru%CC%88ndung_Prototyp.pdf)
